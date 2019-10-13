@@ -1,98 +1,125 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+	<meta charset="UTF-8">
 	<title>Name Holder C.V.</title>
 </head>
 
 <style type="text/css">
-body {
-	font-family: tahoma, sans-serif;
-	width: 70%;
-	margin: auto;
-	background-color: darkslategray; }
 
-section > h1 {
-	letter-spacing: 0.2em;
-	word-spacing: 0.4em; }
+	body {
+		font-family: tahoma, sans-serif;
+		width: 70%;		
+		margin: auto;
+		background-color: darkslategray; }
+	
+	a {
+		color : lightyellow; }
 
-nav > ul {
-	list-style: none;
-	line-height: 2em; }
+	section > h1 {
+		letter-spacing: 0.2em;
+		word-spacing: 0.4em; }
 
-nav > ul > li >a {
-	text-decoration : none; }
+	li {
+		margin-top: 2em;
+		margin-bottom: 2em;}
+	
+	ul {
+		list-style: none }
+	
+	.bulletin {
+		list-style: disc; }
+	
 
-ul {
-	list-style: none; }
+	nav  a {
+		text-decoration : none; }
 
-td {
-	padding-left: 1em;
-	padding-right: 1em; }
 
-section {
-	border-style: groove;
-	padding: 0.2em 2em 0.2em 2em;
-	margin-bottom: 2em;
-	margin-top: 2em;
-	border-width: 0.2em; }
+	td {
+		padding-left: 1em;
+		padding-right: 1em; }
 
-a {
-	color : lightyellow; }
+	section { 
+		border-style: groove;
+		border-width: 0.2em;
+		padding: 2em;
+		margin-bottom: 2em;
+		margin-top: 2em;
+		}
 
 </style>
 
-<body>
-<h1>C.V.</h1>
+<body>	
 
-<nav>
-	<ul>
-		<li>
-			<a href="#personal">Personal Info</a>
-		</li>
-		
-		<li>
-			<a href="#education">Education</a>
-		</li>
-		
-		<li>
-			<a href="#projects">Past Projects</a>
-		</li>
-		
-		<li>
-			<a href="#language-skills">Language Skills</a>
-		</li>
-	</ul>
-</nav>
+<header>
 
+	<h1>C.V.</h1>
+
+	<nav>
+		<ul>
+			<li>
+				<a href="#personal">Personal Info</a>
+			</li>
+			
+			<li>
+				<a href="#education">Education</a>
+			</li>
+			
+			<li>
+				<a href="#projects">Past Projects</a>
+			</li>
+			
+			<li>
+				<a href="#language-skills">Language Skills</a>
+			</li>
+		</ul>
+	</nav>
+
+</header>
 
 <main>
 
 	<section id="personal">
-
+	
 		<h1>Name Holder</h1>
 		<table>
 			<tr>
 				<td>Brith Date</td>
-				<td>June 1984</td>
+				<td>
+					<time datetime="1984-6">June 1984</time>
+				</td>	
 			</tr>
 			
 			<tr>
 				<td>Contacts</td>
 				<td>
-					<address><a href='mailto:NameHolder@NameHolderDomain.com'>NameHolder (at) NameHolderDomain (dot) com </a></address>
+					<address>
+						<a href='mailto:someone@example.org'>someone (at) example (dot) org </a>
+					</address>
+				</td>
+				<td>
+					<address>
+						<a href='tel:+000000000000'>tel +(000) 000 000 000</a>
+					</address>
 				</td>
 			</tr>
 		</table>
 
 	</section>
 
-	<section id="education"><h4>Higher Education</h4>
+
+	<section id="education">
+	
+		<h4>Higher Education</h4>
 		<ul>
 			<li>
 				<details>
 					<summary>
-						<a href='https://www.w3.org/'>Name Holder University</a> 10/1984 - 11/1984
+						<a href='https://www.example.org/'>Name Holder University</a>
+						<time datetime="1984-10">10/1984<time>
+						-
+						<time datetime="1984-11">11/1984<time>
 					</summary>
 					
 					<p>
@@ -101,34 +128,47 @@ a {
 				</details>
 			</li>
 		</ul>
+		
 	</section>
 
-	<section id="projects"><h4>Past Projects</h4>
-		<ul>
+
+	<section id="projects">
+	
+		<h4>Past Projects</h4>
+		<ul>  
 			<li>
 				<details>
-					<summary>Name Holder</summary>
+					<summary>Project 1</summary>
 					
 					<p>
-						<a href="https://www.w3.org/">Project Homepage</a>
+						<a href="https://www.example.org/">Project Homepage</a>
 					</p>
 			
-					<p>A description</p>
+					<p>A description.</p>
 				</details>
-			<li>
+			</li>
 		</ul>
+		
 	</section>
 
-	<section id="language-skills"><h4>Language Skills</h4>
-		<ul>
+
+	<section id="language-skills">
+	
+		<h4>Language Skills</h4>
+		<ul class='bulletin'>
 			<li>Language 1-Native speaker.</li>
 			
-			<li>Language 2-near native.</li>
+			<li>Language 2-Fluent.</li>
 		</ul>
+		
 	</section>
 
 
 </main>
+
+<footer>
+	<em> End of C.V. </em>
+</footer>
 
 </body>
 
