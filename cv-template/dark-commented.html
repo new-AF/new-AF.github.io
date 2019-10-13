@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Name Holder C.V.</title>
+</head>
+
+<style type="text/css"> /* Internal Styling to keep the count of the Document 1 */
+
+body {
+	font-family: tahoma, sans-serif; /* Tahoma font for the entire page, fallback to other sans serifs. */
+	width: 70%;		
+	margin: auto;	/* Center the contents of the Page */
+	background-color: darkslategray; } /* Simulate a Dark/Night mode of the Page, by 1) setting a dark background color.*/
+
+section > h1 {
+	letter-spacing: 0.2em;	/*	For clarity: Space out the individual's name, */
+	word-spacing: 0.4em; }	/* Put spacing among each word of the name. */
+
+nav > ul {
+	list-style: none;
+	line-height: 2em; }
+
+nav > ul > li >a {
+	text-decoration : none; }	/* For each Link leading to a bookmark within the page, drop the underline decoration to set it apart from Links leading to recources outside the Page. */
+
+ul {
+	list-style: none; }
+
+td {
+	padding-left: 1em;
+	padding-right: 1em; }
+
+section { 
+	border-style: groove;	/* Give the each section element a visible border. */
+	padding: 0.2em 2em 0.2em 2em; /* Added padding on Left and Right */
+	margin-bottom: 2em;		/* Added Top and Bottom margins */
+	margin-top: 2em;		/* - */
+	border-width: 0.2em; }
+
+a {
+	color : lightyellow; } /* 2) changing the default blue Link colors to a brighter variant.*/
+
+</style>
+
+<body> <!-- HTML Body Start --> 	
+
+<h1>C.V.</h1> <!-- First text on the Page displayed as Header. -->
+
+<nav>	<!-- Navigation section of the Page, --> 
+	<ul>	<!-- in the form of an Unordered List, -->
+		<li>	<!-- containing Links (as List Items) to bookmarks wtihin the Page. --> 
+			<a href="#personal">Personal Info</a>
+		</li>
+		
+		<li>
+			<a href="#education">Education</a>
+		</li>
+		
+		<li>
+			<a href="#projects">Past Projects</a>
+		</li>
+		
+		<li>
+			<a href="#language-skills">Language Skills</a>
+		</li>
+	</ul>
+</nav>
+
+
+<main> <!-- The Main content of the Page --> 
+
+	<section id="personal"> <!-- A Section with an id to reference it later. --> 
+
+		<h1>Name Holder</h1>	<!-- "Title" as Name of the individual whom this resume is about. --> 
+		<table>					<!-- Their info within a table. -->
+			<tr>				<!-- Start of a row -->
+				<td>Brith Date</td> <!-- A Row span item or a single item within a row, aligned along column dividers. -->
+				<td>June 1984</td>	<!-- Second item on the same row. -->
+			</tr>	<!-- Item 1 [Divider] Item 2 --> 
+			
+			<tr>	<!-- Start of the second row.  -->
+				<td>Contacts</td>
+				<td>
+					<address><a href='mailto:NameHolder@NameHolderDomain.com'>NameHolder (at) NameHolderDomain (dot) com </a></address>	<!-- A semantic element : address, enclosing an email Link.  -->
+				</td>
+			</tr>	<!-- Item 1 [Divider] Item 2 --> 
+		</table> <!-- End of table.  -->
+
+	</section>
+
+	<section id="education">	<!-- Start of another Section -->	<h4>Higher Education</h4>	<!-- Header indide the Section to serve as "Title". -->
+		<ul>	<!-- Grouping of List Items --> 
+			<li>	<!-- First item: -->
+				<details> 	<!-- a details element, headlining content within the summary element first,  -->
+					<summary>
+						<a href='https://www.w3.org/'>Name Holder University</a> 10/1984 - 11/1984
+					</summary>
+					
+					<p> 	<!-- with the actual details being everything else till the closing tag. -->
+						<q>Bachelor of Something</q> 	<!-- Quotations around the Degree Name --> degree.
+					</p>
+				</details>
+			</li>
+		</ul>
+	</section>
+
+	<section id="projects"><h4>Past Projects</h4>
+		<ul>  
+			<li>
+				<details>
+					<summary>Name Holder</summary>
+					
+					<p>
+						<a href="https://www.w3.org/">Project Homepage</a>
+					</p>
+			
+					<p>A description</p>
+				</details>
+			<li>
+		</ul>
+	</section>
+
+	<section id="language-skills">		<!-- Start of another Section --> <h4>Language Skills</h4>		<!-- "Title" -->
+		<ul>	<!-- Beginning of Unorderd List Items-->
+			<li>Language 1-Native speaker.</li>		<!--Regular text marked as a List Item. -->
+			
+			<li>Language 2-near native.</li>
+		</ul>
+	</section>
+
+
+</main> <!-- End of the Main content of the Page. --> 
+
+</body>
+
+</html>
