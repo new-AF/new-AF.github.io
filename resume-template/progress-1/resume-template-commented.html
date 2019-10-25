@@ -1,0 +1,154 @@
+<!DOCTYPE html>	<!-- Page/Document Type Declaration. -->
+<html lang="en">	<!-- Start of the HTML. -->
+
+<head>	<!-- meta information about Page.-->
+	<meta charset="UTF-8">	<!-- character encoding of the Page.-->
+	<meta name="color-scheme" content="dark light">	<!-- Prefer a Dark color scheme for the Document to be
+	rendered in. 
+	source: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta 
+	search-term: color-scheme -->
+	<title>Name Holder Résumé</title>	<!-- Page Title.-->
+</head>
+
+<body> 	<!-- Start of the HTML body. -->
+
+<header>	<!-- Header of the Page, a structural element to group a Title Heading and Navigation List Items. -->
+
+	<h3>Résumé</h3>	<!-- First text displayed as level-3 Heading,to state the purpose of the Document and not to overshadow the Document Holder's Name in coming later in H1. -->
+
+	<nav> <!-- Navigation section of the Page, -->
+		<ul>	<!-- in the form of an Unordered List, -->
+			<li>	<!-- containing Links (as List Items) to Anchors/bookmarks wtihin the Page. -->
+				<a href="#personal">Personal Info</a>
+			</li>
+			
+			<li>
+				<a href="#education">Education</a>
+			</li>
+			
+			<li>
+				<a href="#projects">Past Projects</a>
+			</li>
+			
+			<li>
+				<a href="#language-skills">Language Skills</a>
+			</li>
+		</ul>
+	</nav>
+
+</header>
+
+<main>	<!-- The Main content of the Page -->
+
+	<a name="personal"></a>	<!-- An "Anchor" with a unique name that can be referenced later, to link to
+	this part of the Document. -->
+	<section>	<!-- Start of a section about Personal Info. -->
+
+		<header>	<!-- Header/"Title" of the section.-->
+			<h1>Name Holder</h1>	<!-- The Applicant/Document Holder's Name. -->
+		</header>
+
+			<!-- Personal Info is organized as following: -->
+			<!-- A single paragraph contains text of information to be elaborated on (e.g. "Contacts")
+			followed by one or more structurally-neutral <span> elements that add
+			further details. -->
+			
+			<!-- A <table> element was previously used for presentaional purposes since it spaced
+			items on a single line/row, however this type of information often does not
+			belong in a table, hence its use was dropped. -->
+			
+			<p>Brith Date</p>
+				
+			<span>
+				<time datetime="1984-6">June 1984</time> <!-- A semantic element to denote time. -->
+			</span>	
+			
+			
+			<p>Contacts</p>
+				
+			<span>
+				<address>	<!-- A semantic element : <address>, enclosing an email Link.  -->
+					<a href="mailto:someone@example.org">someone (at) example (dot) org</a>
+				</address>
+			</span>
+				
+			<span>
+				<address>
+					<a href="tel:+000000000000">tel +(000) 000 000 000</a>
+				</address>
+			</span>
+			
+
+	</section>
+
+	<a name="education"></a>
+	<section>	<!-- Education Section. -->
+
+		<header>
+			<h2>Higher Education</h2>	<!-- "Title". -->
+		</header>
+
+		<details>	<!-- One or more <details> elements to enumerate, for instance Educational Experience. -->
+				<summary>	<!-- Headlining for the rest of the actual details, As: -->
+					
+					<a href='https://www.example.org/'>Name Holder University</a>	<!-- a link to the Education
+					Insitution's Web site, and -->
+					<time datetime="1984-10">10/1984</time> <!-- time of stay (from) -->
+					-	<!-- Literal dash character (till) -->
+					<time datetime="1984-11">11/1984</time>	<!-- end of stay. -->
+				
+				</summary>
+				
+				<p>	<!-- "High-level" details , as Type and Title of Degree. -->
+					<q>Bachelor of Something</q> degree.
+				</p>
+		</details>
+		
+	</section>
+
+
+	<a name="projects"></a>	<!-- Same Layout as above -->
+	<section>
+
+		<header>
+			<h2>Past Projects</h2>
+		</header>
+
+			<details>
+				<summary>Project 1</summary>
+				
+				<p>
+					<a href="https://www.example.org/">Project Homepage</a>
+				</p>
+		
+				<p>Project description.</p>
+			</details>
+
+		
+	</section>
+
+	<a name="language-skills"></a>	
+	<section>	<!-- Same Layout as above -->
+
+		<header>
+			<h2>Language Skills</h2>
+		</header>
+
+		<ul>		<!-- Except, instead of a <details> element, an Unorderd List is used.-->
+			<li>Language 1-Native speaker.</li>	<!-- Regular text marked as a List Item. -->
+			
+			<li>Language 2-Fluent.</li>
+		</ul>
+		
+	</section>
+
+
+</main> <!-- End of the Main content of Page. -->
+
+<footer> <!-- Footer at the end of Page. -->
+	<em> End of Résumé </em>
+</footer>
+
+</body>
+
+</html>
