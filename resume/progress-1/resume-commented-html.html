@@ -1,0 +1,193 @@
+<!DOCTYPE html> <!-- Page/Document Type Declaration. -->
+<html lang="en"> <!-- Start of the HTML. -->
+
+<head> <!-- meta information about Page.-->
+	<meta charset="UTF-8"> <!-- character encoding of the Page.-->
+	<meta name="color-scheme" content="dark light"> <!-- Prefer a Dark color scheme for the Document to be
+	rendered in. 
+	source: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta 
+	search-term: color-scheme -->
+	<title>Joe Bloggs Résumé</title>
+</head>
+
+<body> <!-- Start of the HTML body. -->
+
+<header> <!-- Header of the Page, a structural element to group a Title Heading and Navigation List Items. -->
+
+	<nav> <!-- Navigation section of the Page, -->
+		<ul> <!-- in the form of an Unordered List, -->
+			<li> <!-- containing Links (as List Items) to Anchors/bookmarks wtihin the Page. -->
+				<a href="#personal">Personal Info</a>
+			</li>
+			
+			<li>
+				<a href="#education">Education</a>
+			</li>
+			
+			<li>
+				<a href="#work">Work Experience</a>
+			</li>
+			
+			<li>
+				<a href="#language-skills">Language Skills</a>
+			</li>
+		</ul>
+	</nav>
+
+</header>
+
+<main> <!-- The Main content of the Page -->
+
+	<a name="personal"></a> <!-- An "Anchor" with a unique name that can be referenced later, to link to
+	this part of the Document. -->
+	
+	<section> <!-- Start of a section about Personal Info. -->
+
+		<header> <!-- Header of Personal Info Section. -->
+			<h1>Joe Bloggs</h1> <!-- The Resume Holder's Name. -->
+			<img src="avatar.png" alt="Joe Bloggs Profile Photo"> <!-- There Profile Photo. -->
+		</header>
+			
+			
+			<!-- In Previous revisions, a <table> element was used for presentaional purposes since it spaced items on a single line/row, however since this type of information often does not
+			belong in a table, its use was dropped. -->
+			
+			<!-- Instead a series of paragraphs containing semantic Elements are used based on type of information. -->
+			
+			<p>
+				<address> <!-- An <address> element, enclosing an email Link.  -->
+						<a href="mailto:joe.bloggs@example.org">joe.bloggs (at) example (dot) org</a>
+				</address>
+			</p>
+			
+			<p>
+				<address> <!-- An <address> element, enclosing an telephone Number Link.  -->
+						<a href="tel:+17145551212">telephone +1 714 555 1212</a>
+				</address>
+			</p>
+
+	</section>
+
+	<a name="education"></a> <!-- Education Section Anchor. -->
+	<section>
+
+		<header>
+			<h2>Education</h2> <!-- Section "Title". -->
+		</header>
+
+		<details open> <!-- One or more <details> elements to enumerate Educational Experience. -->
+
+				<summary> <!-- Summary or Headlining for the rest of the actual details, As: -->
+					
+					Kadec High School <!-- The Text of the institution and, -->
+					
+					<address>Sceaux, Paris, France</address> <!-- its address. -->
+				</summary>	
+				
+				<!-- Actual Details or High-Level Overeview start here, -->
+				
+				<p>	<!-- Paragraph about enrollment duration. -->
+					<time datetime="1998-10">October 1998</time>
+					-
+					<time datetime="2001-1">October 2001</time>
+				
+				</p>
+		</details>
+		
+		<details open> <!-- University-related information -->
+
+				<summary>
+					
+					University of California, Sunnydale
+					
+					<address>Sunnydale, California, USA</address>
+					
+				</summary>
+				
+				<p>
+					<time datetime="2002-10">October 2002</time>
+					-
+					<time datetime="2006-7">July 2006</time>
+				
+					<strong><q>Bachelor of Science in Biology</q></strong>.
+				</p>
+		</details>
+		
+		
+	</section>
+
+
+	<a name="work"></a>
+	<section>
+
+		<header>
+			<h2>Work Experience</h2> <!-- Same Layout as above -->
+		</header>
+
+			<details open>
+				<summary>
+					<a href="https://www.yoyodyne.com/">Yoyodyne, Inc.</a>
+					
+					<address>San Narciso, California, USA</address>
+				</summary>	
+					
+					
+				<p>
+					<time datetime="2007-10">October 2007</time>
+					-
+					<time datetime="2009-10">October 2009</time>
+				
+					<strong>Junior Web Developer</strong>.
+				</p>
+		
+	
+			</details>
+
+		<details open>
+			<summary>
+				Acme Corp.
+				
+				<address>798 St. Marina del Rey, California, USA</address>
+				
+				
+			</summary>
+			
+			<p>
+				<time datetime="2009-3">March 2010</time>
+				-
+				<time datetime="2010-11">November 2010</time>
+				
+				<strong>DNS Administrator</strong>.
+			</p>
+		</details>
+
+	</section>
+
+
+	<a name="language-skills"></a>	
+	<section> <!-- Same Layout as above -->
+
+		<header>
+			<h2>Language Skills</h2>
+		</header>
+
+		<ul>	<!-- Except, instead of a <details> element, an Unorderd List is used with,-->
+			<li>English-Bilingual.</li> <!-- regular text marked as a List Item, to denote the Language and proficiency kevel -->
+			
+			<li>French-Bilingual.</li>
+			
+			<li>Spanish-Conversational</li>
+		</ul>
+		
+	</section>
+
+
+</main> <!-- End of the Main content of Page. -->
+
+<footer> 
+	<em>End</em> <!-- Display emphasized text as end of Page. -->
+</footer>
+
+</body> <!-- End of Page's HTHML Body. -->
+
+</html> <!-- End of the HTML root element. -->
