@@ -37,8 +37,8 @@ body {
 		
 	#personal {
 		display: grid;
-		grid-template-columns: auto auto;
-		justify-content: space-between;
+		grid-template-columns: 100px 100px;
+		justify-content: start;
 		align-content: center;
 	
 	}
