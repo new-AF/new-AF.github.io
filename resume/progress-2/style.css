@@ -2,11 +2,8 @@ body {
 		font-family: tahoma, sans-serif;
 		width: 70%;		
 		margin: auto;
-		background-color: auto; }
+		}
 
-	section > h1 {
-		letter-spacing: 0.2em;
-		word-spacing: 0.4em; }
 
 	li {
 		margin-top: 2em;
@@ -24,9 +21,11 @@ body {
 	}
 	nav a {
 		text-decoration : none;
-		}
+	}
 	
-
+	address {
+		font-style: normal;
+	}
 	section { 
 		border-style: groove;
 		border-width: 0.2em;
@@ -37,9 +36,42 @@ body {
 		
 	#personal {
 		display: grid;
-		grid-template-columns: 100px 100px;
-		justify-content: start;
-		align-content: center;
-	
+		grid-template-areas:
+		'a i'
+		'b i'
+		'c i';
+		justify-content: space-between;
+		align-content:space-around;	
 	}
+	
+	#personal  header {
+		grid-area: a; 
+	}
+	
+	#personal  img {
+		grid-area: i;
+	}
+
+	details {
+		margin-bottom : 2rem;
+		border:groove;
+	}
+	details time {
+		margin: auto 1rem;
+	}
+	summary {
+		display: flex;
+		padding : 1rem;
+		justify-content:space-between;
+	}
+	section {
+		color : purple;
+	}
+	
+	section header {
+		
+		color: orange;
+		
+	}
+	
 	
