@@ -1,0 +1,45 @@
+body {
+		font-family: tahoma, sans-serif;
+		width: 70%;		
+		margin: auto;
+		background-color: auto; }
+
+	section > h1 {
+		letter-spacing: 0.2em;
+		word-spacing: 0.4em; }
+
+	li {
+		margin-top: 2em;
+		margin-bottom: 2em;}
+	
+	ul {
+		list-style: none }
+	
+	.bulletin {
+		list-style: disc; }
+	
+	a {
+		color: mediumblue;
+		opacity: 0.7;
+	}
+	nav a {
+		text-decoration : none;
+		}
+	
+
+	section { 
+		border-style: groove;
+		border-width: 0.2em;
+		padding: 2em;
+		margin-bottom: 2em;
+		margin-top: 2em;
+		}
+		
+	#personal {
+		display: grid;
+		grid-template-columns: auto auto;
+		justify-content: space-between;
+		align-content: center;
+	
+	}
+	
