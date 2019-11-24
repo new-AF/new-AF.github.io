@@ -1,0 +1,71 @@
+<!--
+    Document Markup Editor, A Document Editor in HTML+JS+CSS
+    Copyright (C) 2019  Abdullah Fatota
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="color-scheme" content="dark light">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<title>Document Markup Editor</title>
+</head>
+
+<body>
+
+<header>
+
+	<h1 class="lead">Document Markup Editor</h1>
+	<a href="https://github.com/new-AF/Document-Markup-Editor" class="badge badge-secondary">GitHub</a>
+</header>
+
+<main>
+
+<section class="container-fluid file-selection">
+		<!-- <form method="get" multilpe> -->
+			<!-- <label> -->
+			Drag a File
+			<span class=>Supported Formats</span>
+				<hr>
+			<!-- 	</label> -->
+		<input type="file" id="filepicker" class="hidden text-center" multiple>
+		<label class='choose btn btn-primary' for="filepicker">Choose A File</label>
+			<!--  </form> -->
+	</section>
+
+	<section class="container-fluid file-info">
+
+	</section>
+
+
+	<div class="btn-group btn-group-sm" role="group" aria-label="Progress buttons">
+	  <button class="btn btn-secondary">Progress 1</button>
+	  <button class="btn btn-secondary" disabled>Progress 1.1</button>	</div>
+</main>
+
+<footer>
+</footer>
+
+<script src="process.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>

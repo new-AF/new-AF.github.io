@@ -1,0 +1,83 @@
+##
+    Document Markup Editor, A Document Editor in HTML+JS+CSS
+    Copyright (C) 2019  Abdullah Fatota
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+##
+
+##
+These rules are based on my understanding of 
+pdf specification; file 'PDF32000_2008.pdf'
+##
+
+WSPACE
+	0X0 NULL
+	0X9 HORIZONTAL TAB
+	0XA LINE FEED ..EOLM..
+	0XC FORM FEED 
+	0XD CARRIAGE RETURN ..EOLM..
+	0X20 SPACE
+	.white space.
+	
+EOLM
+	{CARRIAGE RETURN}{LINE FEED} CARRIAGE RETURN NEXT LINE FEED
+	.end of line marker.
+	
+DELIM
+	0X25 PERCENT SIGN
+	0X2F FORWARD SLASH
+	0X28 LEFT PARENTHESIS
+	0X29 RIGHT {1}
+	0X3C LEFT ANGLE BRACKET
+	0X3E RIGHT {1}{2}
+	0X5B LEFT SQUARE BRACKET
+	0X5D RIGHT {1}{2}
+	0X7B LEFT CURLY BRACKET
+	0X7D RIGHT {1}{2}
+	.delimiters.
+
+COMMENT
+	{PERCENT SIGN}:<{EOLM}
+	
+
+PCL
+	#Character Literals 
+	ANY PRINTABLE ASCII?? CHARACTER
+
+Strings
+	(
+		CL
+		IGNORE
+			Balanced ()
+		ESCAPE
+			\
+				NEXT
+					n	0xA LINE FEED
+					r	0xD CARRIAGE RETURN
+					t	0x9 HORIZONTAL TAB
+					b	0x8	BACKSPACE
+					(	0x28 LEFT PARENTHESIS
+					)	0x29	RIGHT PARENTHESIS
+					\	0x5C	BACKSLASH
+					OXXX	XXXo	8-BIT ASCII?? OCTAL CHARACTER CODE
+					EOLM		AS IF NOT SPLIT STRING
+
+				ELSE
+					IGNORE
+		ANY
+			EOLM	0xA LINE FEED
+	)
+	
+	<
+	Bytes
+	>
+		
+	

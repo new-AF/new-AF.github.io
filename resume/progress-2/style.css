@@ -1,10 +1,8 @@
-body {
+	body {
 		font-family: tahoma, sans-serif;
 		width: 70%;		
 		margin: auto;
 		}
-
-
 	li {
 		margin-top: 2em;
 		margin-bottom: 2em;}
