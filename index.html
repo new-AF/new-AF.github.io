@@ -7,56 +7,119 @@
  </head>
 
 <style type="text/css">
-
+	:root {
+		--text-color: snow;
+		--transparent-color: transparent;
+		--page-background-color: darkslategray;
+		--zero-margin: 0px;
+		--project-ink-border-width: 1px;
+	}
+	
+	
     body {
       font-family: "Consolas", "Lucida Console", monospace, "Tahoma", sans-serif;
-      background-color:	darkslategray; /*simulate Dark Mode*/
-      color : snow;
+      background-color:	var(--page-background-color); /*simulate Dark Mode*/
+      color : var(--text-color);
+	  margin: var(--zero-margin);
+	  min-height: 100vh;
+	  
     }
-    a {
-      color : snow; /*simulate Dark Mode*/
+    
+	a {
+		
+		color : var(--text-color); /*simulate Dark Mode*/
     }
+	
+	body {
+		display: grid;
+		grid-auto-rows: auto;
+		align-content: center;
+		justify-items: center;
+	}
+	
+	.main-title {
+		text-align: center;
+	}
+	
+	.all-projects-section-title {
+		text-align: center;
+	}
+	
+	.project-item {
+		text-align: center;
+		transition: all 200ms;
+		box-shadow: 1px 1px 5px 5px green;
+	}
+	
+	.project-item:hover {
+		filter: brightness(2);
+		font-weight: bold;
+	}	
+	
+	.project-link {
+		display: block;
+		text-decoration: none;
+		padding: 1rem;
+		
+	}
+	
+
+	
+	footer {
+	
+	}
+
 
 </style>
 
 
 <body>
-	<main>
-		<header>
-			<h1>Portfolio</h1>
-		</header>
-		<p>Projects are sorted from most advanced to least.</p>
-		<h3>React + Redux<h3>
-		<ul>
-			<li>
-				<a href="https://codepen.io/user-af/pen/GRBGRMJ">25 + 5 Clock (Work/Break Timer)</a>
-			</li>
-			
-			<li>
-				<a href="https://codepen.io/user-af/pen/qByPBYp">JavaScript Calculator</a>
-			</li>
-			
-			<li>
-				<a href="https://codepen.io/user-af/pen/MWBpLMp">Drum Machine</a>
-			</li>
-
-		</ul>
+	
+	<header class="main-title">
+		<h1>Portfolio</h1>
 		
-		<h3>React only<h3>
-		<ul>
-			<li>
-				<a href="https://codepen.io/user-af/pen/wvxoOWe">Markdown Previewer</a>
-			</li>
+		<p>Projects are sorted from most advanced to least.</p>
+	</header>
+		
+	<main>	
+		
+		<section class="all-projects-section">
+			<h3 class="all-projects-section-title">React + Redux</h3>
+			
+		
+				<p class="project-item">
+					<a class="project-link" href="https://codepen.io/user-af/pen/GRBGRMJ">25 + 5 Clock (Work/Break Timer)</a>
+				</p>
+				
+				<p class="project-item">
+					<a class="project-link" href="https://codepen.io/user-af/pen/qByPBYp">JavaScript Calculator</a>
+				</p>
+				
+				<p class="project-item">
+					<a class="project-link" href="https://codepen.io/user-af/pen/MWBpLMp">Drum Machine</a>
+				</p>
 
-			<li>
-				<a href="https://codepen.io/user-af/pen/NWBbMYZ">Random Quote Machine</a>
-			</li>
+		</section>
+		
+		
+		<section class="all-projects-section">
+			<h3  class="all-projects-section-title">React only</h3>
+			
+				<p class="project-item">
+					<a class="project-link" href="https://codepen.io/user-af/pen/wvxoOWe">Markdown Previewer</a>
+				</p>
 
-		</ul>
+				<p class="project-item">
+					<a class="project-link" href="https://codepen.io/user-af/pen/NWBbMYZ">Random Quote Machine</a>
+				</p>
+
+		</section>
 
 	</main>
 	<footer>
-		<p>by Abdullah Fatota</p>
+		<p>
+			by <a href="https://www.linkedin.com/in/abdullah-fatota-039a34218/">Abdullah Fatota</a>
+		</p>
 	</footer>
 </body>
 
