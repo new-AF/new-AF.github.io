@@ -16,6 +16,9 @@
 		--zero-margin: 0px;
 		--project-ink-border-width: 1px;
 		--grid-gap-margin: 1rem;
+		--icon-size: 2rem;
+		--contact-icon-size: 1rem;
+		--icon-gap: 1rem;
 	}
 	
 	* {
@@ -93,7 +96,22 @@
 
 	
 	.all-projects-section-title {
-		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: var(--icon-gap);
+	}
+	
+	.library-icon {
+		display: inline;
+		filter: invert(90%);
+		width: var(--icon-size);
+	}
+	
+	.contact-icon {
+		display: inline;
+		filter: invert(90%);
+		width: var(--contact-icon-size);
 	}
 	
 	.project-item {
@@ -131,8 +149,15 @@
 		text-align: center;
 		border-top: 1px dotted;
 		
-	}
 
+		
+	}
+	.footer-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: calc(var(--icon-gap) / 2);
+	}
 
 
 
@@ -146,7 +171,12 @@
 		<p>Projects are sorted from most advanced to least.</p>
 		
 		<section class="all-projects-section">
-			<h3 class="all-projects-section-title">React + Redux</h3>
+			
+			<h3 class="all-projects-section-title">
+					<img class="library-icon" src="assets/react.svg"/>
+					<img class="library-icon" src="assets/redux.svg"/>
+					<span>React Redux</span>
+			</h3>
 			
 		
 				<p class="project-item">
@@ -165,7 +195,10 @@
 		
 		
 		<section class="all-projects-section">
-			<h3  class="all-projects-section-title">React only</h3>
+			<h3  class="all-projects-section-title">
+				<img class="library-icon" src="assets/react.svg"/>
+				<span>React only</span>
+			</h3>
 			
 				<p class="project-item">
 					<a class="project-link" href="https://codepen.io/user-af/embed/wvxoOWe?default-tab=" target="iframe1">Markdown Previewer</a>
@@ -188,7 +221,9 @@
 	<iframe class="theiframe" name="iframe1" loading="lazy"></iframe>
 	<footer>
 		<p>
-			by <a href="https://www.linkedin.com/in/abdullah-fatota-039a34218/">Abdullah Fatota</a>
+			<span>by</span>
+			<a class="footer-container" href="https://www.linkedin.com/in/abdullah-fatota-039a34218/">
+			<img class="contact-icon" src="assets/linkedin-in.svg"/>Abdullah Fatota</a>
 		</p>
 	</footer>
 </body>
