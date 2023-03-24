@@ -29,24 +29,31 @@
 		font-family: "Consolas", "Lucida Console", monospace, "Tahoma", sans-serif;
 		background-color:	var(--page-background-color); /*simulate Dark Mode*/
 		color : var(--text-color);
-		/*margin: var(--zero-margin) var(--grid-gap-margin);*/
 		min-height: 100vh;
 		margin: 0;
+		
 		/*grid*/
 		display: grid;
-		grid-auto-rows: auto;
 		grid-template-columns: minmax(0,20%) minmax(0,80%);
+		grid-auto-rows: auto;
 		align-content: stretch;
 		align-items: center;
 		justify-items: stretch;
-		grid-gap: var(--grid-gap-margin);
     }
     
 	main {
-
-		justify-self: center;
+		border-right: 1px solid gray;
+		border-left: 1px solid gray;
+		border-top: 1px solid gray;
+		overflow-wrap: anywhere;
 	}
-	
+	main > h1 {
+		overflow-wrap: normal;
+	}
+	main > p , main h2 , main h3 {
+		overflow-wrap: anywhere;
+		text-align: center;
+	}
 	a {
 		
 		color : var(--text-color); /*simulate Dark Mode*/
@@ -72,9 +79,10 @@
 		position: fixed;
 		top: 0;
 		margin: var(--zero-margin);
-		left: calc(20% + var(--grid-gap-margin));
-		width: calc(100% - 20% - var(--grid-gap-margin));
+		left: calc(20%);
+		width: calc(100% - 20%);
 		height: calc(100%);
+		border: 1px solid gray;
 	}
 
 	.main-title {
@@ -100,6 +108,7 @@
 		align-items: center;
 		justify-content: center;
 		gap: var(--icon-gap);
+		flex-wrap: wrap;
 	}
 	
 	.library-icon {
@@ -148,8 +157,9 @@
 		backdrop-filter: blur(0.5rem);
 		text-align: center;
 		border-top: 1px dotted;
-		
-
+		border-right: 1px solid gray;
+		border-bottom: 1px solid gray;
+		border-left: 1px solid gray;
 		
 	}
 	.footer-container {
@@ -157,6 +167,7 @@
 		align-items: center;
 		justify-content: center;
 		gap: calc(var(--icon-gap) / 2);
+		flex-wrap: wrap;
 	}
 
 
@@ -234,13 +245,6 @@
 
 		</section>
 	
-	
-
-<!-- <iframe height="300" style="width: 100%;" scrolling="no" title="React Redux Work/Break Timer" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"> -->
-  <!-- See the Pen <a href="https://codepen.io/user-af/embed/GRBGRMJ"> -->
-  <!-- React Redux Work/Break Timer</a> by Abdullah Fatota (<a href="https://codepen.io/user-af">@user-af</a>) -->
-  <!-- on <a href="https://codepen.io">CodePen</a>. -->
-<!-- </iframe> -->
 
 	</main>
 	<iframe class="theiframe" name="iframe1" loading="lazy"></iframe>
