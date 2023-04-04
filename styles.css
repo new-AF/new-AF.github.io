@@ -166,7 +166,7 @@ footer *{
 }
 .footer-link {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: minmax(0,1fr) 4fr;
     text-decoration: none;
     align-items: center;
     justify-content: center;
