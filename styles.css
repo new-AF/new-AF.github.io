@@ -19,16 +19,14 @@
 
 body {
     font-family: "Consolas", "Lucida Console", monospace, "Tahoma", sans-serif;
-    background-color:	var(--page-background-color); /*simulate Dark Mode*/
-    color : var(--text-color);
+    background-color: var(--page-background-color);
+    color: var(--text-color);
     min-height: 100vh;
     margin: 0;
-    
-    /*grid*/
     display: grid;
     grid-template-columns: minmax(0,20%) minmax(0,80%);
-    grid-auto-rows: auto;
-    align-content: start;
+    grid-template-rows: minmax(auto, 80%) minmax(auto, 20%);
+    align-content: stretch;
     align-items: center;
     justify-items: stretch;
 }
