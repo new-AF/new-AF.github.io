@@ -96,7 +96,21 @@ a {
     gap: var(--icon-gap);
     flex-wrap: wrap;
 }
+.projects-header-icons {
+    flex-grow: 0;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    /*background-color: red;*/
+    justify-content: right;
+    column-gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.projects-header-name{
+    /*background-color: green;*/
 
+    flex-grow: 1;
+}
 .library-icon {
     display: inline;
     width: var(--icon-size);
