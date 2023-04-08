@@ -1,118 +1,208 @@
-<!DOCTYPE html>
-<html lang="en">
+:root {
+    --text-color: snow;
+    --transparent-color: transparent;
+    --page-background-color: darkslategray;
+    --page-background-color-rgba: rgba(47, 79, 79, 0.5);
+    --box-shadow-color: gray;
+    --zero-margin: 0px;
+    --project-ink-border-width: 1px;
+    --grid-gap-margin: 1rem;
+    --icon-size: 2rem;
+    --contact-icon-size: 1rem;
+    --icon-gap: 1rem;
+}
 
-<head>
-  <meta charset="utf-8">
-  <title>Abdullah Fatota Portfolio</title>
-</head>
+* {
+    margin: 0;
+    font-family: "Consolas", "Lucida Console", monospace, "Tahoma", sans-serif;
+}
 
-<link href='styles.css' rel='stylesheet'>
+body {
+    
+    background-color: var(--page-background-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    
+    display: grid;
+    grid-template-columns: minmax(0,20%) minmax(0,80%);
+    grid-template-rows: minmax(auto, 0.25fr) minmax(auto, 5fr) minmax(auto, 1fr);
+    align-content: stretch;
+    align-items: stretch;
+    justify-items: stretch;
+}
+
+#main {
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    
+    border: none;
+    overflow-wrap: anywhere;
+}
+a {
+    
+    color : var(--text-color); /*simulate Dark Mode*/
+}
+.icon {
+    filter: invert(0.9);
+}
+.theiframe {
+    grid-column: 2;
+    grid-row: 1/4;
+    align-self: stretch;
+    justify-self: stretch;
+    
+    position: fixed;
+    top: 0;
+    margin: var(--zero-margin);
+    left: calc(20%);
+    width: calc(100% - 20%);
+    height: calc(100%);
+    border: 1px solid gray;
+}
+
+#main-header {
+    z-index: 99;/*important: without it hover on .project-item will nullify blur effect*/
+    background-color: var(--page-background-color-rgba);
+
+    grid-column: 1;
+    display: grid;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(0.5rem);
+    
+    border: 1px solid gray;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px dotted;
+
+    text-align: center;
+    padding-top: var(--grid-gap-margin) ;
+    padding-bottom: var(--grid-gap-margin) ;
+    
+}
+
+#main-title {
+    overflow-wrap: normal;
+}
+
+.projects-header {
+    margin-top: 2rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: var(--icon-gap);
+}
+.projects-header-icons {
+    display: flex;
+    align-items: center;
+    /*background-color: red;*/
+    justify-content: center;
+    column-gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.projects-header-name{
+    /*background-color: green;*/
+    text-align: center;
+}
+.library-icon {
+    display: inline;
+    width: var(--icon-size);
+}
+
+.projects-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+}
+.project-item {
+    
+    text-align: center;
+    transition: all 200ms;
+    box-shadow: -4px 4px 0px 1px gray;
+    margin: 0 var(--grid-gap-margin);
+    margin-bottom: -0.5rem;
+    border: 1px solid;
+}
+
+.project-item:hover {
+    backdrop-filter: brightness(1.5);
+    box-shadow: -4px 4px 0px 1px snow;
+}	
+
+.project-item:active {
+    box-shadow: -4px 4px 0px 1px black;
+}	
+
+.project-link {
+    display: block;
+    text-decoration: none;
+    padding: 1rem;
+    border:none;
+}
 
 
-<body>
+#footer {
+    background-color: var(--page-background-color-rgba);
+    grid-column: 1;
+    display: grid;
+    justify-items: stretch;
+    grid-template-columns: 1fr;
+    row-gap: 0;
 
-	<header id="main-header">
-		<h1  id="main-title">Portfolio</h1>
-		
-	</header>
+    
+    position: sticky;
+    bottom: 0;
+    backdrop-filter: blur(0.5rem);
+    
+    text-align: center;
+    border-top: 1px dotted;
+    border-right: none;
+    border-left: none;
 
-	<main id="main">	
-				
-		<section class="projects-section">
-			
-			<header class="projects-header">
-				<span class="projects-header-icons">
-					<img class="icon library-icon" src="assets/react.svg"/>
-					<img class="icon library-icon" src="assets/redux.svg"/>
-				</span>
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+}
+.my-hr{
+    width: 17.5%;
+    border: none;
+    border-bottom: 1px dotted snow;
+    justify-self: center;
 
-				<h3 class="projects-header-name">React Redux</h3>
-			</header>
-			
-		
-			<p class="project-item">
-				<a class="project-link" href="https://codepen.io/user-af/embed/GRBGRMJ?default-tab=" target="iframe1">Work Break timer</a>
-			</p>
-			
-			<p class="project-item">
-				<a class="project-link" href="https://codepen.io/user-af/embed/qByPBYp?default-tab=" target="iframe1">Calculator</a>
-			</p>
-			
-			<p class="project-item">
-				<a class="project-link" href="https://codepen.io/user-af/embed/MWBpLMp?default-tab=" target="iframe1">Drum Machine</a>
-			</p>
-
-		</section>
-		
-		
-		<section class="projects-section">
-			<header  class="projects-header">
-				<span class="projects-header-icons">
-					<img class="icon library-icon" src="assets/react.svg"/>		
-				</span>
-				<h3 class="projects-header-name">React only</h3>
-			</header>
-			
-			<p class="project-item">
-				<a class="project-link" href="https://codepen.io/user-af/embed/wvxoOWe?default-tab=" target="iframe1">Markdown 	Viewer</a>
-			</p>
-
-			<p class="project-item">
-				<a class="project-link" href="https://codepen.io/user-af/embed/NWBbMYZ?default-tab=" target="iframe1">Random Quotes</a>
-			</p>
-
-		</section>
-	
-		<section class="projects-section">
-			
-			<header  class="projects-header">
-				<span class="projects-header-icons">
-					<img class="icon library-icon" src="assets/html5.svg"/>
-					<img class="icon library-icon" src="assets/css3.svg"/>				
-				</span>
-
-				<h3 class="projects-header-name">HTML + CSS</h3>
-			</header>
-			
-			<p class="project-item">
-				<a class="project-link" href="https://codepen.io/user-af/embed/RwYYOLZ?default-tab=" target="iframe1">Personal Portfolio</a>
-			</p>			
-			
-			<p class="project-item">
-				<a class="project-link" href="https://codepen.io/user-af/embed/RwYYOgg?default-tab=" target="iframe1">Product Page</a>
-			</p>				
-			
-			<p class="project-item">
-				<a class="project-link" href="https://codepen.io/user-af/embed/vYzzMZm?default-tab=" target="iframe1">Technical Documentation</a>
-			</p>				
-			
-			<p class="project-item">
-				<a class="project-link" href="https://codepen.io/user-af/embed/PoddgWO?default-tab=" target="iframe1">Survey Form</a>
-			</p>
-
-		</section>
-	
-
-	</main>
-	
-	<iframe class="theiframe" name="iframe1" loading="lazy"></iframe>
-	
-	<footer id="footer">
-		<p id="footer-by">by</p>
-
-		<p id="footer-name">
-			<strong>Abdullah Fatota</strong>
-		</p>
-
-		<a class="footer-link" href="https://www.linkedin.com/in/abdullah-fatota-039a34218/">
-			<img class="icon footer-link-icon" src="assets/linkedin-in.svg"/>
-			<span>Linkedin Contact</span>
-		</a>
-		<a class="footer-link" href="https://github.com/new-AF">
-			<img class="icon footer-link-icon" src="assets/github.svg"/>
-			<span>Github Profile</span>
-		</a>
-	</footer>
-</body>
-
-</html>
+}
+#footer *{
+    margin: 0;
+}
+#footer-by {
+    padding-top: 0.25rem;
+}
+#footer-name {
+    padding: 0.25rem 0;
+}
+.footer-link {
+    align-self: stretch;
+    display: grid;
+    grid-template-columns: minmax(0,1fr) 2fr minmax(0,0.5fr);
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    gap: calc(var(--icon-gap) / 2);
+    flex-wrap: wrap;
+    border: 1px solid transparent;
+    border-bottom: 1px solid snow;
+    padding: 0.5rem 0;
+    transition: all 200ms;
+}
+.footer-link:hover {
+    backdrop-filter: brightness(2);
+    border: 1px solid snow;
+}
+.footer-link-icon {
+    display: inline;
+    height: var(--contact-icon-size);
+    justify-self: right;    
+}
