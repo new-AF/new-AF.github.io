@@ -13,53 +13,40 @@
 }
 
 * {
-    /*outline: 2px solid red; */
-    
+    margin: 0;
+    font-family: "Consolas", "Lucida Console", monospace, "Tahoma", sans-serif;
 }
 
 body {
-    font-family: "Consolas", "Lucida Console", monospace, "Tahoma", sans-serif;
+    
     background-color: var(--page-background-color);
     color: var(--text-color);
     min-height: 100vh;
-    margin: 0;
+    
     display: grid;
     grid-template-columns: minmax(0,20%) minmax(0,80%);
-    grid-template-rows: minmax(auto, 80%) minmax(auto, 20%);
+    grid-template-rows: minmax(auto, 10%) minmax(auto, 70%) minmax(auto, 20%);
     align-content: stretch;
-    align-items: center;
+    align-items: stretch;
     justify-items: stretch;
 }
 
-main {
-    border-right: 1px solid gray;
-    border-left: 1px solid gray;
-    border-top: 1px solid gray;
+#main {
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    
+    border: none;
     overflow-wrap: anywhere;
-}
-main > h1 {
-    overflow-wrap: normal;
-}
-main > p , main h2 , main h3 {
-    overflow-wrap: anywhere;
-    text-align: center;
 }
 a {
     
     color : var(--text-color); /*simulate Dark Mode*/
 }
-
-
-/*select all direct descendants except .theiframe*/
-body > *:not(.theiframe) {
-    grid-column: 1;
+.icon {
+    filter: invert(0.9);
 }
-
-/*select all direct descendants except */
-main > *:not(.main-title, footer) {
-    margin: auto var(--grid-gap-margin);
-}
-
 .theiframe {
     grid-column: 2;
     grid-row: 1/4;
@@ -75,24 +62,34 @@ main > *:not(.main-title, footer) {
     border: 1px solid gray;
 }
 
-.main-title {
+#main-header {
+    z-index: 99;/*important: without it hover on .project-item will nullify blur effect*/
+    background-color: var(--page-background-color-rgba);
+
+    grid-column: 1;
+    display: grid;
+    align-items: center;
+
     position: sticky;
     top: 0;
-    background-color: var(--page-background-color-rgba);
     backdrop-filter: blur(0.5rem);
-    border: none;
+    
+    border: 1px solid gray;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px dotted;
 
     text-align: center;
-    margin: var(--zero-margin) var(--zero-margin) var(--grid-gap-margin) var(--zero-margin);
     padding-top: var(--grid-gap-margin) ;
     padding-bottom: var(--grid-gap-margin) ;
-    border-bottom: 1px dotted;
-}	
-h1 {
-
+    
 }
 
-.all-projects-section-title {
+#main-title {
+    overflow-wrap: normal;
+}
+
+#projects-header {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -102,16 +99,19 @@ h1 {
 
 .library-icon {
     display: inline;
-    filter: invert(90%);
     width: var(--icon-size);
 }
 
-
+.projects-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+}
 .project-item {
     text-align: center;
     transition: all 200ms;
     box-shadow: -4px 4px 0px 1px gray;
-    margin: var(--grid-gap-margin) var(--zero-margin);
+    margin: 0 var(--grid-gap-margin);
     border: 1px solid;
 }
 
@@ -130,39 +130,48 @@ h1 {
     padding: 1rem;
     border:none;
 }
-.project-link:hover {
-    
-}
 
-footer {
+
+#footer {
+    background-color: var(--page-background-color-rgba);
+    grid-column: 1;
     display: grid;
     justify-items: stretch;
     grid-template-columns: 1fr;
     row-gap: 0;
-    justify-content: center;
+
+    
     position: sticky;
     bottom: 0;
-    background-color: var(--page-background-color-rgba);
     backdrop-filter: blur(0.5rem);
+    
     text-align: center;
     border-top: 1px dotted;
-    border-right: 1px solid gray;
-    border-bottom: 1px solid gray;
-    border-left: 1px solid gray;
-    padding: 1rem 0;
+    border-right: none;
+    border-left: none;
+
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
 }
-footer > hr{
+.my-hr{
     width: 17.5%;
     border: none;
     border-bottom: 1px dotted snow;
     justify-self: center;
-    margin: 1rem 0;
 
 }
-footer *{
+#footer *{
     margin: 0;
 }
+#footer-by {
+    padding-top: 0.25rem;
+}
+#footer-name {
+    padding: 0.25rem 0;
+}
 .footer-link {
+    align-self: stretch;
     display: grid;
     grid-template-columns: minmax(0,1fr) 2fr minmax(0,0.5fr);
     text-decoration: none;
@@ -181,7 +190,6 @@ footer *{
 }
 .footer-link-icon {
     display: inline;
-    filter: invert(90%);
     height: var(--contact-icon-size);
     justify-self: right;    
 }
