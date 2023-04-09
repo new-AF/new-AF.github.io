@@ -241,9 +241,3 @@ responive mode */
 	}
 
 }
-@media screen and (max-width: 805px) {
-	body {
-		background-color: red;
-	}
-
-}
