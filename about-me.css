@@ -213,12 +213,3 @@ a {
     height: 2rem;
     justify-self: center;
 }
-
-/* if viewport is <803px switch to
-responive mode */
-@media screen and (max-width: 805px) {
-	body {
-		background-color: red;
-	}
-
-}
