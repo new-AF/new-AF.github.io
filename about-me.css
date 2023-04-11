@@ -36,7 +36,7 @@ body {
     display: grid;
     
     grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr);
-    grid-template-rows: minmax(auto, 1fr) minmax(auto, 0.175fr);
+    grid-template-rows: minmax(auto, 1fr) minmax(auto, 1fr);
     row-gap: 2rem;
     
     align-content: center;
@@ -105,7 +105,7 @@ a {
     height: calc( var(--icon-size) / 2 );
 }
 #main-title {
-    grid-column: 2;
+    grid-column: 1 / span 3;
     grid-row: 1;
     overflow-wrap: normal;
 }
@@ -113,7 +113,12 @@ a {
     align-self: stretch;
     display: grid;
     grid-template-columns: repeat(auto-fill,1fr);
+    grid-template-rows: 1fr 1fr 2fr;
     align-items: center;
+}
+.about-me-list {
+    display: grid;
+    align-content: space-around;
 }
 .about-me-text {
     font-style: italic;
@@ -131,22 +136,29 @@ a {
 .contact-section {
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
 
     justify-items: stretch;
 
-    column-gap: 1rem;
+    gap: 1rem;
 
 }
 /*-------------------------*/
-
+.contact-link-portfolio {
+    grid-column: 1 ;
+    grid-row: 1 / span 2;
+    font-size: 2rem;
+    font-weight: bold;
+}
 .contact-link-linkedin {
     grid-column: 1;
-    grid-row: 1;
+    grid-row: 3;
 }
 .contact-link-github {
-    grid-column: 2;
-    grid-row: 1;
+    grid-column: 1;
+    grid-row: 4;
 }
 
 
@@ -192,19 +204,20 @@ a {
     display: grid;
     grid-template-columns: 0.25fr 1fr;
     text-decoration: none;
+    border-radius: 1rem;
     align-items: center;
     justify-content: center;
     justify-items: stretch;
     gap: calc(var(--icon-gap) / 2);
     flex-wrap: wrap;
-    border: 1px solid gray;
+    border: medium solid gray;
     padding: 0.5rem 0;
     transition: all 200ms;
 
 }
 .contact-link:hover {
     backdrop-filter: brightness(2);
-    border: 1px solid snow;
+    border: medium solid snow;
     font-weight: bold;
 
 }
