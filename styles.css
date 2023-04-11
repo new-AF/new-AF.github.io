@@ -77,8 +77,9 @@ a {
     backdrop-filter: blur(0.5rem);
     
     border: none;
-
     border-bottom: 1px dotted;
+    /*border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;*/
 
     text-align: center;
     padding: var(--grid-gap-margin) ;
@@ -96,7 +97,7 @@ a {
     background-color: transparent;
     border: 1px solid gray;
 
-    grid-column: 1;
+    grid-column: 3;
     grid-row: 1;
 
     transition: all 200ms;
@@ -234,14 +235,4 @@ a {
     display: inline;
     height: var(--contact-icon-size);
     justify-self: right;    
-}
-
-/* if viewport is <803px switch to
-responive mode */
-@media screen and (max-width: 1300px) {
-	#main-header {
-		padding-left: 0;
-        padding-right: 0;
-	}
-
 }
