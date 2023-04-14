@@ -16,6 +16,7 @@
 
 * {
     margin: 0;
+    padding: 0;
     font-family: "Consolas", "Lucida Console", monospace, "Tahoma", sans-serif;
 }
 
@@ -50,7 +51,7 @@ a {
 .icon {
     filter: invert(0.9);
 }
-.theiframe {
+.iframe {
     grid-column: 2;
     grid-row: 1/4;
     align-self: stretch;
@@ -84,7 +85,6 @@ a {
     border-bottom-left-radius: 1rem;*/
 
     text-align: center;
-    padding: var(--grid-gap-margin) ;
 
    
     
@@ -212,16 +212,11 @@ a {
     justify-self: center;
 
 }
-#footer *{
-
-}
 #footer-by {
     font-size: 0.9rem;
     align-self: center;
 }
-#footer-name {
 
-}
 .footer-link {
     align-self: stretch;
     display: grid;
@@ -244,4 +239,11 @@ a {
     display: inline;
     height: var(--contact-icon-size);
     justify-self: right;    
+}
+
+/* if viewport is <803px switch to
+responive mode */
+@media screen and (max-width: 1300px) {
+
+
 }
