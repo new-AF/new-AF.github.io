@@ -12,6 +12,9 @@
     --icon-gap: 1rem;
     --portfolio-width: 25%;
     --iframe-width: calc(100% - var(--portfolio-width));
+
+    /* body */
+    --body-bg: linear-gradient(to right bottom, #2f4f4f, #096056, #007052, #007e41, #228b22);
 }
 
 * {
@@ -22,7 +25,8 @@
 
 body {
     
-    background-image: linear-gradient(to right bottom, #2f4f4f, #096056, #007052, #007e41, #228b22);    color: var(--text-color);
+    background-image: var(--body-bg);
+    color: var(--text-color);
     min-height: 100vh;
     
     display: grid;
@@ -120,7 +124,16 @@ a {
     grid-row: 1;
     overflow-wrap: normal;
 }
+.projects-section {
+    display: grid;
+    grid-template-columns: 1fr;
 
+    grid-template-rows: 2fr;
+    grid-auto-flow: row;
+    grid-auto-rows: 5rem;
+
+    row-gap: 1rem;
+}
 .projects-header {
     margin-top: 2rem;
     display: grid;
@@ -145,11 +158,6 @@ a {
     width: var(--icon-size);
 }
 
-.projects-section {
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: 2rem;
-}
 .project-item {
     display: grid;
     align-content: center;
@@ -158,27 +166,40 @@ a {
     text-align: center;
     transition: all 200ms;
     box-shadow: -4px 4px 0px 1px gray;
-    margin: 0 var(--grid-gap-margin);
-    margin-bottom: -0.5rem;
-    border: 1px solid;
+    /* margin: 0 var(--grid-gap-margin); */
+    margin-left: 5px;
+    border: thin solid gray;
+    text-decoration: none;
+
 }
 
 .project-item:hover {
-    backdrop-filter: brightness(1.5);
-    box-shadow: -4px 4px 0px 1px snow;
+    backdrop-filter: brightness(1.25);
+    box-shadow: -4px 3px 0px 1px snow;
+    
+    border: none;
+    border-bottom: thin solid snow;
+    border-left: thin solid snow;
+    border-top-color: transparent;
+    border-right-color: transparent;
+
+
 }	
 
 .project-item:active {
     box-shadow: -4px 4px 0px 1px black;
+    border: none;
 }	
 
 .project-link {
     display: block;
-    text-decoration: none;
     padding: 1rem;
     border:none;
+    
 }
 
+.project-link:hover {
+}
 
 #footer {
     background-color: var(--page-background-color-rgba);
