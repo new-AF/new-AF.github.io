@@ -1,8 +1,10 @@
 :root {
     --text-color: snow;
     --transparent-color: transparent;
+
     --page-background-color: darkslategray;
     --page-background-color-rgba: rgba(47, 79, 79, 0.5);
+
     --box-shadow-color: gray;
     --zero-margin: 0px;
     --project-ink-border-width: 1px;
@@ -31,7 +33,7 @@ body {
     
     display: grid;
     grid-template-columns: minmax(0,var(--portfolio-width)) minmax(0,var(--iframe-width));
-    grid-template-rows: 6% 1fr 6%; /*1fr 10fr 1fr*/
+    grid-template-rows: 5rem 1fr 5rem; /*1fr 10fr 1fr*/
     align-content: stretch;
     align-items: stretch;
     justify-items: stretch;
@@ -67,7 +69,9 @@ a {
     left: calc(var(--portfolio-width));
     width: calc(var(--iframe-width));
     height: calc(100%);
-    border: 1px solid gray;
+    
+    border: thin solid gray;
+    
 }
 
 #main-header {
@@ -84,7 +88,7 @@ a {
     backdrop-filter: blur(0.5rem);
     
     border: none;
-    border-bottom: 1px dotted;
+    border-bottom: thin dashed gray;
     /*border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 1rem;*/
 
@@ -160,6 +164,7 @@ a {
 
 .project-item {
     display: grid;
+    
     align-content: center;
     border-radius: 1rem;
 
@@ -167,7 +172,8 @@ a {
     transition: all 200ms;
     box-shadow: -4px 4px 0px 1px gray;
     /* margin: 0 var(--grid-gap-margin); */
-    margin-left: 5px;
+    margin-left: 4px;
+    
     border: thin solid gray;
     text-decoration: none;
 
@@ -175,14 +181,9 @@ a {
 
 .project-item:hover {
     backdrop-filter: brightness(1.25);
-    box-shadow: -4px 3px 0px 1px snow;
+    box-shadow: -4px 4px 0px 1px snow;
     
-    border: none;
-    border-bottom: thin solid snow;
-    border-left: thin solid snow;
-    border-top-color: transparent;
-    border-right-color: transparent;
-
+    border-color: snow;
 
 }	
 
@@ -190,16 +191,6 @@ a {
     box-shadow: -4px 4px 0px 1px black;
     border: none;
 }	
-
-.project-link {
-    display: block;
-    padding: 1rem;
-    border:none;
-    
-}
-
-.project-link:hover {
-}
 
 #footer {
     background-color: var(--page-background-color-rgba);
@@ -218,7 +209,7 @@ a {
     backdrop-filter: blur(0.5rem);
     
     text-align: center;
-    border-top: 1px dotted;
+    border-top: thin dashed gray;
     border-right: none;
     border-left: none;
 
