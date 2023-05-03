@@ -44,7 +44,12 @@ body {
     display: grid;
     /* grid-template-columns: minmax(0,var(--portfolio-rows-height)) minmax(0,var(--iframe-height)); */
     grid-template-columns: 4rem 1fr 4rem;
-    grid-template-rows: 10% minmax(0%, 80%) 10%; /*1fr 10fr 1fr*/
+    grid-template-rows: 5rem 1fr 5rem;
+    grid-template-areas:
+        "header header header"
+        "left main right"
+        "footer footer footer"
+        ;
     
     
     column-gap: 0rem;
@@ -52,8 +57,7 @@ body {
 }
 
 #portfolio {
-    grid-column: 2;
-    grid-row: 2;
+    grid-area: "main";
     
     display: grid;
     
@@ -67,9 +71,7 @@ body {
     border: none;
     
     
-    background-color: red;
-
-     overflow-x: scroll;
+    overflow-x: scroll;
     
     /* .project-item s */
     align-content: center;
@@ -77,11 +79,8 @@ body {
     background: transparent;
 
     column-gap: 5rem;
-
-/*     padding-right: 5rem;
-    padding-left: 5rem; */
-
 }
+
 .scroll-button {
     display: grid;
     justify-content: center;
@@ -111,15 +110,13 @@ body {
     outline: none;
 }
 .scroll-left {
-    grid-column: 1;
-    grid-row: 2;
+    grid-area: left;
     
 /*     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem; */
 }
 .scroll-right {
-    grid-column: 3;
-    grid-row: 2;
+    grid-area: right;
 
 /*     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem; */
@@ -213,10 +210,7 @@ a {
     filter: invert(0.9);
 }
 .iframe-home {
-    
-
-    grid-column: 1;
-    grid-row: 2;
+    grid-area: main;
     
     align-self: stretch;
     justify-self: stretch;
@@ -331,8 +325,7 @@ a {
 
 
 #footer {
-    grid-column: 1/span 3;
-    grid-row: 3;
+    grid-area: footer;
     
     background-color: var(--page-bg-rgba);
     
@@ -380,7 +373,46 @@ a {
 }
 /* if viewport is <803px switch to
 responive mode */
-@media screen and (max-width: 1300px) {
-
+@media screen and (max-width: 640px) {
+    #main-header {
+        position: sticky;
+        top: 0;
+    }
+    #portfolio {
+        grid-area: "main";
+        
+        display: grid;
+        
+        grid-auto-flow: row;
+    
+        /* try make projects cards a square */
+        /* card width */
+        grid-auto-rows: 18rem;
+    
+    
+        border: none;
+        overflow: hidden;
+        
+        padding: 2.5rem 0;
+   
+        
+        /* .project-item s */
+        align-content: center;
+        justify-content: center;
+    
+        /* background: red; */
+    
+        row-gap: 5rem;
+    }
+    
+    .scroll-left, .scroll-right {
+       
+        height :0;
+        visibility :hidden;
+    }
+    #footer {
+        position: sticky;
+        bottom: 0;
+    }
 
 }

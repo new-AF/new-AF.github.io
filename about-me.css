@@ -24,7 +24,7 @@ body {
     
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(auto, 0.25fr) minmax(auto, 5fr) minmax(auto, 0.25fr);
+    grid-template-rows: 5rem 1fr 5rem;
     align-content: stretch;
     align-items: stretch;
     justify-items: stretch;
@@ -79,8 +79,6 @@ a {
     text-align: center;
     padding-top: var(--grid-gap-margin) ;
     padding-bottom: var(--grid-gap-margin) ;
-
-    margin-bottom: 1rem;
     
 }
 #back-button {
