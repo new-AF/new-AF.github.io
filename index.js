@@ -30,24 +30,44 @@ const iframeClose= document.querySelector("#iframe-home-close");
 
 const getPortfolioWidth= ()=>portfolio.scrollWidth;
 
-scrollLeftFunction= event=>{
+const scrollLeftFunction= event=>{
     const target= event.target;
 
     const width= getPortfolioWidth();
-    const chunk= width / 50;
+    const chunk= width / 10;
 
     portfolio.scrollLeft -= chunk;
 
 };
 
-scrollRightFunction= event=>{
+const scrollRightFunction= event=>{
     const target= event.target;
 
     const width= getPortfolioWidth();
-    const chunk= width / 50;
+    const chunk= width / 10;
 
     portfolio.scrollLeft += chunk;
 
+};
+
+const onScroll= event =>{
+    const width= getPortfolioWidth() - portfolio.clientWidth;
+    const x= event.target.scrollLeft;
+
+    // console.log('--x=',x,'--width=',width);
+   
+    if(x==width){
+        scrollRight.classList.add('scroll-right-hide');
+    }
+    else {
+        scrollRight.classList.remove('scroll-right-hide');
+        if(x>0){
+            scrollLeft.classList.remove('scroll-left-hide');
+        }
+        else if(x==0){
+            scrollLeft.classList.add('scroll-left-hide');
+        }
+    }
 };
 // other statements
 
@@ -69,28 +89,12 @@ projects.forEach(element=> {
 iframeClose.onclick= e=> hideIframe();
 
 scrollLeft.onclick= scrollLeftFunction;
-scrollLeft.onmousedown= scrollLeftFunction;
+// scrollLeft.onmousedown= scrollLeftFunction;
 
 scrollRight.onclick= scrollRightFunction;
-scrollRight.onmousedown= scrollRightFunction;
+// scrollRight.onmousedown= scrollRightFunction;
 
-portfolio.onscroll= event =>{
-    const width= getPortfolioWidth() - portfolio.clientWidth;
-    const x= event.target.scrollLeft;
+// portfolio.onscroll= onScroll;
 
-    // console.log('--x=',x,'--width=',width);
-   
-    if(x==width){
-        scrollRight.classList.add('scroll-right-hide');
-    }
-    else {
-        scrollRight.classList.remove('scroll-right-hide');
-        if(x>0){
-            scrollLeft.classList.remove('scroll-left-hide');
-        }
-        else if(x==0){
-            scrollLeft.classList.add('scroll-left-hide');
-        }
-    }
-
-};
+/* set initially */
+// portfolio.onload= onScroll;

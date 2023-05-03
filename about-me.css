@@ -74,7 +74,7 @@ a {
 
     border: none;
 
-    border-bottom: 1px dotted;
+    border-bottom: 1px dashed gray;
 
     text-align: center;
     padding-top: var(--grid-gap-margin) ;
@@ -180,7 +180,7 @@ a {
     backdrop-filter: blur(0.5rem);
     
     text-align: center;
-    border-top: 1px dotted;
+    border-top: 1px dashed gray;
     border-right: none;
     border-left: none;
 

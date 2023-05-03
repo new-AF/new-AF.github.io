@@ -6,7 +6,8 @@
 
     --icon-size: 2rem;
     --contact-icon-size: 1rem;
-    
+
+    --transition: ease-in-out 200ms;
 
     /* body */
     
@@ -26,6 +27,7 @@
 
     --projects-header-icon-gap: 1rem;
 
+    
 
 }
 
@@ -57,7 +59,8 @@ body {
 }
 
 #portfolio {
-    grid-area: "main";
+    align-self:center;
+    grid-area: main;
     
     display: grid;
     
@@ -78,33 +81,41 @@ body {
 
     background: transparent;
 
-    column-gap: 5rem;
+    column-gap: 4.5rem;
+    padding: 2.5rem 0;
 }
 
 .scroll-button {
+    visibility :hidden; 
+
     display: grid;
     justify-content: center;
     align-items: center;
     
-    font-weight: bold;
-    font-size: 2rem;
+    /* font-weight: bold; */
+    font-size: 4rem;
     
     
     z-index: 99;
     
-    background: var(--page-bg-rgba);
+    background: transparent;
     
     backdrop-filter: blur(0.5rem);
     
-    filter: brightness(1.5);
+    /* filter: brightness(1.5); */
     border: medium solid transparent;
     
     /* border-radius: 1rem; */
     color: snow;
 
     cursor: pointer;
-    
 
+    transition: filter var(--transition);
+
+}
+.scroll-button:hover {
+    filter: brightness(1.25);
+    
 }
 .scroll-button:focus-visible {
     outline: none;
@@ -122,11 +133,11 @@ body {
     border-bottom-left-radius: 1rem; */
 }
 .scroll-left-hide {
-    height :0;
+    /* height :0; */
     visibility :hidden;
 }
 .scroll-right-hide {
-    height :0;
+    /* height :0; */
     visibility :hidden;
 }
 .project-item {
@@ -270,6 +281,9 @@ a {
 
 }
 #main-header {
+    position: sticky;
+    top: 0;
+    
     grid-column: 1/span 3;
     grid-row: 1;
 
@@ -325,6 +339,10 @@ a {
 
 
 #footer {
+    
+    position: sticky;
+    bottom: 0;
+    
     grid-area: footer;
     
     background-color: var(--page-bg-rgba);
@@ -374,12 +392,12 @@ a {
 /* if viewport is <803px switch to
 responive mode */
 @media screen and (max-width: 640px) {
-    #main-header {
+/*     #main-header {
         position: sticky;
         top: 0;
-    }
+    } */
     #portfolio {
-        grid-area: "main";
+        grid-area: main;
         
         display: grid;
         
@@ -392,8 +410,6 @@ responive mode */
     
         border: none;
         overflow: hidden;
-        
-        padding: 2.5rem 0;
    
         
         /* .project-item s */
