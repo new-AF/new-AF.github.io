@@ -31,6 +31,7 @@
         class="project-item"
         href="https://codepen.io/user-af/embed/GRBGRMJ?default-tab="
         target="iframe1"
+        myRepoLink="https://github.com/new-AF/fcc-certification-project-25-5-clock"
       >
         <img
           class="project-item-image"
@@ -64,6 +65,7 @@
         class="project-item"
         href="https://codepen.io/user-af/embed/qByPBYp?default-tab="
         target="iframe1"
+        myRepoLink="https://github.com/new-AF/fcc-certification-project-javascript-calculator"
       >
         <img
           class="project-item-image"
@@ -110,6 +112,7 @@
         class="project-item"
         href="https://codepen.io/user-af/embed/LYgbNQd?default-tab="
         target="iframe1"
+        myRepoLink="https://github.com/new-AF/binary-decimal-hex-converter"
       >
         <img
           class="project-item-image"
@@ -145,6 +148,7 @@
         class="project-item"
         href="https://codepen.io/user-af/embed/wvxoOWe?default-tab="
         target="iframe1"
+        myRepoLink="https://github.com/new-AF/fcc-certification-project-markdown-previewer"
       >
         <img
           class="project-item-image"
@@ -289,16 +293,25 @@
     <article id="iframe-outer-container" class="iframe-outer-container hide">
       <section id="iframe-container">
         
+        <!-- X button  -->
         <button id="iframe-outer-container-close">
           <img id="iframe-outer-container-close-icon" class="invert-icon" src="assets/xmark-solid.svg" />
           <p id="iframe-outer-container-close-text">Close</p>
         </button>
         
+        <!-- iframe -->
         <iframe
           id="iframe"
           name="iframe1"
           title="Selected Project running live, hosted remotely on CodePen.io"
         ></iframe>
+
+
+        <!-- github repo link -->
+        <a id="iframe-repo-link" target="_blank">
+          <img id="iframe-repo-link-icon" class="invert-icon" src="assets/arrow-up-right-from-square-solid.svg">
+          <span>GitHub Repository</span>
+        </a>
       </section>
     </article>
 
@@ -310,12 +323,16 @@
   <script>
     const button=document.querySelector('#iframe-outer-container-close');
     const iframeOuterContainer=document.querySelector('#iframe-outer-container');
+    const repoLink=document.querySelector('#iframe-repo-link');
     const projectsTemp=document.querySelectorAll('.project-item');
     const projects=Array.from(projectsTemp);
 
+    // X Close
     button.onclick=event=>{
         iframeOuterContainer.classList.remove('show');
         iframeOuterContainer.classList.add('hide');
+
+
       }
     projects.forEach(el=>{
       //on click show `#iframe-outer-container-close`
@@ -323,6 +340,17 @@
         iframeOuterContainer.classList.remove('hide');
         iframeOuterContainer.classList.add('show');
 
+        // set repo link
+        const linkTemp= el.getAttribute('myRepoLink');
+        const link= linkTemp===null ? '' : linkTemp;
+        repoLink.setAttribute('href', link);
+        repoLink.classList.remove('hide');
+        repoLink.classList.add('show');
+
+        // hide element
+        if(linkTemp === null){
+          repoLink.classList.add('hide');
+          repoLink.classList.remove('show');        }
       }
 
       // // initially set class `.scale-90` on all `.project-item-image`

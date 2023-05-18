@@ -118,10 +118,11 @@ body {
 
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 10fr;
+  grid-template-rows: 1fr 9fr 1fr;
   grid-template-areas:
     ". button"
-    "iframe iframe";
+    "iframe iframe"
+    "link link";
 
   /* background-color: red; */
   border: var(--medium-border);
@@ -168,7 +169,24 @@ body {
   border: none;
   border-top: var(--medium-border);
 }
-
+#iframe-repo-link {
+  grid-area: link;
+  text-decoration: none;
+  color: var(--text-color);
+  display: grid;
+  grid-template-columns: auto auto;
+  place-items: center;
+  justify-content: center; /* important */
+  cursor: pointer;
+  gap: 0 1rem;
+}
+#iframe-repo-link:hover {
+  backdrop-filter: brightness(1.25);
+}
+#iframe-repo-link-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
 /* --------------- #portfolio --------------- */
 .library-icon {
   width: 1.25rem;
@@ -210,7 +228,7 @@ body {
   --border-radius: 1rem;
 
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 20% 2fr;
   grid-template-rows: 2fr 1fr;
   grid-template-areas:
     "image image"
