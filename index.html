@@ -13,10 +13,101 @@
   <body>
     <header id="main-header">
       <h1 id="main-title">Portfolio</h1>
+
+      <button id="popup-menu-button" href="./about-me.html">
+        <img
+          id="popup-menu-button-icon"
+          class="icon"
+          src="assets/bars-solid.svg"
+          alt="Popup Menu icon"
+        />
+        <span id="popup-home-button-text">Menu</span>
+      </button>
+
+      <a id="home-button" href="./about-me.html">
+        <img
+          id="home-button-icon"
+          class="icon"
+          src="assets/house-solid.svg"
+          alt="Home page icon"
+        />
+        <span id="home-button-text">About me</span>
+      </a>
+
     </header>
+
+
 
     <button class="scroll-left scroll-button scroll-left-hide">&#706;</button>
     <button class="scroll-right scroll-button">&#707;</button>
+
+    <section id="menu-container">
+      <article id="menu">
+        <h2 id="menu-title">Menu</h2>
+        <button id="popup-menu-close-button">
+        <img
+          id="menu-close"
+          src="assets/xmark-solid.svg"
+          alt="Menu Close icon"
+        />
+        </button>
+        <p id="menu-desc">
+          Please tap to select which projects to show based on tech stack
+        </p>
+
+        <div class="popup-menu-item" id="popup-menu-item-featured">
+          <img class="menu-item-icon" src="./assets/star-solid.svg" alt="Star icon">
+          <h2 class="menu-item-text">Only Show Featured Projects</h2>
+          <img class="menu-item-select-mark" src="./assets/check-solid.svg" alt="Checkmark icon">
+        </div>
+        
+        <p id="popup-menu-desc-2">
+          Other projects
+        </p>
+        
+<!--         <div class="popup-menu-item">
+          <img class="menu-item-icon" src="./assets/react.svg" alt="React library icon">
+          <h2 class="menu-item-text">All React Projects</h2>
+          <img class="menu-item-select-mark" src="./assets/check-solid.svg" alt="Checkmark icon">
+        </div>
+
+        <div class="popup-menu-item">
+          <img class="menu-item-icon" src="./assets/css3.svg" alt="CSS icon">
+          <h2 class="menu-item-text">All CSS Projects</h2>
+          <img class="menu-item-select-mark" src="./assets/check-solid.svg" alt="Checkmark icon">
+        </div>        
+
+        <div class="popup-menu-item">
+          <img class="menu-item-icon" src="./assets/html5.svg" alt="CSS icon">
+          <h2 class="menu-item-text">All HTML Projects</h2>
+          <img class="menu-item-select-mark" src="./assets/check-solid.svg" alt="Checkmark icon">
+        </div>   -->
+
+        <table id="popup-menu-table">
+
+          <tr class="popup-menu-table-item">
+            <td>
+              <img class="menu-item-icon" src="./assets/react.svg" alt="React library icon">
+            </td>
+            <td>All React Projects</td>
+            <td>
+              <img class="menu-item-select-mark" src="./assets/check-solid.svg" alt="Checkmark icon">
+            </td>
+          </tr>
+          <!-- css projects -->
+          <tr class="popup-menu-table-item">
+            <td>
+              <img class="menu-item-icon" src="./assets/css3.svg" alt="CSS icon">
+            </td>
+            <td>All CSS Projects</td>
+            <td>
+              <img class="menu-item-select-mark" src="./assets/check-solid.svg" alt="Checkmark icon">
+            </td>
+          </tr>
+        </table>
+
+      </article>
+    </section>
 
     <section id="portfolio">
       <a
@@ -30,22 +121,26 @@
         />
         <span class="project-item-text">Work Break timer</span>
 
-        <header class="projects-header react-redux-bg">
-          <span class="projects-header-icons">
+        <ul class="project-stack react-redux-bg">
+          <li class="project-stack-item">
             <img
               class="icon library-icon"
               src="assets/react.svg"
               alt="React library icon"
             />
+            <h3 class="project-stack-name">React</h3>
+          </li>
+
+          <li class="project-stack-item"></span>
             <img
               class="icon library-icon"
               src="assets/redux.svg"
               alt="Redux library icon"
             />
-          </span>
+            <h3 class="project-stack-name">Redux</h3>
+          </li>
+          </ul>
 
-          <h3 class="projects-header-name">React Redux</h3>
-        </header>
       </a>
 
       <a
@@ -59,35 +154,38 @@
         />
         <span class="project-item-text">Calculator</span>
 
-        <header class="projects-header react-redux-bg">
-          <span class="projects-header-icons">
+        <ul class="project-stack react-redux-bg">
+          <li class="project-stack-item">
             <img
               class="icon library-icon"
               src="assets/react.svg"
               alt="React library icon"
             />
+            <h3 class="project-stack-name">React</h3>
+          </li>
+
+          <li class="project-stack-item"></span>
             <img
               class="icon library-icon"
               src="assets/redux.svg"
               alt="Redux library icon"
             />
-          </span>
-
-          <h3 class="projects-header-name">React Redux</h3>
-        </header>
+            <h3 class="project-stack-name">Redux</h3>
+          </li>          
+          </ul>
       </a>
 
       <!-- 		<a class="project-item" href="https://codepen.io/user-af/embed/MWBpLMp?default-tab=" target="iframe1">			
 			<img class="project-item-image" src="assets/1 react redux 3 drum machine.png"/>
 			<span class="project-item-text">Drum Machine</span>
 
-			<header class="projects-header react-redux-bg">
-				<span class="projects-header-icons">
+			<header class="project-stack react-redux-bg">
+				<span class="project-stack-item">
 					<img class="icon library-icon" src="assets/react.svg" alt="React library icon"/>
 					<img class="icon library-icon" src="assets/redux.svg" alt="Redux library icon"/>
 				</span>
 
-				<h3 class="projects-header-name">React Redux</h3>
+				<h3 class="project-stack-name">React Redux</h3>
 			</header>	
 		</a> -->
 
@@ -101,25 +199,28 @@
           src="assets/1 react redux 4 binary hex decimal.png"
         />
         <span class="project-item-text"
-          >Binary - Hexadecimal - Decimal converter</span
+          >Binary | Hex | Decimal converter</span
         >
 
-        <header class="projects-header react-redux-bg">
-          <span class="projects-header-icons">
+        <ul class="project-stack react-redux-bg">
+          <li class="project-stack-item">
             <img
               class="icon library-icon"
               src="assets/react.svg"
               alt="React library icon"
             />
+            <h3 class="project-stack-name">React</h3>
+          </li>
+
+          <li class="project-stack-item"></span>
             <img
               class="icon library-icon"
               src="assets/redux.svg"
               alt="Redux library icon"
             />
-          </span>
-
-          <h3 class="projects-header-name">React Redux</h3>
-        </header>
+            <h3 class="project-stack-name">Redux</h3>
+          </li>
+          </ul>
       </a>
 
       <!-- react only	 -->
@@ -134,27 +235,27 @@
         />
         <span class="project-item-text">Markdown Viewer</span>
 
-        <header class="projects-header react-bg">
-          <span class="projects-header-icons">
+        <ul class="project-stack react-redux-bg">
+          <li class="project-stack-item">
             <img
               class="icon library-icon"
               src="assets/react.svg"
               alt="React library icon"
             />
-          </span>
-          <h3 class="projects-header-name">React only</h3>
-        </header>
+            <h3 class="project-stack-name">React</h3>
+          </li>
+          </ul>
       </a>
 
       <!-- 		<a class="project-item" href="https://codepen.io/user-af/embed/NWBbMYZ?default-tab=" target="iframe1">
 			<img class="project-item-image" src="assets/2 react 2 random quotes.png"/>
 			<span class="project-item-text">Random Quotes</span>
 
-			<header  class="projects-header react-bg">
-				<span class="projects-header-icons">
+			<header  class="project-stack react-bg">
+				<span class="project-stack-item">
 					<img class="icon library-icon" src="assets/react.svg" alt="React library icon"/>		
 				</span>
-				<h3 class="projects-header-name">React only</h3>
+				<h3 class="project-stack-name">React only</h3>
 			</header>
 		</a> -->
 
@@ -164,13 +265,13 @@
 			<img class="project-item-image" src="assets/3 html5 css3 1 personal portfolio.png"/>
 			<span class="project-item-text">Personal Portfolio</span>
 
-			<header  class="projects-header html5-bg">
-				<span class="projects-header-icons">
+			<header  class="project-stack html5-bg">
+				<span class="project-stack-item">
 					<img class="icon library-icon" src="assets/html5.svg" alt="HTML5 icon"/>
 					<img class="icon library-icon" src="assets/css3.svg" alt="CSS3 icon"/>				
 				</span>
 
-				<h3 class="projects-header-name">HTML + CSS</h3>
+				<h3 class="project-stack-name">HTML + CSS</h3>
 			</header>
 		</a> -->
 
@@ -185,22 +286,24 @@
         />
         <span class="project-item-text">Product Page</span>
 
-        <header class="projects-header html5-bg">
-          <span class="projects-header-icons">
+        <ul class="project-stack html5-bg">
+          <li class="project-stack-item">
             <img
               class="icon library-icon"
               src="assets/html5.svg"
               alt="HTML5 icon"
             />
+            <h3 class="project-stack-name">HTML</h3>
+          </li>
+          <li class="project-stack-item">
             <img
               class="icon library-icon"
               src="assets/css3.svg"
               alt="CSS3 icon"
             />
-          </span>
-
-          <h3 class="projects-header-name">HTML + CSS</h3>
-        </header>
+            <h3 class="project-stack-name">CSS</h3>
+          </li>
+        </ul>
       </a>
 
       <a
@@ -214,22 +317,24 @@
         />
         <span class="project-item-text">Technical Documentation</span>
 
-        <header class="projects-header html5-bg">
-          <span class="projects-header-icons">
+        <ul class="project-stack html5-bg">
+          <li class="project-stack-item">
             <img
               class="icon library-icon"
               src="assets/html5.svg"
               alt="HTML5 icon"
             />
+            <h3 class="project-stack-name">HTML</h3>
+          </li>
+          <li class="project-stack-item">
             <img
               class="icon library-icon"
               src="assets/css3.svg"
               alt="CSS3 icon"
             />
-          </span>
-
-          <h3 class="projects-header-name">HTML + CSS</h3>
-        </header>
+            <h3 class="project-stack-name">CSS</h3>
+          </li>
+        </ul>
       </a>
 
       <a
@@ -243,22 +348,24 @@
         />
         <span class="project-item-text">Survey Form</span>
 
-        <header class="projects-header html5-bg">
-          <span class="projects-header-icons">
+        <ul class="project-stack html5-bg">
+          <li class="project-stack-item">
             <img
               class="icon library-icon"
               src="assets/html5.svg"
               alt="HTML5 icon"
             />
+            <h3 class="project-stack-name">HTML</h3>
+          </li>
+          <li class="project-stack-item">
             <img
               class="icon library-icon"
               src="assets/css3.svg"
               alt="CSS3 icon"
             />
-          </span>
-
-          <h3 class="projects-header-name">HTML + CSS</h3>
-        </header>
+            <h3 class="project-stack-name">CSS</h3>
+          </li>
+        </ul>
       </a>
     </section>
 
@@ -266,6 +373,7 @@
       <section class="iframe-home-2">
         <button id="iframe-home-close">
           <img id="iframe-home-close-image" src="assets/xmark-solid.svg" />
+          <p>Close</p>
         </button>
         <iframe
           id="iframe"
@@ -276,15 +384,6 @@
     </article>
 
     <footer id="footer">
-      <a id="back-button" href="./about-me.html">
-        <img
-          id="back-button-icon"
-          class="icon"
-          src="assets/house-solid.svg"
-          alt="Home shape icon"
-        />
-        <span>About me</span>
-      </a>
       <p id="footer-by">Copyright &#169; 2023 Abdullah Fatota.</p>
     </footer>
   </body>
