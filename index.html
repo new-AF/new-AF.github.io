@@ -8,26 +8,16 @@
     <title>Abdullah Fatota Portfolio</title>
   </head>
 
-  <link href="index.css" rel="stylesheet" />
+  <link href="index2.css" rel="stylesheet" />
 
   <body>
-    <header id="main-header">
-      <h1 id="main-title">Portfolio</h1>
-
-      <button id="popup-menu-button" href="./about-me.html">
-        <img
-          id="popup-menu-button-icon"
-          class="icon"
-          src="assets/bars-solid.svg"
-          alt="Popup Menu icon"
-        />
-        <span id="popup-home-button-text">Menu</span>
-      </button>
+    <header id="header">
+      <h1 id="title">Portfolio</h1>
 
       <a id="home-button" href="./about-me.html">
         <img
           id="home-button-icon"
-          class="icon"
+          class="invert-icon"
           src="assets/house-solid.svg"
           alt="Home page icon"
         />
@@ -36,84 +26,12 @@
 
     </header>
 
-
-
-    <button class="scroll-left scroll-button scroll-left-hide">&#706;</button>
-    <button class="scroll-right scroll-button">&#707;</button>
-
-    <section id="menu-container">
-      <article id="menu">
-        <h2 id="menu-title">Menu</h2>
-        <button id="popup-menu-close-button">
-        <img
-          id="menu-close"
-          src="assets/xmark-solid.svg"
-          alt="Menu Close icon"
-        />
-        </button>
-        <p id="menu-desc">
-          Please tap to select which projects to show based on tech stack
-        </p>
-
-        <div class="popup-menu-item" id="popup-menu-item-featured">
-          <img class="menu-item-icon" src="./assets/star-solid.svg" alt="Star icon">
-          <h2 class="menu-item-text">Only Show Featured Projects</h2>
-          <img class="menu-item-select-mark" src="./assets/check-solid.svg" alt="Checkmark icon">
-        </div>
-        
-        <p id="popup-menu-desc-2">
-          Other projects
-        </p>
-        
-<!--         <div class="popup-menu-item">
-          <img class="menu-item-icon" src="./assets/react.svg" alt="React library icon">
-          <h2 class="menu-item-text">All React Projects</h2>
-          <img class="menu-item-select-mark" src="./assets/check-solid.svg" alt="Checkmark icon">
-        </div>
-
-        <div class="popup-menu-item">
-          <img class="menu-item-icon" src="./assets/css3.svg" alt="CSS icon">
-          <h2 class="menu-item-text">All CSS Projects</h2>
-          <img class="menu-item-select-mark" src="./assets/check-solid.svg" alt="Checkmark icon">
-        </div>        
-
-        <div class="popup-menu-item">
-          <img class="menu-item-icon" src="./assets/html5.svg" alt="CSS icon">
-          <h2 class="menu-item-text">All HTML Projects</h2>
-          <img class="menu-item-select-mark" src="./assets/check-solid.svg" alt="Checkmark icon">
-        </div>   -->
-
-        <table id="popup-menu-table">
-
-          <tr class="popup-menu-table-item">
-            <td>
-              <img class="menu-item-icon" src="./assets/react.svg" alt="React library icon">
-            </td>
-            <td>All React Projects</td>
-            <td>
-              <img class="menu-item-select-mark" src="./assets/check-solid.svg" alt="Checkmark icon">
-            </td>
-          </tr>
-          <!-- css projects -->
-          <tr class="popup-menu-table-item">
-            <td>
-              <img class="menu-item-icon" src="./assets/css3.svg" alt="CSS icon">
-            </td>
-            <td>All CSS Projects</td>
-            <td>
-              <img class="menu-item-select-mark" src="./assets/check-solid.svg" alt="Checkmark icon">
-            </td>
-          </tr>
-        </table>
-
-      </article>
-    </section>
-
     <section id="portfolio">
       <a
         class="project-item"
         href="https://codepen.io/user-af/embed/GRBGRMJ?default-tab="
         target="iframe1"
+        myRepoLink="https://github.com/new-AF/fcc-certification-project-25-5-clock"
       >
         <img
           class="project-item-image"
@@ -124,7 +42,7 @@
         <ul class="project-stack react-redux-bg">
           <li class="project-stack-item">
             <img
-              class="icon library-icon"
+              class="library-icon invert-icon"
               src="assets/react.svg"
               alt="React library icon"
             />
@@ -133,7 +51,7 @@
 
           <li class="project-stack-item"></span>
             <img
-              class="icon library-icon"
+              class="library-icon invert-icon"
               src="assets/redux.svg"
               alt="Redux library icon"
             />
@@ -147,6 +65,7 @@
         class="project-item"
         href="https://codepen.io/user-af/embed/qByPBYp?default-tab="
         target="iframe1"
+        myRepoLink="https://github.com/new-AF/fcc-certification-project-javascript-calculator"
       >
         <img
           class="project-item-image"
@@ -157,7 +76,7 @@
         <ul class="project-stack react-redux-bg">
           <li class="project-stack-item">
             <img
-              class="icon library-icon"
+              class="library-icon invert-icon"
               src="assets/react.svg"
               alt="React library icon"
             />
@@ -166,7 +85,7 @@
 
           <li class="project-stack-item"></span>
             <img
-              class="icon library-icon"
+              class="library-icon invert-icon"
               src="assets/redux.svg"
               alt="Redux library icon"
             />
@@ -181,8 +100,8 @@
 
 			<header class="project-stack react-redux-bg">
 				<span class="project-stack-item">
-					<img class="icon library-icon" src="assets/react.svg" alt="React library icon"/>
-					<img class="icon library-icon" src="assets/redux.svg" alt="Redux library icon"/>
+					<img class="library-icon invert-icon" src="assets/react.svg" alt="React library icon"/>
+					<img class="library-icon invert-icon" src="assets/redux.svg" alt="Redux library icon"/>
 				</span>
 
 				<h3 class="project-stack-name">React Redux</h3>
@@ -193,6 +112,7 @@
         class="project-item"
         href="https://codepen.io/user-af/embed/LYgbNQd?default-tab="
         target="iframe1"
+        myRepoLink="https://github.com/new-AF/binary-decimal-hex-converter"
       >
         <img
           class="project-item-image"
@@ -205,7 +125,7 @@
         <ul class="project-stack react-redux-bg">
           <li class="project-stack-item">
             <img
-              class="icon library-icon"
+              class="library-icon invert-icon"
               src="assets/react.svg"
               alt="React library icon"
             />
@@ -214,7 +134,7 @@
 
           <li class="project-stack-item"></span>
             <img
-              class="icon library-icon"
+              class="library-icon invert-icon"
               src="assets/redux.svg"
               alt="Redux library icon"
             />
@@ -228,6 +148,7 @@
         class="project-item"
         href="https://codepen.io/user-af/embed/wvxoOWe?default-tab="
         target="iframe1"
+        myRepoLink="https://github.com/new-AF/fcc-certification-project-markdown-previewer"
       >
         <img
           class="project-item-image"
@@ -238,7 +159,7 @@
         <ul class="project-stack react-redux-bg">
           <li class="project-stack-item">
             <img
-              class="icon library-icon"
+              class="library-icon invert-icon"
               src="assets/react.svg"
               alt="React library icon"
             />
@@ -253,7 +174,7 @@
 
 			<header  class="project-stack react-bg">
 				<span class="project-stack-item">
-					<img class="icon library-icon" src="assets/react.svg" alt="React library icon"/>		
+					<img class="library-icon invert-icon" src="assets/react.svg" alt="React library icon"/>		
 				</span>
 				<h3 class="project-stack-name">React only</h3>
 			</header>
@@ -267,8 +188,8 @@
 
 			<header  class="project-stack html5-bg">
 				<span class="project-stack-item">
-					<img class="icon library-icon" src="assets/html5.svg" alt="HTML5 icon"/>
-					<img class="icon library-icon" src="assets/css3.svg" alt="CSS3 icon"/>				
+					<img class="library-icon invert-icon" src="assets/html5.svg" alt="HTML5 icon"/>
+					<img class="library-icon invert-icon" src="assets/css3.svg" alt="CSS3 icon"/>				
 				</span>
 
 				<h3 class="project-stack-name">HTML + CSS</h3>
@@ -289,7 +210,7 @@
         <ul class="project-stack html5-bg">
           <li class="project-stack-item">
             <img
-              class="icon library-icon"
+              class="library-icon invert-icon"
               src="assets/html5.svg"
               alt="HTML5 icon"
             />
@@ -297,7 +218,7 @@
           </li>
           <li class="project-stack-item">
             <img
-              class="icon library-icon"
+              class="library-icon invert-icon"
               src="assets/css3.svg"
               alt="CSS3 icon"
             />
@@ -320,7 +241,7 @@
         <ul class="project-stack html5-bg">
           <li class="project-stack-item">
             <img
-              class="icon library-icon"
+              class="library-icon invert-icon"
               src="assets/html5.svg"
               alt="HTML5 icon"
             />
@@ -328,7 +249,7 @@
           </li>
           <li class="project-stack-item">
             <img
-              class="icon library-icon"
+              class="library-icon invert-icon"
               src="assets/css3.svg"
               alt="CSS3 icon"
             />
@@ -351,7 +272,7 @@
         <ul class="project-stack html5-bg">
           <li class="project-stack-item">
             <img
-              class="icon library-icon"
+              class="library-icon invert-icon"
               src="assets/html5.svg"
               alt="HTML5 icon"
             />
@@ -359,7 +280,7 @@
           </li>
           <li class="project-stack-item">
             <img
-              class="icon library-icon"
+              class="library-icon invert-icon"
               src="assets/css3.svg"
               alt="CSS3 icon"
             />
@@ -369,17 +290,28 @@
       </a>
     </section>
 
-    <article class="iframe-home iframe-home-hide">
-      <section class="iframe-home-2">
-        <button id="iframe-home-close">
-          <img id="iframe-home-close-image" src="assets/xmark-solid.svg" />
-          <p>Close</p>
+    <article id="iframe-outer-container" class="iframe-outer-container hide">
+      <section id="iframe-container">
+        
+        <!-- X button  -->
+        <button id="iframe-outer-container-close">
+          <img id="iframe-outer-container-close-icon" class="invert-icon" src="assets/xmark-solid.svg" />
+          <p id="iframe-outer-container-close-text">Close</p>
         </button>
+        
+        <!-- iframe -->
         <iframe
           id="iframe"
           name="iframe1"
-          title="Selected Live Project, hosted remotely on CodePen.io"
+          title="Selected Project running live, hosted remotely on CodePen.io"
         ></iframe>
+
+
+        <!-- github repo link -->
+        <a id="iframe-repo-link" target="_blank">
+          <img id="iframe-repo-link-icon" class="invert-icon" src="assets/arrow-up-right-from-square-solid.svg">
+          <span>GitHub Repository</span>
+        </a>
       </section>
     </article>
 
@@ -388,5 +320,56 @@
     </footer>
   </body>
 
-  <script src="index.js"></script>
+  <script>
+    const button=document.querySelector('#iframe-outer-container-close');
+    const iframeOuterContainer=document.querySelector('#iframe-outer-container');
+    const repoLink=document.querySelector('#iframe-repo-link');
+    const projectsTemp=document.querySelectorAll('.project-item');
+    const projects=Array.from(projectsTemp);
+
+    // X Close
+    button.onclick=event=>{
+        iframeOuterContainer.classList.remove('show');
+        iframeOuterContainer.classList.add('hide');
+
+
+      }
+    projects.forEach(el=>{
+      //on click show `#iframe-outer-container-close`
+      el.onclick=event=> {
+        iframeOuterContainer.classList.remove('hide');
+        iframeOuterContainer.classList.add('show');
+
+        // set repo link
+        const linkTemp= el.getAttribute('myRepoLink');
+        const link= linkTemp===null ? '' : linkTemp;
+        repoLink.setAttribute('href', link);
+        repoLink.classList.remove('hide');
+        repoLink.classList.add('show');
+
+        // hide element
+        if(linkTemp === null){
+          repoLink.classList.add('hide');
+          repoLink.classList.remove('show');        }
+      }
+
+      // // initially set class `.scale-90` on all `.project-item-image`
+      // const image=el.children[0];
+      
+      // image.classList.add('scale-90');
+
+      // // on mouse enter set class `.scale-100` on all `.project-item-image`
+      // el.onmouseenter=event=>{
+      //   image.classList.remove('scale-90');
+      //   image.classList.add('scale-100');
+      // };
+
+      // // on mouse leave set class `.scale-90` on all `.project-item-image`
+      // el.onmouseleave=event=>{
+      //   image.classList.remove('scale-100');
+      //   image.classList.add('scale-90');
+      // };
+
+    });
+  </script>
 </html>
