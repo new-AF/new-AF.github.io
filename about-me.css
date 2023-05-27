@@ -12,6 +12,9 @@
   --font-size-small: calc(1rem + 1vmin);
 
   --gap: 1rem;
+
+  --box-shadow: 0px 0px 10px 1px gray;
+  --blur: blur(1rem);
 }
 
 * {
@@ -92,8 +95,11 @@ body {
 
   position: sticky;
   top: 0;
-  background: var(--page-bg);
+  background: var(--page-bg-rgba);
   z-index: 99;
+
+  box-shadow: var(--box-shadow);
+  backdrop-filter: var(--blur);
 }
 
 /* ------------- #me-section ------------- */
@@ -172,8 +178,11 @@ body {
 
   position: sticky;
   bottom: 0;
-  background: var(--page-bg);
+  background: var(--page-bg-rgba);
   z-index: 99;
+
+  box-shadow: var(--box-shadow);
+  backdrop-filter: var(--blur);
 }
 /* ------------- media queries ------------- */
 @media only screen and (max-width: 280px) {
