@@ -1,7 +1,7 @@
 :root {
   --text-color: #f5fef5;
   --page-bg: teal;
-  --page-bg-rgba: rgba(47, 79, 79, 0.5);
+  --page-bg-rgba: rgba(0, 128, 128, 0.5);
   --box-shadow-color: gray;
 
   --transition: ease-in-out 100ms;
@@ -14,7 +14,7 @@
   --gap: 1rem;
 
   --box-shadow: 0px 0px 10px 1px gray;
-  --blur: blur(1rem);
+  --blur: blur(1rem) brightness(0.5);
 }
 
 * {
@@ -95,7 +95,7 @@ body {
 
   position: sticky;
   top: 0;
-  background: var(--page-bg-rgba);
+  background-color: var(--page-bg-rgba);
   z-index: 99;
 
   box-shadow: var(--box-shadow);
