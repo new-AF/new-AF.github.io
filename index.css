@@ -9,6 +9,9 @@
 
   --thin-border: thin solid var(--text-color);
   --medium-border: medium solid var(--text-color);
+
+  --box-shadow: 0px 0px 10px 1px lightgray;
+  --blur: blur(1rem);
 }
 
 * {
@@ -87,7 +90,12 @@ body {
   position: sticky;
   top: 0;
   z-index: 99;
-  background-color: var(--bg);
+  background-color: var(
+    --bg-rgba
+  ); /*must be semi transparent for `backdrop-filter`*/
+
+  box-shadow: var(--box-shadow);
+  backdrop-filter: var(--blur);
 }
 /* --------------- #iframe-outer-container --------------- */
 #iframe-outer-container {
