@@ -117,8 +117,8 @@ body {
     padding-left: 0;
     display: grid;
     grid-auto-flow: row;
-    grid-auto-rows: 1fr;
-    gap: var(--font-size-small-extra) 0;
+    grid-auto-rows: auto;
+    gap: var(--font-size-small) 0;
 
     font-size: var(--font-size-small);
     font-style: italic;
@@ -197,6 +197,27 @@ body {
 }
 .tech-tag-cert::before {
     background-image: url("./assets/certificate-solid.svg");
+}
+.tech-tag-next-js::before {
+    background-image: url("./assets/nextjs-icon.svg");
+}
+.tech-tag-node-js::before {
+    background-image: url("./assets/node-js.svg");
+}
+.currently-learning {
+    justify-self: center;
+    width: 100%;
+    grid-column: 1 / -1;
+    border: none;
+    border-radius: 1rem;
+    opacity: 0.5;
+    border-top: thin solid snow;
+}
+.learning::before {
+    content: "Currenlty Learning: ";
+    text-transform: uppercase;
+    font-size: smaller;
+    font-style: normal;
 }
 /* ------------- #portfolio-section ------------- */
 
