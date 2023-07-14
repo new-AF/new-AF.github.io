@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-
+    <link rel="icon" type="image/svg+xml" href="./assets/code-solid.svg" />
     <!-- viewport meta element -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Abdullah Fatota Portfolio</title>
@@ -11,295 +11,438 @@
   <link href="index.css" rel="stylesheet" />
 
   <body>
-    <header id="header">
-      <h1 id="title">Portfolio</h1>
+    <section id="left">
+        <div id="left-img"></div>
 
-      <a id="home-button" href="./about-me.html">
+        <p id="left-text"><strong id="left-text-strong">I am Abdullah</strong><span id="left-text-normal">, Software Engineer creating exceptional user experiences</span></p>
+        <a id="left-github" href="https://github.com/new-AF" class="global-icon global-icon-github"></a>
+              
+      <nav id="left-nav">
+        <ul id="left-nav-list">
+          <li class="left-nav-list-item global_hover left_hover">
+            <a class="left-nav-list-item-link global_link" href="#about">About</a>
+          </li>
+          <li class="left-nav-list-item global_hover left_hover">
+            <a class="left-nav-list-item-link global_link" href="#portfolio">Recent Work</a>
+          </li>
+          <li class="left-nav-list-item global_hover left_hover">
+            <a class="left-nav-list-item-link global_link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+    </section>
+
+    <footer id="footer">
+      
+      <article id="footer-dim"></article>
+      
+      <ul id="footer-icons">
+        <li class="footer-icons-item">
+          <a href="https://www.linkedin.com/in/abdullah-fatota-039a34218/" class="global-icon global-icon-linkedin"></a>
+        </li>
+      </ul>
+      
+      <small id="footer-small">
+        <p>Design Template: <a href="https://html5up.net/">HTML5 UP</a></p>
+        <p>Demo Image: <a href="https://unsplash.com/">Unsplash</a></p>
+        <p id="footer-small-by">Coding, &#169; 2023 Abdullah Fatota</p>
+      </small>
+    </footer>
+  
+<!--     <header id="header">
+      <h1 id="header-title">Portfolio</h1>
+
+      <a id="header-home" href="./about-me.html">
         <img
-          id="home-button-icon"
-          class="invert-icon"
+          id="header-home-icon"
+          class="invert_icon"
           src="assets/house-solid.svg"
           alt="Home page icon"
         />
-        <span id="home-button-text">About me</span>
+        <span id="header-home-text">About me</span>
       </a>
 
-    </header>
+    </header> -->
 
-    <section id="portfolio">
+    <section id="about" class="global-bottom-hr">
+      <h2 id="about-header">Writing Software</h2>
+      <p class="about-text">
+        My passion for writing software started before university education as my very first project was a <span class="about-text-tag">File Explorer</span> written in <span class="about-text-tag">Python</span> as the backend and logic and <span class="about-text-tag">Tkinter</span> as the <span class="about-text-tag">Graphical User Interface</span> library.
+      </p>
+      <p class="about-text">
+        I  write Applications using the Frontend Library <span class="about-text-tag about-text-tag-icon global-tag-react">React</span> and <span class="about-text-tag about-text-tag-icon global-tag-js">JavaScript</span> for the components and their functionality and use <span class="about-text-tag about-text-tag-icon global-tag-redux-toolkit">Redux Toolkit</span> for managing the <span class="about-text-tag">global state</span>.
+      </p>
+    </section>
+
+    <section id="contact" class="global-bottom-hr">
+      <article id="contact-header" class="global-section-header">
+        <h2 class="contact-header-text" class="global-section-header">Looking to complete your software product team ?</h2>
+      </article>
+      <form id="contact-form" action = "https://formsubmit.co/6c1db44d46ff3399651745e2218ade9a" method = "POST">
+        <label for="contact-form-inputName" id="contact-form-labelName" class="contact-form-name">
+          Name
+        </label>
+        <input id="contact-form-inputName" type="text" placeholder="Name" name = "name" required/>
+        
+        <label for="contact-form-inputEmail" id="contact-form-labelEmail" class="contact-form-email">
+          Email Address
+        </label>
+        <input id="contact-form-inputEmail" type="text" placeholder="Email Address" name = "email" required/>
+
+        <input id="contact-form-inputSubmit" type="submit" value="Send Message"/>
+
+        <label for="contact-form-message" id="contact-form-labelMessage">Message</label>
+        <textarea id="contact-form-message" type="text" placeholder="Hi Abdullah, ..." name = "message" required></textarea>
+
+      </form>
+
+    </section>
+    
+    <section id="portfolio"  class="global-bottom-hr">
+      <h2 id="portfolio-header" class="global-section-header">
+        Recent Work
+      </h2>
+
       <a
-        class="project-item"
+        class="portfolio-item"
         href="https://codepen.io/user-af/embed/rNqQvZM?default-tab="
         target="iframe1"
-        myRepoLink="https://github.com/new-AF/react-redux-work-break-timer"
+        data-repo-link="https://github.com/new-AF/react-redux-work-break-timer"
       >
         <img
-          class="project-item-image"
+          class="portfolio-item-image"
           src="assets/1 react redux 1 work break timer.png"
         />
-        <span class="project-item-text">Work Break timer</span>
+        <span class="portfolio-item-text">
+          <p class="portfolio-item-text-title">Work Break timer</p>
+          <p class="portfolio-item-text-about">Set and track <i>Work</i> and <i>Break</i> time</p>
+        </span>
 
-        <ul class="project-stack react-redux-bg">
-          <li class="project-stack-item">
+        <ul class="portfolio-item-list react-redux-bg">
+          <li class="portfolio-item-list-item">
             <img
-              class="library-icon invert-icon"
+              class="portfolio-item-list-item-image invert_icon"
               src="assets/react.svg"
               alt="React library icon"
             />
-            <h3 class="project-stack-name">React</h3>
+            <h3 class="portfolio-item-list-item-text">React</h3>
           </li>
 
-          <li class="project-stack-item"></span>
+          <li class="portfolio-item-list-item"></span>
             <img
-              class="library-icon invert-icon"
+              class="portfolio-item-list-item-image invert_icon"
               src="assets/redux.svg"
               alt="Redux library icon"
             />
-            <h3 class="project-stack-name">Redux</h3>
+            <h3 class="portfolio-item-list-item-text">Redux</h3>
           </li>
           </ul>
 
       </a>
-
       <a
-        class="project-item"
+      class="portfolio-item"
+      href="https://codepen.io/user-af/embed/ZEqVBWB?default-tab="
+      target="iframe1"
+      data-repo-link="https://github.com/new-AF/react-markown-previewer"
+    >
+      <img
+        class="portfolio-item-image"
+        src="assets/2 react 1 markdown viewer.png"
+      />
+      <span class="portfolio-item-text">
+        <p class="portfolio-item-text-title">Markdown Viewer</p>
+        <p class="portfolio-item-text-about">Render Markdown text as you type </p>
+      </span>
+
+      <ul class="portfolio-item-list react-redux-bg">
+        <li class="portfolio-item-list-item">
+          <img
+            class="portfolio-item-list-item-image invert_icon"
+            src="assets/react.svg"
+            alt="React library icon"
+          />
+          <h3 class="portfolio-item-list-item-text">React</h3>
+        </li>
+        </ul>
+      </a>
+      
+      <a
+        class="portfolio-item"
         href="https://codepen.io/user-af/embed/poxqEgY?default-tab="
         target="iframe1"
-        myRepoLink="https://github.com/new-AF/react-redux-calculator"
+        data-repo-link="https://github.com/new-AF/react-redux-calculator"
       >
         <img
-          class="project-item-image"
+          class="portfolio-item-image"
           src="assets/1 react redux 2 calculator.png"
         />
-        <span class="project-item-text">Calculator</span>
+        <span class="portfolio-item-text">
+          <p class="portfolio-item-text-title">Calculator</p>
+          <p class="portfolio-item-text-about">Calculator with basic operations of addition, subtraction, multiplication and division</p>
+        </span>
 
-        <ul class="project-stack react-redux-bg">
-          <li class="project-stack-item">
+        <ul class="portfolio-item-list react-redux-bg">
+          <li class="portfolio-item-list-item">
             <img
-              class="library-icon invert-icon"
+              class="portfolio-item-list-item-image invert_icon"
               src="assets/react.svg"
               alt="React library icon"
             />
-            <h3 class="project-stack-name">React</h3>
+            <h3 class="portfolio-item-list-item-text">React</h3>
           </li>
 
-          <li class="project-stack-item"></span>
+          <li class="portfolio-item-list-item"></span>
             <img
-              class="library-icon invert-icon"
+              class="portfolio-item-list-item-image invert_icon"
               src="assets/redux.svg"
               alt="Redux library icon"
             />
-            <h3 class="project-stack-name">Redux</h3>
+            <h3 class="portfolio-item-list-item-text">Redux</h3>
           </li>          
           </ul>
       </a>
 
       <a
-        class="project-item"
+        class="portfolio-item"
         href="https://codepen.io/user-af/embed/LYgbNQd?default-tab="
         target="iframe1"
-        myRepoLink="https://github.com/new-AF/react-redux-binary-decimal-hex-converter"
+        data-repo-link="https://github.com/new-AF/react-redux-binary-decimal-hex-converter"
       >
         <img
-          class="project-item-image"
+          class="portfolio-item-image"
           src="assets/1 react redux 4 binary hex decimal.png"
         />
-        <span class="project-item-text"
-          >Binary | Hex | Decimal converter</span
-        >
+        <span class="portfolio-item-text">
+          <p class="portfolio-item-text-title">Binary, Hex, Decimal converter</p>
+          <p class="portfolio-item-text-about">Convert between numbers in Binary, Decimal and Hexadecimal notations </p>
+        </span>
 
-        <ul class="project-stack react-redux-bg">
-          <li class="project-stack-item">
+        <ul class="portfolio-item-list react-redux-bg">
+          <li class="portfolio-item-list-item">
             <img
-              class="library-icon invert-icon"
+              class="portfolio-item-list-item-image invert_icon"
               src="assets/react.svg"
               alt="React library icon"
             />
-            <h3 class="project-stack-name">React</h3>
+            <h3 class="portfolio-item-list-item-text">React</h3>
           </li>
 
-          <li class="project-stack-item"></span>
+          <li class="portfolio-item-list-item"></span>
             <img
-              class="library-icon invert-icon"
+              class="portfolio-item-list-item-image invert_icon"
               src="assets/redux.svg"
               alt="Redux library icon"
             />
-            <h3 class="project-stack-name">Redux</h3>
+            <h3 class="portfolio-item-list-item-text">Redux</h3>
           </li>
           </ul>
       </a>
 
       <!-- react only	 -->
-      <a
-        class="project-item"
-        href="https://codepen.io/user-af/embed/ZEqVBWB?default-tab="
-        target="iframe1"
-        myRepoLink="https://github.com/new-AF/react-markown-previewer"
-      >
-        <img
-          class="project-item-image"
-          src="assets/2 react 1 markdown viewer.png"
-        />
-        <span class="project-item-text">Markdown Viewer</span>
-
-        <ul class="project-stack react-redux-bg">
-          <li class="project-stack-item">
-            <img
-              class="library-icon invert-icon"
-              src="assets/react.svg"
-              alt="React library icon"
-            />
-            <h3 class="project-stack-name">React</h3>
-          </li>
-          </ul>
-      </a>
+      
 
       <a
-        class="project-item"
+        class="portfolio-item"
         href="https://codepen.io/user-af/embed/RwYYOgg?default-tab="
         target="iframe1"
       >
         <img
-          class="project-item-image"
+          class="portfolio-item-image"
           src="assets/3 html5 css3 2 product page.png"
         />
-        <span class="project-item-text">Product Page</span>
+        <span class="portfolio-item-text">
+          <p class="portfolio-item-text-title">Product Page</p>
+          <p class="portfolio-item-text-about">Responsive and Static Hotel Page</p>
+        </span>
 
-        <ul class="project-stack html5-bg">
-          <li class="project-stack-item">
+        <ul class="portfolio-item-list html5-bg">
+          <li class="portfolio-item-list-item">
             <img
-              class="library-icon invert-icon"
+              class="portfolio-item-list-item-image invert_icon"
               src="assets/html5.svg"
               alt="HTML5 icon"
             />
-            <h3 class="project-stack-name">HTML</h3>
+            <h3 class="portfolio-item-list-item-text">HTML</h3>
           </li>
-          <li class="project-stack-item">
+          <li class="portfolio-item-list-item">
             <img
-              class="library-icon invert-icon"
+              class="portfolio-item-list-item-image invert_icon"
               src="assets/css3.svg"
               alt="CSS3 icon"
             />
-            <h3 class="project-stack-name">CSS</h3>
+            <h3 class="portfolio-item-list-item-text">CSS</h3>
           </li>
         </ul>
       </a>
 
       <a
-        class="project-item"
-        href="https://codepen.io/user-af/embed/vYzzMZm?default-tab="
-        target="iframe1"
-      >
-        <img
-          class="project-item-image"
-          src="assets/3 html5 css3 3 technical documentation.png"
-        />
-        <span class="project-item-text">Technical Documentation</span>
-
-        <ul class="project-stack html5-bg">
-          <li class="project-stack-item">
-            <img
-              class="library-icon invert-icon"
-              src="assets/html5.svg"
-              alt="HTML5 icon"
-            />
-            <h3 class="project-stack-name">HTML</h3>
-          </li>
-          <li class="project-stack-item">
-            <img
-              class="library-icon invert-icon"
-              src="assets/css3.svg"
-              alt="CSS3 icon"
-            />
-            <h3 class="project-stack-name">CSS</h3>
-          </li>
-        </ul>
-      </a>
-
-      <a
-        class="project-item"
+        class="portfolio-item"
         href="https://codepen.io/user-af/embed/PoddgWO?default-tab="
         target="iframe1"
       >
         <img
-          class="project-item-image"
+          class="portfolio-item-image"
           src="assets/3 html5 css3 4 survey form.png"
         />
-        <span class="project-item-text">Survey Form</span>
+        <span class="portfolio-item-text">
+          <p class="portfolio-item-text-title">Survey Form</p>
+          <p class="portfolio-item-text-about">Responsive and Static Survey Form</p>
+        </span>
 
-        <ul class="project-stack html5-bg">
-          <li class="project-stack-item">
+        <ul class="portfolio-item-list html5-bg">
+          <li class="portfolio-item-list-item">
             <img
-              class="library-icon invert-icon"
+              class="portfolio-item-list-item-image invert_icon"
               src="assets/html5.svg"
               alt="HTML5 icon"
             />
-            <h3 class="project-stack-name">HTML</h3>
+            <h3 class="portfolio-item-list-item-text">HTML</h3>
           </li>
-          <li class="project-stack-item">
+          <li class="portfolio-item-list-item">
             <img
-              class="library-icon invert-icon"
+              class="portfolio-item-list-item-image invert_icon"
               src="assets/css3.svg"
               alt="CSS3 icon"
             />
-            <h3 class="project-stack-name">CSS</h3>
+            <h3 class="portfolio-item-list-item-text">CSS</h3>
           </li>
         </ul>
       </a>
+
+      <a
+        class="portfolio-item"
+        href="https://codepen.io/user-af/embed/vYzzMZm?default-tab="
+        target="iframe1"
+      >
+        <img
+          class="portfolio-item-image"
+          src="assets/3 html5 css3 3 technical documentation.png"
+        />
+        <span class="portfolio-item-text">
+          <p class="portfolio-item-text-title">Technical Documentation</p>
+          <p class="portfolio-item-text-about">Responsive and Static JavaScript Documentation Page</p>
+        </span>
+
+        <ul class="portfolio-item-list html5-bg">
+          <li class="portfolio-item-list-item">
+            <img
+              class="portfolio-item-list-item-image invert_icon"
+              src="assets/html5.svg"
+              alt="HTML5 icon"
+            />
+            <h3 class="portfolio-item-list-item-text">HTML</h3>
+          </li>
+          <li class="portfolio-item-list-item">
+            <img
+              class="portfolio-item-list-item-image invert_icon"
+              src="assets/css3.svg"
+              alt="CSS3 icon"
+            />
+            <h3 class="portfolio-item-list-item-text">CSS</h3>
+          </li>
+        </ul>
+      </a>
+      
     </section>
 
-    <article id="iframe-outer-container" class="iframe-outer-container hide">
-      <section id="iframe-container">
+    <article id="live" class="live hide">
+      <section id="live-container">
         
         <!-- X button  -->
-        <button id="iframe-outer-container-close">
-          <img id="iframe-outer-container-close-icon" class="invert-icon" src="assets/xmark-solid.svg" />
-          <p id="iframe-outer-container-close-text">Close</p>
+        <button id="live-container-close">
+          <img id="live-container-close-icon" class="invert_icon" src="assets/xmark-solid.svg" />
+          <p id="live-container-close-text">Close</p>
         </button>
         
         <!-- iframe -->
         <iframe
-          id="iframe"
+          id="live-container-iframe"
           name="iframe1"
           title="Selected Project running live, hosted remotely on CodePen.io"
         ></iframe>
 
 
         <!-- github repo link -->
-        <a id="iframe-repo-link" target="_blank">
-          <img id="iframe-repo-link-icon" class="invert-icon" src="assets/arrow-up-right-from-square-solid.svg">
-          <span>GitHub Repository</span>
+        <a id="live-container-iframe-link" target="_blank">
+          <img id="live-container-iframe-link-icon" class="invert_icon" src="assets/arrow-up-right-from-square-solid.svg">
+          <span id="live-container-iframe-link-text">GitHub Repository</span>
         </a>
       </section>
     </article>
 
-    <footer id="footer">
-      <p id="footer-by">Copyright &#169; 2023 Abdullah Fatota.</p>
-    </footer>
+
   </body>
 
+  <!-- add project title and description -->
   <script>
-    const button=document.querySelector('#iframe-outer-container-close');
-    const iframeOuterContainer=document.querySelector('#iframe-outer-container');
-    const repoLink=document.querySelector('#iframe-repo-link');
-    const projectsTemp=document.querySelectorAll('.project-item');
+    const allItems = document.querySelectorAll(".portfolio-item");
+    const portfolio = document.querySelector("#portfolio");
+
+    for(const item of allItems){
+      const text = item.querySelector(".portfolio-item-text");
+      //console.log({text});
+      text.remove();
+
+      
+
+      const list = document.createElement("ul");
+      list.classList.add("portfolio-item-list-2");
+      const oldList = item.querySelectorAll(".portfolio-item-list-item");
+      //console.log({oldList})
+      for(const single of oldList){
+        list.appendChild(single);
+      }
+
+      // item.after(list);
+      item.after(text);
+      text.appendChild(list);
+
+    }
+  </script>
+
+  <!-- /* show/hide Run card */ -->
+  <script>
+
+    for(const item of allItems){
+      const card = item.querySelector(".portfolio-item-list");
+
+      //console.log({item, card})
+      item.addEventListener('mouseenter', () => {
+        item.classList.add("class1");
+        card.style.opacity = 1;
+      });
+      item.addEventListener('mouseleave', () => {
+        item.classList.remove("class1");
+        card.style.opacity = 0;
+      });
+
+    }
+    //console.log({cards});
+  </script>
+
+  <script>
+    const button=document.querySelector('#live-container-close');
+    const iframeOuterContainer=document.querySelector('#live');
+    const repoLink=document.querySelector('#live-container-iframe-link');
+    const projectsTemp=document.querySelectorAll('.portfolio-item');
     const projects=Array.from(projectsTemp);
 
     // X Close
     button.onclick=event=>{
         iframeOuterContainer.classList.remove('show');
         iframeOuterContainer.classList.add('hide');
+    }
 
-
-      }
     projects.forEach(el=>{
-      //on click show `#iframe-outer-container-close`
+      //console.log("---",{el});
+      //on click show `#live-container-close`
       el.onclick=event=> {
         iframeOuterContainer.classList.remove('hide');
         iframeOuterContainer.classList.add('show');
 
         // set repo link
-        const linkTemp= el.getAttribute('myRepoLink');
+        const linkTemp= el.getAttribute('data-repo-link');
         const link= linkTemp===null ? '' : linkTemp;
         repoLink.setAttribute('href', link);
         repoLink.classList.remove('hide');
@@ -308,21 +451,22 @@
         // hide element
         if(linkTemp === null){
           repoLink.classList.add('hide');
-          repoLink.classList.remove('show');        }
+          repoLink.classList.remove('show');
+        }
       }
 
-      // // initially set class `.scale-90` on all `.project-item-image`
+      // // initially set class `.scale-90` on all `.portfolio-item-image`
       // const image=el.children[0];
       
       // image.classList.add('scale-90');
 
-      // // on mouse enter set class `.scale-100` on all `.project-item-image`
+      // // on mouse enter set class `.scale-100` on all `.portfolio-item-image`
       // el.onmouseenter=event=>{
       //   image.classList.remove('scale-90');
       //   image.classList.add('scale-100');
       // };
 
-      // // on mouse leave set class `.scale-90` on all `.project-item-image`
+      // // on mouse leave set class `.scale-90` on all `.portfolio-item-image`
       // el.onmouseleave=event=>{
       //   image.classList.remove('scale-100');
       //   image.classList.add('scale-90');
