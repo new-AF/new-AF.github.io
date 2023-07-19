@@ -46,7 +46,7 @@
       <small id="footer-small">
         <p>Design Template: <a href="https://html5up.net/">HTML5 UP</a></p>
         <p>Demo Image: <a href="https://unsplash.com/">Unsplash</a></p>
-        <p id="footer-small-by">Coding, &#169; 2023 Abdullah Fatota</p>
+        <p id="footer-small-by">Coding, &#169; 2023 <em>Abdullah Fatota</em></p>
       </small>
     </footer>
   
@@ -71,16 +71,16 @@
         My passion for writing software started before university education as my very first project was a <span class="about-text-tag">File Explorer</span> written in <span class="about-text-tag">Python</span> as the backend and logic and <span class="about-text-tag">Tkinter</span> as the <span class="about-text-tag">Graphical User Interface</span> library.
       </p>
       <p class="about-text">
-        I  write Applications using the Frontend Library <span class="about-text-tag about-text-tag-icon global-tag-react">React</span> and <span class="about-text-tag about-text-tag-icon global-tag-js">JavaScript</span> for the components and their functionality and use <span class="about-text-tag about-text-tag-icon global-tag-redux-toolkit">Redux Toolkit</span> for managing the <span class="about-text-tag">global state</span>.
+        I  write Applications using the Frontend Library <span class="about-text-tag about-text-tag-icon global-tag-react">React</span> and <span class="about-text-tag about-text-tag-icon global-tag-js">JavaScript</span> for the components and their functionality and use <span class="about-text-tag about-text-tag-icon global-tag-redux-toolkit">Redux Toolkit</span> for managing <span class="about-text-tag">global state</span> slices.
       </p>
     </section>
 
     <section id="contact" class="global-bottom-hr">
       <article id="contact-header" class="global-section-header">
         <h2 class="contact-header-text" class="global-section-header">Get in touch</h2>
-        <h5>
-          I'm currently looking for new work experiences and prefer an entry level psoition (internships are welcome too). If you would like to know more about my background or projects then I'm looking forward to answering you.
-        </h5>
+        <p>
+          I'm currently looking for an entry level psoition (internships are welcome too). If you would like to know more about my background technical or otherwise or the projects shown here then I look forward to answering you.
+        </p>
       </article>
       <form id="contact-form" action = "https://formsubmit.co/6c1db44d46ff3399651745e2218ade9a" method = "POST">
         <label for="contact-form-inputName" id="contact-form-labelName" class="contact-form-name">
@@ -104,11 +104,11 @@
     
     <section id="portfolio"  class="global-bottom-hr">
       <h2 id="portfolio-header" class="global-section-header">
-        Recent Work
+        Featured Projects
       </h2>
 
       <a
-      class="portfolio-item"
+      class="portfolio-item featured"
       href="https://new-af.github.io/react-markown-previewer/"
       target="iframe1"
       data-repo-link="https://github.com/new-AF/react-markown-previewer"
@@ -119,7 +119,25 @@
       />
       <span class="portfolio-item-text">
         <p class="portfolio-item-text-title">Markdown Viewer</p>
-        <p class="portfolio-item-text-about">Render Markdown text as you type </p>
+        <p class="portfolio-item-text-about">
+          Render plaintext Markdown input to styled and formatted output as you type.
+
+          <h4>Supported features</h4>
+          <ul>
+            <li>Save rendered Output as PDF file through Browser's Print Dialogue</li>
+            <li>Download Input as plaintext .md file</li>
+          </ul>
+
+          <h4>Supported Markdown features</h4>
+          <ul>
+            <li>Headers</li>
+            <li>Unhighlighted Inline Code Snippets</li>
+            <li>Highlighted Code Blocks</li>
+            <li>Links, Ordered and Unordered lists</li>
+            <li>Linked Images</li>
+          </ul>
+  
+        </p>
       </span>
 
       <ul class="portfolio-item-list react-redux-bg">
@@ -131,8 +149,18 @@
           />
           <h3 class="portfolio-item-list-item-text">React</h3>
         </li>
-        </ul>
+        <li class="portfolio-item-list-item"></span>
+          <img
+            class="portfolio-item-list-item-image invert_icon"
+            src="assets/redux.svg"
+            alt="Redux library icon"
+          />
+          <h3 class="portfolio-item-list-item-text">Redux Toolkit</h3>
+        </li>
+      </ul>
       </a>
+
+      <button id="portfolio-button">Show More Projects</button>
 
       <a
         class="portfolio-item"
@@ -378,9 +406,60 @@
 
   </body>
 
-  <!-- add project title and description -->
+  <!-- on hover of .portfolio-item-text; add box shadow on .portfolio-item -->
   <script>
     const allItems = document.querySelectorAll(".portfolio-item");
+    const featuredName = "featured";
+
+    for(const item of allItems){
+      
+      const text = item.querySelector(".portfolio-item-text");
+
+      if(item.classList.contains(featuredName)){
+        text.classList.add(featuredName);
+      } else{
+        /* hide non featured */
+        item.style.display = "none";
+        text.style.display = "none";
+      }
+
+      
+
+      // text.addEventListener("mouseenter",(event)=>{
+      //   item.classList.add("class1");
+      // });
+      // text.addEventListener("mouseleave",(event)=>{
+      //   item.classList.remove("class1");
+      // });
+    }
+
+    const showMore = document.querySelector("#portfolio-button");
+    showMore.addEventListener("click",(event)=>{
+      for(const item of allItems){
+        
+        if(item.classList.contains(featuredName) === false){
+          /* show non featured */
+          item.style.display = "grid";
+        }
+
+      }
+
+      for(const text of document.querySelectorAll(".portfolio-item-text")){
+        
+        if(text.classList.contains(featuredName) === false){
+          /* show non featured */
+          text.style.display = "block";
+        }
+
+      }
+      /* hide button itself */
+      showMore.style.display = "none";
+
+    });
+  </script>
+
+  <!-- add project title and description -->
+  <script>
     const portfolio = document.querySelector("#portfolio");
 
     for(const item of allItems){
@@ -413,11 +492,11 @@
 
       //console.log({item, card})
       item.addEventListener('mouseenter', () => {
-        item.classList.add("class1");
+        item.classList.add("class2");
         card.style.opacity = 1;
       });
       item.addEventListener('mouseleave', () => {
-        item.classList.remove("class1");
+        item.classList.remove("class2");
         card.style.opacity = 0;
       });
 

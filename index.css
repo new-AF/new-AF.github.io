@@ -20,7 +20,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    /* padding: 0; */
 }
 
 .hide {
@@ -319,7 +319,7 @@ body {
 
     cursor: pointer;
     border-radius: 0.5rem !important;
-    border: medium solid lightgray !important;
+    border: medium solid darkgray !important;
     transition: all linear 150ms;
 }
 #contact-form-inputSubmit:hover {
@@ -378,7 +378,7 @@ body {
     font-family: font1;
 
     box-sizing: border-box;
-    padding: 0 10%;
+    padding: 0 5%;
 
     display: grid;
     grid-template-columns: 1fr;
@@ -390,8 +390,7 @@ body {
     /* only for header */
     grid-template-rows: auto;
 
-    gap: 8rem 5rem;
-    /* padding: 5% 0; */
+    gap: 8rem 0;
 
     font-family: font1;
     line-height: 2;
@@ -403,8 +402,23 @@ body {
 #portfolio-header {
     /* only for header */
     grid-column: 1 / -1;
-
-    margin-bottom: -2rem;
+}
+#portfolio-button {
+    grid-column: 1/ -1;
+    padding: 2rem 0;
+    font-size: 100%;
+    font-family: font2;
+    background-color: aliceblue;
+    cursor: pointer;
+    border: medium solid darkgray;
+    border-radius: 1rem;
+    transition: all linear 150ms;
+}
+#portfolio-button:hover {
+    --color: peru;
+    color: var(--color);
+    border-color: var(--color);
+    background-color: transparent;
 }
 .portfolio-item {
     --border-radius: 1rem;
@@ -497,6 +511,8 @@ body {
 
     /* border-top: thin solid lightgray; */
     text-align: right;
+
+    padding: 1rem 0;
 }
 #footer a {
     color: unset;
@@ -510,6 +526,8 @@ body {
     display: flex;
     gap: 0 0.5rem;
     flex-wrap: wrap;
+
+    padding-left: 0;
 }
 #footer-small {
     grid-area: small;
@@ -520,7 +538,7 @@ body {
 @media only screen and (min-width: 1px) {
     body {
         grid-template-columns: 1fr;
-        grid-template-rows: 60vh auto auto minmax(100vh, 1fr) 30vh;
+        grid-template-rows: 60vh auto auto minmax(100vh, 1fr) auto;
         grid-template-areas:
             "left"
             "about"
@@ -578,7 +596,11 @@ body {
     }
     #portfolio {
         grid-template-columns: 0 1fr 0;
-        gap: 2rem 2rem;
+        gap: 10rem 0;
+        transition: display linear 150ms;
+    }
+    #portfolio-header {
+        margin-bottom: -10rem;
     }
     .portfolio-item {
         grid-column: 2;
@@ -592,7 +614,11 @@ body {
 
         /* aspect-ratio: 1.7 / 1; */
 
-        box-shadow: 0 0.6rem 1rem 1px rgba(205, 133, 63, 0.5);
+        translate: 0 0.175rem;
+
+        box-shadow: 0 0.25rem 1rem 0 lightgray;
+    }
+    .portfolio-item:hover {
     }
     .portfolio-item-image {
         filter: blur(0px);
@@ -659,30 +685,31 @@ body {
         opacity: 0.8;
     }
     .class1 {
+        box-shadow: 0 0.25rem 1rem 0 rgba(205, 133, 63, 0.5);
+    }
+    .class2 {
         /* filter: brightness(0.25); */
         box-shadow: 0 0.25rem 0.5rem 1px peru;
+        translate: 0 0;
     }
     .portfolio-item-list::before {
         /* display: block; */
         position: absolute;
-        content: url(./assets/play-solid.svg) "Run";
-        /* grid-column: 1 / span 2;
-        grid-row: 2; */
+        content: "Run";
+        background-image: url(./assets/play-solid.svg);
+        background-repeat: no-repeat;
+        background-size: auto 4rem;
+        background-position: center top;
+        padding-top: 4rem;
         filter: invert(1);
         color: black;
         text-align: center;
         justify-self: center;
-        width: 20%;
-        left: 40%;
-        /* top: auto; */
-        /* height: 20%; */
-        /* translate: -50% 0; */
+        align-self: center;
+
         font-size: 2rem;
         font-weight: bold;
-        height: 100%;
-        display: grid;
         font-family: font2;
-        align-content: center;
     }
     .portfolio-item-list-item-text {
         /* color: black; */
@@ -705,7 +732,9 @@ body {
         gap: 1rem 1rem;
 
         margin-top: 1rem;
-        margin-bottom: 8rem;
+        margin-bottom: 0;
+
+        padding-left: 0;
     }
     .portfolio-item-list-2::before {
         content: "Tech Stack used";
@@ -810,7 +839,11 @@ body {
     #portfolio {
         grid-template-columns: 0 400px 1fr;
     }
+    #portfolio > .portfolio-item {
+    }
     .portfolio-item-text {
+        /* emulate grid gap */
+        margin-left: 2rem;
         grid-column: 3;
     }
     #header-home {
