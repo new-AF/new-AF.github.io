@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="I am a Software engineer creating exceptional user experiences
+        with the help of the team"
+        />
+        <title>Abdullah Fatota | Software Engineer</title>
+        <link rel="stylesheet" href="index.css" />
+        <link rel="shortcut icon" href="code.svg" type="image/x-icon" />
+    </head>
+    <body>
+        <!-- header -->
+        <header class="body-header">
+            <h1>Abdullah</h1>
+            <nav>
+                <!-- .about -->
+                <a class="nav-button top" href="#about">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                        fill="currentColor"
+                    >
+                        <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path
+                            d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
+                        />
+                    </svg>
+                    <span class="link-text">About</span>
+                </a>
+
+                <!-- .projects -->
+                <a class="nav-button projects" href="#projects">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 640 512"
+                        fill="currentColor"
+                    >
+                        <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path
+                            d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"
+                        />
+                    </svg>
+                    <span class="link-text">Projects</span>
+                </a>
+
+                <!-- .contact -->
+                <a class="nav-button contact" href="#contact">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                        fill="currentColor"
+                    >
+                        <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path
+                            d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+                        />
+                    </svg>
+                    <span class="link-text">Contact</span>
+                </a>
+            </nav>
+
+            <!-- .light-theme <label></label>  -->
+            <label
+                class="nav-button light-theme"
+                role="button"
+                for="light-theme-checkbox"
+            >
+                <!-- <input/> -->
+                <input id="light-theme-checkbox" type="checkbox" />
+
+                <!-- .text -->
+                <span class="text">Activate Light Theme</span>
+
+                <!-- .sun-svg -->
+                <svg
+                    class="sun-svg"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                    fill="currentColor"
+                >
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                        d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"
+                    />
+                </svg>
+
+                <!-- .check-mark-svg -->
+                <svg
+                    class="check-mark-svg"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                    fill="currentColor"
+                >
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                    />
+                </svg>
+
+                <!-- .x-mark-svg -->
+                <svg
+                    class="x-mark-svg"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 384 512"
+                    fill="currentColor"
+                >
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                        d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                    />
+                </svg>
+            </label>
+        </header>
+
+        <!-- main -->
+        <main>
+            <section id="about" class="about">
+                <header class="header">
+                    <h2>About</h2>
+                </header>
+                <p class="about-text">
+                    <span class="welcome">Welcome</span>
+                    <span class="i-am">I am Abdullah</span>
+                    <span class="se"
+                        >Software engineer creating exceptional user experiences
+                        with team help</span
+                    >
+                </p>
+                <img
+                    class="hero-image"
+                    src="./teamwork-makes-the-dream-work-smaller.jpg"
+                    alt="top view of 5 arms extended and hands on top of each other, making the 'team work' gesture"
+                />
+                <p class="links">
+                    <a class="git" href="https://github.com/new-AF"
+                        >GitHub Profile</a
+                    >
+                    <!-- <a class="cv" href="#id-cv">CV</a> -->
+                </p>
+            </section>
+
+            <!-- projects -->
+            <section id="projects" class="projects">
+                <header class="header">
+                    <h2>Projects</h2>
+                </header>
+
+                <div class="info">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                        fill="currentColor"
+                    >
+                        <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path
+                            d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"
+                        />
+                    </svg>
+                    <p>
+                        Click on any project, to go to its homepage on GitHub.
+                    </p>
+                </div>
+
+                <a
+                    class="project p1"
+                    href="https://github.com/new-AF/Web-App-Count-File-Words-Lines-Bytes"
+                >
+                    <header>
+                        <h3>Count File Words, Lines & Bytes</h3>
+                    </header>
+                    <picture
+                        role="button"
+                        aria-label="Button to run the project in an embedded iframe"
+                    >
+                        <img
+                            class="image"
+                            alt="Image preview of 'Count File Words, Lines & Bytes' web app"
+                        />
+                    </picture>
+                    <p class="description">
+                        Locally upload mutliple files, and the count the number
+                        of words, lines and bytes in each file.
+                    </p>
+                </a>
+
+                <a
+                    class="project p2"
+                    href="https://github.com/new-AF/react-markown-previewer"
+                >
+                    <header>
+                        <h3>Markdown Editor</h3>
+                    </header>
+                    <picture
+                        role="button"
+                        aria-label="Button to run the project in an embedded iframe"
+                    >
+                        <img
+                            class="image"
+                            alt="Image preview of 'Markdown Editor' web app"
+                        />
+                    </picture>
+                    <p class="description">
+                        Render plain Markdown text into styled and formatted
+                        output as you type.
+                    </p>
+                </a>
+
+                <a
+                    class="project p3"
+                    href="https://github.com/new-AF/timestamp-microservice"
+                >
+                    <header>
+                        <h3>Timestamp Microservice</h3>
+                    </header>
+                    <picture
+                        role="button"
+                        aria-label="Button to run the project in an embedded iframe"
+                    >
+                        <img
+                            class="image"
+                            alt="Image preview of
+                        'Timestamp Microservice' web app"
+                        />
+                    </picture>
+                    <p class="description">
+                        GUI and API to convert representation of dates between
+                        text & JavaScript timestamp formats.
+                    </p>
+                </a>
+            </section>
+
+            <!-- contact -->
+            <section id="contact" class="contact">
+                <header class="header">
+                    <h2>Contact</h2>
+                </header>
+                <p class="open-position">
+                    <span>
+                        I'm always open to exploring new opportunities and
+                        working with innovative teams, so feel free to reach
+                        out!
+                    </span>
+                    <span></span>
+                </p>
+
+                <form
+                    class="form"
+                    action="https://formsubmit.co/6c1db44d46ff3399651745e2218ade9a"
+                    method="POST"
+                >
+                    <!-- email -->
+                    <label for="email" id="email-label" class="label"
+                        >Your email address (required)</label
+                    >
+                    <input
+                        id="email"
+                        class="input"
+                        type="text"
+                        name="email"
+                        required
+                    />
+
+                    <!-- message -->
+                    <label for="message" id="message-label" class="label"
+                        >Your message (required)</label
+                    >
+                    <textarea
+                        id="message"
+                        class="input"
+                        type="text"
+                        name="message"
+                        required
+                    ></textarea>
+
+                    <!-- submit button -->
+                    <input
+                        id="submit"
+                        class="button"
+                        type="submit"
+                        value="Send Email"
+                    />
+                </form>
+            </section>
+        </main>
+
+        <!-- footer -->
+        <footer><small>&copy; 2024 Abdullah Fatota</small></footer>
+    </body>
+</html>
