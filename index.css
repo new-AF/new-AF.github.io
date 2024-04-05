@@ -378,6 +378,9 @@ section.projects {
     }
 
     .project {
+        transform: translateY(1rem);
+        transition: transform 250ms ease-out;
+
         /* like row-gap but wihout grid container */
         &:not(:last-child) {
             margin-block-end: var(--project-margin-bottom);
@@ -459,6 +462,7 @@ section.projects {
         /* card hover effect */
         &:hover {
             box-shadow: var(--card-box-shadow-hover);
+            transform: unset;
 
             /* Icons overlay to run project */
             /* .image {
