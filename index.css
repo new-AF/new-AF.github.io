@@ -502,7 +502,7 @@ section.contact {
         row-gap: 0.25rem;
         grid-template-columns: 1fr;
         grid-template-rows:
-            min-content min-content min-content minmax(15rem, 1fr)
+            min-content min-content min-content minmax(10rem, 1fr)
             min-content;
 
         .input {
