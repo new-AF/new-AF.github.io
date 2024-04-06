@@ -74,24 +74,24 @@
     --card-max-width: 700px;
 
     font-family: system-ui;
-    color: var(--color-text);
-    background-color: var(--color-bg);
 }
 * {
     box-sizing: border-box;
     margin: 0;
 }
-html {
+html,
+body {
     scroll-behavior: smooth;
 }
 a {
+    cursor: pointer;
     color: inherit;
     text-decoration: none;
-    border-bottom: var(--border-width) solid var(--color-text);
-    transition: border-bottom 250ms ease-out;
+    border-bottom: var(--border-width) solid
+        color-mix(in srgb, var(--color-text), black 50%);
+    transition: border-bottom-style 250ms ease-out;
 
     &:hover {
-        border-bottom-color: var(--color-text);
         border-bottom-style: dashed;
     }
 
@@ -138,6 +138,8 @@ body {
         "main"
         "footer"
         "header";
+    color: var(--color-text);
+    background-color: var(--color-bg);
 }
 .body-header {
     /* to raise on top of sections > header */
@@ -560,7 +562,12 @@ footer {
     text-align: center;
     padding-block: var(--section-padding-block);
 }
-/* activate dark theme */
+/* :root:has:not(#light-theme-checkbox:checked:checked) {
+    body {
+        transition: background-color 5s ease-out;
+    }
+} */
+/* activate white theme */
 :root:has(#light-theme-checkbox:checked) {
     --theme: white;
     --color-bg: var(--white-body-bg);
