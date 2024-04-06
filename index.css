@@ -652,9 +652,8 @@ footer {
         column-gap: 1em;
     }
 
-    html,
-    body {
-        scroll-padding-block-start: 6rem;
+    main > section {
+        scroll-margin-block-start: 6rem;
     }
 
     body {
