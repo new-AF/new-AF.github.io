@@ -77,8 +77,7 @@
 }
 @font-face {
     font-family: font1;
-    /* Copyright (c) 2024, LyonsType (lyonstype4.wixsite.com/lyonstype-beta),
-with Reserved Font Name LT Saeada. */
+    /* Copyright (c) 2024, LyonsType (lyonstype4.wixsite.com/lyonstype-beta), with Reserved Font Name LT Saeada. */
     src: url(LTSaeada-Medium.otf);
 }
 * {
@@ -98,7 +97,7 @@ a {
     transition: border-bottom-style 250ms ease-out;
 
     &:hover {
-        border-bottom-style: dashed;
+        border-bottom-style: dotted;
     }
 
     /* elongate it a tiny bit at the end */
@@ -120,7 +119,6 @@ h2 {
     cursor: pointer;
     font: inherit;
     color: var(--color-primary-button-text-color);
-    font-variant: small-caps;
     background-color: var(--color-primary-button-bg);
     border: var(--border-width) solid var(--color-border);
     border-radius: 0.5rem;
@@ -163,7 +161,7 @@ body {
     grid-template-rows: repeat(2, 1fr);
 
     letter-spacing: var(--header-letter-spacing);
-    font-variant: var(--about-font-variant);
+    text-transform: uppercase;
     font-size: 0.85rem;
     font-weight: 600;
 
@@ -174,6 +172,7 @@ body {
     h1 {
         grid-area: h1;
         display: none;
+        word-spacing: 0.25em;
         align-self: center;
         padding-inline: var(--header-elemnts-padding);
         font-size: 1.3em;
@@ -386,14 +385,12 @@ section.projects {
     }
 
     .project {
-        transform: translateY(1rem);
-        transition: transform 250ms ease-out;
-
         /* like row-gap but wihout grid container */
         &:not(:last-child) {
             margin-block-end: var(--project-margin-bottom);
         }
 
+        border-bottom: unset;
         border-radius: var(--card-border-radius);
         padding: var(--card-padding);
 
@@ -448,15 +445,16 @@ section.projects {
                 border-radius: calc(
                     var(--card-border-radius) - var(--card-padding)
                 );
-                transition: background-size 250ms ease-out;
+                transition: transform 250ms ease-out;
                 box-shadow: 0 0 0.1rem gray;
                 /* hide alt-text */
-                text-indent: 100%;
+                /* text-indent: 100%;
                 white-space: nowrap;
-                overflow: hidden;
+                overflow: hidden; */
                 /* end */
 
                 object-fit: cover;
+                object-position: top;
                 width: 100%;
                 height: 100%;
 
@@ -473,9 +471,9 @@ section.projects {
             transform: unset;
 
             /* Icons overlay to run project */
-            /* .image {
-                background-size: 102.5%;
-            } */
+            .image {
+                transform: scale(1.1) translateY(5%);
+            }
         }
         /* end of card hover effect */
 
@@ -483,16 +481,6 @@ section.projects {
             justify-self: start;
             align-self: end;
         }
-    }
-
-    .p1 .image {
-        background-image: url(p1.png);
-    }
-    .p2 .image {
-        background-image: url(p2.png);
-    }
-    .p3 .image {
-        background-image: url(p3.png);
     }
 }
 section.contact {
