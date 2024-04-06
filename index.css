@@ -73,7 +73,13 @@
     --card-padding: 1rem;
     --card-max-width: 700px;
 
-    font-family: system-ui;
+    font-family: font1, system-ui;
+}
+@font-face {
+    font-family: font1;
+    /* Copyright (c) 2024, LyonsType (lyonstype4.wixsite.com/lyonstype-beta),
+with Reserved Font Name LT Saeada. */
+    src: url(LTSaeada-Medium.otf);
 }
 * {
     box-sizing: border-box;
