@@ -653,7 +653,7 @@ footer {
     }
 
     main > section {
-        scroll-margin-block-start: 6rem;
+        padding-block-start: 6rem;
     }
 
     body {
