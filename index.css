@@ -314,7 +314,7 @@ section.about {
 
     font-weight: bold;
     letter-spacing: var(--about-letter-spacing);
-    font-variant: var(--about-font-variant);
+    /* font-variant: var(--about-font-variant); */
 
     /* hide header  */
     & > header {
@@ -682,27 +682,17 @@ footer {
         margin-inline: var(--section-padding-inline);
         justify-self: center;
         column-gap: 1.1rem;
+
+        --about-font-size: 3rem;
     }
 
     section.projects {
-        grid-template-columns: var(--big-section-left-column) minmax(
-                0,
-                var(--big-section-right-column)
-            );
-        justify-content: center;
-        column-gap: var(--big-section-col-gap);
-        row-gap: var(--big-section-row-gap);
-        .header {
-            grid-column: 1;
+        & > .header {
             font-size: 4rem;
         }
-        .info {
-            grid-column: 1;
-            align-self: start;
-            margin: unset;
-        }
-        .project {
-            grid-column: 2;
+        & > .project {
+            max-width: 675px;
+            justify-self: center;
         }
     }
 
