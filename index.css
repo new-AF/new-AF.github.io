@@ -87,6 +87,7 @@
 html,
 body {
     scroll-behavior: smooth;
+    transition: background-color 1s linear;
 }
 a {
     cursor: pointer;
@@ -146,6 +147,8 @@ body {
     background-color: var(--color-bg);
 }
 .body-header {
+    transition: background-color 1s linear;
+
     /* to raise on top of sections > header */
     z-index: var(--body-header-z-index);
     position: sticky;
@@ -445,7 +448,7 @@ section.projects {
                 border-radius: calc(
                     var(--card-border-radius) - var(--card-padding)
                 );
-                transition: transform 250ms ease-out;
+                transition: transform 250ms linear;
                 box-shadow: 0 0 0.1rem gray;
                 /* hide alt-text */
                 /* text-indent: 100%;
