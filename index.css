@@ -2,23 +2,25 @@
     --border-width: 0.25rem;
 
     /* dark theme */
-    --dark-body-bg: #121212;
+    --dark-body-bg: #192428;
     --dark-text-color: #ffa500;
     --dark-primary-button-bg: #ffa500;
     --dark-primary-button-text-color: var(--dark-body-bg);
-    --dark-input-bg: #414141;
-    --dark-card-bg: #232323;
+    --dark-card-bg: color-mix(in srgb, var(--dark-body-bg), white 10%);
+    --dark-card-hover: black;
+    --dark-input-bg: color-mix(in srgb, var(--dark-body-bg), white 20%);
     --dark-border: var(--dark-primary-button-bg);
     --dark-info-bg: color-mix(in srgb, var(--dark-body-bg), white 10%);
-    --dark-nav-bg: #1f1f1f;
+    --dark-nav-bg: var(--dark-card-bg);
 
     /* light theme */
     --white-body-bg: snow;
     --white-text-color: #141e46; /*#bb2525;*/
     --white-primary-button-bg: #ffa500;
     --white-primary-button-text-color: var(--white-text-color);
-    --white-input-bg: inherit;
     --white-card-bg: var(--white-body-bg);
+    --white-card-hover: grey;
+    --white-input-bg: inherit;
     --white-border: var(--white-primary-button-bg);
     --white-info-bg: #b4c5fa;
     --white-nav-bg: color-mix(in srgb, var(--white-body-bg), black 5%);
@@ -29,8 +31,9 @@
     --color-text: var(--dark-text-color);
     --color-primary-button-bg: var(--dark-primary-button-bg);
     --color-primary-button-text-color: var(--dark-primary-button-text-color);
-    --color-input-bg: var(--dark-input-bg);
     --color-card-bg: var(--dark-card-bg);
+    --color-card-hover: var(--dark-card-hover);
+    --color-input-bg: var(--dark-input-bg);
     --color-border: var(--dark-primary-button-bg);
     --color-info-bg: var(--dark-info-bg);
     --color-nav-bg: var(--dark-nav-bg);
@@ -67,8 +70,8 @@
     --big-section-row-gap: 2rem;
 
     /* section.projects .project */
-    --card-box-shadow: 0 0 0.5rem grey;
-    --card-box-shadow-hover: 0 0 0.55rem gray;
+    --card-box-shadow: 0 0 0.5rem var(--color-card-hover);
+    --card-box-shadow-hover: 0 0 0.55rem var(--color-card-hover);
     --card-border-radius: 1.25rem;
     --card-padding: 1rem;
     --card-max-width: 700px;
@@ -210,7 +213,7 @@ body {
             height: 100%;
         }
 
-        &:hover {
+        &:not(.light-theme):hover {
             background-color: unset;
             backdrop-filter: brightness(1.75);
         }
@@ -233,28 +236,17 @@ body {
 
     /* group 2 activate dark theme */
     .light-theme {
+        position: relative;
         grid-area: light-theme;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         grid-template-areas:
-            "moon-svg some-svg"
-            "text text";
+            "moon-svg"
+            "text";
         column-gap: 0.5rem;
 
         & > .sun-svg {
             grid-area: moon-svg;
-            justify-self: end;
-        }
-
-        & > .check-mark-svg {
-            display: none;
-            grid-area: some-svg;
-            justify-self: start;
-        }
-
-        & > .x-mark-svg {
-            grid-area: some-svg;
-            justify-self: start;
         }
 
         & > #light-theme-checkbox {
@@ -263,16 +255,68 @@ body {
         & > .text {
             grid-area: text;
         }
-        &:has(#light-theme-checkbox:checked) {
-            /* background-color: greenyellow; */
-            & > .check-mark-svg {
-                display: unset;
-            }
-            & > .x-mark-svg {
-                display: none;
-            }
-        } /* end of &:has(#light-theme-checkbox:checked) */
     }
+
+    /* themes and accessibility */
+    & > .accessibility {
+        cursor: auto;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-transform: none;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: auto;
+        justify-content: center;
+        background-color: inherit;
+        padding-block: 1em;
+        box-shadow: var(--card-box-shadow);
+
+        fieldset {
+            border: none;
+            grid-auto-rows: auto;
+        }
+
+        label {
+            cursor: pointer;
+            display: grid;
+            grid-template-columns: min-content 1fr;
+            justify-items: start;
+            align-items: center;
+            padding-block: 0.5em;
+            column-gap: 0.5em;
+            padding-inline-start: 0.5em;
+            padding-inline-end: 2em;
+            width: 100%;
+            white-space: nowrap;
+
+            &:hover {
+                backdrop-filter: brightness(0.5);
+            }
+        }
+
+        legend:first-child {
+            margin-block-start: 1em;
+        }
+
+        .custom-label {
+            text-align: start;
+            width: 100%;
+        }
+
+        .custom-input {
+            width: 100%;
+        }
+
+        .x-mark-svg {
+            cursor: pointer;
+            width: 2em;
+        }
+    }
+}
+.hidden {
+    display: none !important;
 }
 main {
     grid-area: main;
@@ -480,7 +524,7 @@ section.projects {
         }
         /* end of card hover effect */
 
-        & > .link {
+        & > .git-repo-online {
             justify-self: start;
             align-self: end;
         }
@@ -561,23 +605,46 @@ footer {
     text-align: center;
     padding-block: var(--section-padding-block);
 }
-/* :root:has:not(#light-theme-checkbox:checked:checked) {
-    body {
-        transition: background-color 5s ease-out;
-    }
-} */
 /* activate white theme */
-:root:has(#light-theme-checkbox:checked) {
+:root:has(.radio-theme-white:checked) {
     --theme: white;
     --color-bg: var(--white-body-bg);
     --color-text: var(--white-text-color);
     --color-primary-button-bg: var(--white-primary-button-bg);
     --color-primary-button-text-color: var(--white-primary-button-text-color);
-    --color-input-bg: var(--white-input-bg);
     --color-card-bg: var(--white-card-bg);
+    --color-card-hover: var(--white-card-hover);
+    --color-input-bg: var(--white-input-bg);
     --color-border: var(--white-primary-button-bg);
     --color-info-bg: var(--white-info-bg);
     --color-nav-bg: var(--white-nav-bg);
+}
+/* activate black theme */
+:root:has(.radio-theme-black:checked) {
+    --theme: black;
+    --dark-body-bg: #141414;
+    --color-bg: var(--dark-body-bg);
+    --color-text: var(--dark-text-color);
+    --color-primary-button-bg: var(--dark-primary-button-bg);
+    --color-primary-button-text-color: var(--dark-primary-button-text-color);
+    --color-card-bg: var(--dark-card-bg);
+    --color-card-hover: var(--dark-card-hover);
+    --color-input-bg: var(--dark-input-bg);
+    --color-border: var(--dark-primary-button-bg);
+    --color-info-bg: var(--dark-info-bg);
+    --color-nav-bg: var(--dark-nav-bg);
+}
+/* radio-font-xl */
+:root:has(.radio-font-size-xl:checked) {
+    font-size: 2rem;
+}
+/* radio-font-xxl */
+:root:has(.radio-font-size-xxl:checked) {
+    font-size: 4rem;
+}
+/* radio-font-family-system */
+:root:has(.radio-font-family-system:checked) {
+    font-family: system-ui;
 }
 /* @media (prefers-color-scheme: light) {
 } */
@@ -628,7 +695,8 @@ footer {
     }
 }
 
-/* 1, 1, 4 col, 1 row .body-header */
+/* move header on top
+1, 1, 4 col, 1 row .body-header */
 @media (min-width: 800px) {
     .body-header {
         display: grid;
@@ -638,6 +706,12 @@ footer {
         padding-inline: var(--section-padding-inline);
         position: sticky;
         top: 0;
+
+        .accessibility {
+            bottom: unset;
+            top: 0;
+        }
+
         & > h1 {
             padding-inline-start: 0;
             display: unset;

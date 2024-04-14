@@ -68,38 +68,108 @@
                 class="nav-button light-theme"
                 role="button"
                 for="light-theme-checkbox"
+                onclick="document.querySelector('.accessibility').classList.remove('hidden')"
             >
                 <!-- <input/> -->
                 <input id="light-theme-checkbox" type="checkbox" />
 
                 <!-- .text -->
-                <span class="text">Activate Light Theme</span>
+                <span class="text">Themes and Accessibility</span>
 
-                <!-- .sun-svg -->
+                <!-- .accessibility-svg -->
                 <svg
-                    class="sun-svg"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
+                    class="sun-svg"
                     fill="currentColor"
                 >
-                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                     <path
-                        d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"
+                        d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm161.5-86.1c-12.2-5.2-26.3 .4-31.5 12.6s.4 26.3 12.6 31.5l11.9 5.1c17.3 7.4 35.2 12.9 53.6 16.3v50.1c0 4.3-.7 8.6-2.1 12.6l-28.7 86.1c-4.2 12.6 2.6 26.2 15.2 30.4s26.2-2.6 30.4-15.2l24.4-73.2c1.3-3.8 4.8-6.4 8.8-6.4s7.6 2.6 8.8 6.4l24.4 73.2c4.2 12.6 17.8 19.4 30.4 15.2s19.4-17.8 15.2-30.4l-28.7-86.1c-1.4-4.1-2.1-8.3-2.1-12.6V235.5c18.4-3.5 36.3-8.9 53.6-16.3l11.9-5.1c12.2-5.2 17.8-19.3 12.6-31.5s-19.3-17.8-31.5-12.6L338.7 175c-26.1 11.2-54.2 17-82.7 17s-56.5-5.8-82.7-17l-11.9-5.1zM256 160a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"
                     />
                 </svg>
+            </label>
 
-                <!-- .check-mark-svg -->
-                <svg
-                    class="check-mark-svg"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 448 512"
-                    fill="currentColor"
-                >
-                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                    <path
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-                    />
-                </svg>
+            <article class="accessibility">
+                <fieldset>
+                    <legend>Theme</legend>
+                    <label
+                        ><input
+                            type="radio"
+                            name="radio-theme"
+                            checked
+                            class="radio-theme-default"
+                        />Default</label
+                    >
+                    <label
+                        ><input
+                            type="radio"
+                            name="radio-theme"
+                            class="radio-theme-black"
+                        />Black</label
+                    >
+                    <label
+                        ><input
+                            type="radio"
+                            name="radio-theme"
+                            class="radio-theme-white"
+                        />White</label
+                    >
+                </fieldset>
+
+                <fieldset>
+                    <legend>Font Size</legend>
+                    <label
+                        ><input
+                            type="radio"
+                            name="radio-font-size"
+                            class="radio-font-size-default"
+                            checked
+                        />Default</label
+                    >
+                    <label
+                        ><input
+                            type="radio"
+                            name="radio-font-size"
+                            class="radio-font-size-xl"
+                        />Extra Large</label
+                    >
+                    <label
+                        ><input
+                            type="radio"
+                            name="radio-font-size"
+                            class="radio-font-size-xxl"
+                        />Extra Extra Large</label
+                    >
+                    <!-- <label class="custom-label" for="custom-font-size"
+                        >Custom (pts):</label
+                    >
+                    <input
+                        type="number"
+                        id="custom-font-size"
+                        class="custom-input"
+                    /> -->
+                </fieldset>
+
+                <fieldset>
+                    <legend>Font Family</legend>
+                    <label
+                        ><input
+                            type="radio"
+                            name="radio-font-family"
+                            class="radio-font-family-default"
+                            checked
+                        />Default</label
+                    >
+                    <label
+                        ><input
+                            type="radio"
+                            name="radio-font-family"
+                            class="radio-font-family-system"
+                        />System</label
+                    >
+                    <!-- <label><input type="radio" />OpenDyslexic</label> -->
+                </fieldset>
 
                 <!-- .x-mark-svg -->
                 <svg
@@ -107,13 +177,14 @@
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 384 512"
                     fill="currentColor"
+                    onclick="document.querySelector('.accessibility').classList.add('hidden')"
                 >
                     <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                     <path
                         d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
                     />
                 </svg>
-            </label>
+            </article>
         </header>
 
         <!-- main -->
@@ -167,7 +238,7 @@
 
                 <a
                     class="project p1"
-                    href="https://github.com/new-AF/Web-App-Count-File-Words-Lines-Bytes"
+                    href="https://new-af.github.io/Web-App-Count-File-Words-Lines-Bytes/"
                 >
                     <header>
                         <h3>Count File Words, Lines & Bytes</h3>
@@ -190,7 +261,7 @@
 
                 <a
                     class="project p2"
-                    href="https://github.com/new-AF/react-markown-previewer"
+                    href="https://new-af.github.io/react-markown-previewer/"
                 >
                     <header>
                         <h3>Markdown Editor</h3>
@@ -213,7 +284,7 @@
 
                 <a
                     class="project p3"
-                    href="https://github.com/new-AF/timestamp-microservice"
+                    href="https://timestamp-microservice-t7m9.onrender.com/"
                 >
                     <header>
                         <h3>Timestamp Microservice</h3>
