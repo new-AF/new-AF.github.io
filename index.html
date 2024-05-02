@@ -8,8 +8,9 @@
             content="I am a Software engineer creating exceptional user experiences
         with the help of the team"
         />
-        <title>Abdullah Fatota | Software Engineer</title>
+        <title class="lang title">Abdullah Fatota | Software Engineer</title>
         <link rel="stylesheet" href="index.css" />
+        <link rel="stylesheet" href="more styles/toggle.css" />
         <link rel="shortcut icon" href="code.svg" type="image/x-icon" />
     </head>
     <body>
@@ -29,7 +30,7 @@
                             d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
                         />
                     </svg>
-                    <span class="link-text">About</span>
+                    <span class="link-text lang">About</span>
                 </a>
 
                 <!-- .projects -->
@@ -44,7 +45,7 @@
                             d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"
                         />
                     </svg>
-                    <span class="link-text">My Work</span>
+                    <span class="link-text lang">My Work</span>
                 </a>
 
                 <!-- .contact -->
@@ -59,7 +60,7 @@
                             d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
                         />
                     </svg>
-                    <span class="link-text">Contact</span>
+                    <span class="link-text lang">Contact</span>
                 </a>
             </nav>
 
@@ -74,7 +75,7 @@
                 <input id="light-theme-checkbox" type="checkbox" />
 
                 <!-- .text -->
-                <span class="text">Themes and Accessibility</span>
+                <span class="text lang">Themes and Accessibility</span>
 
                 <!-- .accessibility-svg -->
                 <svg
@@ -187,6 +188,12 @@
                     </svg>
                 </div>
             </article>
+
+            <label class="external-toggle">
+                <input class="checkbox" type="checkbox" />
+                <span class="text1">🇬🇧 English</span>
+                <span class="text2">Bosanski 🇧🇦</span>
+            </label>
         </header>
 
         <!-- main -->
@@ -196,9 +203,9 @@
                     <h2>About</h2>
                 </header>
                 <p class="about-text">
-                    <span class="welcome">Welcome</span>
-                    <span class="i-am">I am Abdullah</span>
-                    <span class="se"
+                    <span class="welcome lang">Welcome</span>
+                    <span class="i-am lang">I am Abdullah</span>
+                    <span class="se lang"
                         >Software engineer creating exceptional user experiences
                         with the help of the team</span
                     >
@@ -209,7 +216,7 @@
                     alt="top view of 5 arms extended and hands on top of each other, making the 'team work' gesture"
                 />
                 <p class="links">
-                    <a class="git" href="https://github.com/new-AF"
+                    <a class="git lang" href="https://github.com/new-AF"
                         >GitHub Profile</a
                     >
                     <!-- <a class="cv" href="#id-cv">CV</a> -->
@@ -219,7 +226,7 @@
             <!-- projects -->
             <section id="projects" class="projects">
                 <header class="header">
-                    <h2>My Work</h2>
+                    <h2 class="lang">My Work</h2>
                 </header>
 
                 <div class="info">
@@ -233,7 +240,7 @@
                             d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"
                         />
                     </svg>
-                    <p>Click on any web app, to run it live.</p>
+                    <p class="lang">Click on any web app, to run it live.</p>
                 </div>
 
                 <a
@@ -241,7 +248,7 @@
                     href="https://new-af.github.io/Web-App-Count-File-Words-Lines-Bytes/"
                 >
                     <header>
-                        <h3>Count File Words, Lines & Bytes</h3>
+                        <h3 class="lang">Count File Words, Lines & Bytes</h3>
                     </header>
                     <picture
                         role="button"
@@ -253,7 +260,7 @@
                             alt="Image preview of 'Count File Words, Lines & Bytes' web app"
                         />
                     </picture>
-                    <p class="description">
+                    <p class="description lang">
                         Locally upload mutliple files, and the count the number
                         of words, lines and bytes in each file.
                     </p>
@@ -264,7 +271,7 @@
                     href="https://new-af.github.io/react-markown-previewer/"
                 >
                     <header>
-                        <h3>Markdown Editor</h3>
+                        <h3 class="lang">Markdown Editor</h3>
                     </header>
                     <picture
                         role="button"
@@ -276,7 +283,7 @@
                             alt="Image preview of 'Markdown Editor' web app"
                         />
                     </picture>
-                    <p class="description">
+                    <p class="description lang">
                         Render plain Markdown text into styled and formatted
                         output as you type.
                     </p>
@@ -287,7 +294,7 @@
                     href="https://timestamp-microservice-t7m9.onrender.com/"
                 >
                     <header>
-                        <h3>Timestamp Microservice</h3>
+                        <h3 class="lang">Timestamp Microservice</h3>
                     </header>
                     <picture
                         role="button"
@@ -300,7 +307,7 @@
                         'Timestamp Microservice' web app"
                         />
                     </picture>
-                    <p class="description">
+                    <p class="description lang">
                         GUI and API to convert representation of dates between
                         text & JavaScript timestamp formats.
                     </p>
@@ -310,12 +317,13 @@
             <!-- contact -->
             <section id="contact" class="contact">
                 <header class="header">
-                    <h2>Contact</h2>
+                    <h2 class="lang">Contact</h2>
                 </header>
-                <p class="open-position">
+                <p class="open-position lang">
                     <span>
-                        I'm always open to collaborating with innovative teams,
-                        so if you got an offer do reach out!
+                        I'm always interested in collaborating with innovative
+                        teams. For any questions or offers feel free to reach
+                        out!
                     </span>
                     <span></span>
                 </p>
@@ -326,7 +334,7 @@
                     method="POST"
                 >
                     <!-- email -->
-                    <label for="email" id="email-label" class="label"
+                    <label for="email" id="email-label" class="label lang"
                         >Your email address (required)</label
                     >
                     <input
@@ -338,7 +346,7 @@
                     />
 
                     <!-- message -->
-                    <label for="message" id="message-label" class="label"
+                    <label for="message" id="message-label" class="label lang"
                         >Your message (required)</label
                     >
                     <textarea
@@ -350,17 +358,104 @@
                     ></textarea>
 
                     <!-- submit button -->
-                    <input
-                        id="submit"
-                        class="button"
-                        type="submit"
-                        value="Send Email"
-                    />
+                    <label for="submit" class="submit button lang"
+                        >Send Email</label
+                    >
+                    <input id="submit" type="submit" style="display: none" />
                 </form>
             </section>
         </main>
 
         <!-- footer -->
         <footer><small>&copy; 2024 Abdullah Fatota</small></footer>
+
+        <!-- javascript -->
+        <script>
+            const LANG_BA = new Map([
+                [".title", "Abdullah Fatota | Softverski Inženjer"],
+                [".top .lang", "O meni"],
+                [".projects .lang", "Izdvojeni radovi"],
+                [".contact .lang", "Kontakt"],
+                [".light-theme .lang", "Teme i Pristupačnost"],
+                [".welcome.lang", "Dobrodošli"],
+                [".i-am.lang", "Ja sam Abdullah"],
+                [
+                    ".se.lang",
+                    "Softverski inženjer koji kreira vrhunska korisnička iskustva uz pomoć tima",
+                ],
+                [".git.lang", "Github Profil"],
+                [".projects .header .lang", "Izdvojeni radovi"],
+                [
+                    ".projects .info .lang",
+                    "Kliknite na bilo koju aplikaciju ispod, da biste je pokrenuli uživo.",
+                ],
+                [
+                    ".projects .p1 .lang",
+                    "Brojite riječi, redove i byte-ove u Fajlovima",
+                ],
+                [
+                    ".projects .p1 .description.lang",
+                    "Lokalno obradite više fajlove i brojite riječi, redova i byte-ove u svaki fajl.",
+                ],
+                [".projects .p2 .lang", "Preglednik Markdown Fajlova"],
+                [
+                    ".projects .p2 .description.lang",
+                    "Pretvoriti običan Markdown fajl u stilizovan i formatiran tekst dok kucate.",
+                ],
+                [
+                    ".projects .p3 .lang",
+                    "Mikroservis za obradu vremenske oznake (tzv. Timestamps)",
+                ],
+                [
+                    ".projects .p3 .description.lang",
+                    "Aplikacija i API za pretvaranje datuma u JavaScript-u između formata tekstualnog i vremenske oznake.",
+                ],
+                [".contact .header .lang", "Kontakt"],
+                [
+                    ".contact .open-position.lang",
+                    "Uvijek sam zainteresovan za saradnju sa inovativnim timovima. O bilo kojih pitanja ili ponuda slobodno se javite putem ove forme!",
+                ],
+                [
+                    ".contact #email-label.lang",
+                    "Vaša email adresa (obavezno polje)",
+                ],
+                [
+                    ".contact #message-label.lang",
+                    "Vaše pitanje, ponuda, itd...  (obavezno polje)",
+                ],
+                [".contact .submit.lang", "Pošaljite"],
+            ]);
+            const LANG_EN = new Map();
+            const header = document.querySelector(".body-header");
+            const checkbox = header.querySelector(
+                ".external-toggle > .checkbox"
+            );
+
+            /* fill in LANG_EN with default english textContents for 1st time */
+            document.addEventListener("DOMContentLoaded", () => {
+                LANG_BA.forEach((value, key) => {
+                    const element = document.querySelector(key);
+                    const text = element.textContent;
+                    LANG_EN.set(key, text);
+                    // console.log(text);
+                });
+                // console.log(LANG_EN);
+            });
+
+            /* when checkbox is checked on/toggled or checked off/toggled */
+            checkbox.addEventListener("input", (event) => {
+                /* is English or Bosanski toggled */
+                const english = checkbox.checked === false;
+                const bosanski = !english;
+
+                const fromMap = bosanski ? LANG_EN : LANG_BA;
+                const translatedMap = bosanski ? LANG_BA : LANG_EN;
+                fromMap.forEach((value, key) => {
+                    const element = document.querySelector(key);
+                    const translatedText = translatedMap.get(key);
+                    element.textContent = translatedText;
+                });
+            });
+        </script>
     </body>
 </html>

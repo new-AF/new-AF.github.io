@@ -39,9 +39,10 @@
     --color-nav-bg: var(--dark-nav-bg);
 
     /* z-indicies */
-    --body-header-z-index: 3;
-    --play-icon-z-index: 1;
-    --section-header-z-index: 2;
+    --z-index-accessibility: 4;
+    --z-index-body-header: 3;
+    --z-index-section-header: 2;
+    --z-index-play-icon: 1;
 
     /* main */
     /* this is also padding-block-start for .about
@@ -153,7 +154,7 @@ body {
     transition: background-color 1s linear;
 
     /* to raise on top of sections > header */
-    z-index: var(--body-header-z-index);
+    z-index: var(--z-index-body-header);
     position: sticky;
     bottom: 0;
     line-height: 1;
@@ -271,9 +272,10 @@ body {
         background-color: inherit;
         box-shadow: var(--card-box-shadow);
         accent-color: var(--color-text);
+        z-index: var(--z-index-accessibility);
 
         & > .container {
-            justify-self: end;
+            justify-self: center;
             display: grid;
             grid-template-columns: repeat(3, 1fr) 0.5fr;
 
@@ -354,7 +356,7 @@ main > section {
     & > header {
         font-size: 2rem;
         font-weight: bold;
-        z-index: var(--section-header-z-index);
+        z-index: var(--z-index-section-header);
         font-variant: var(--about-font-variant);
         letter-spacing: var(--header-letter-spacing);
         /* position: sticky; */
@@ -602,10 +604,11 @@ section.contact {
         grid-area: message;
         resize: vertical;
     }
-    #submit {
-        font-weight: bold;
-        font-size: 1.25rem;
+    .submit {
         grid-area: submit;
+        font-weight: bold;
+        text-align: center;
+        font-size: 1.25rem;
         padding-block: 1rem;
     }
 
@@ -669,7 +672,13 @@ footer {
 /* @media (prefers-color-scheme: light) {
 } */
 
-/* 3 col, 2 row stretched .body-header */
+/*  bottom
+    3 columns,
+    2 rows
+    stretched
+    .body-header
+    super small screen
+*/
 @media (min-width: 425px) {
     :root {
         --section-padding-inline: 10%;
@@ -678,22 +687,30 @@ footer {
     /* make header 1 row */
     .body-header {
         grid-template-areas:
-            "about projects contact"
-            "light-theme light-theme light-theme";
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr;
+            "about projects "
+            " contact light-theme "
+            " external-toggle external-toggle";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
     } /* end of .body-header */
 }
 
-/* 4 col, 1 row center .body-header */
+/*  bottom
+    4 columns,
+    1 row
+    center .body-header
+    small screen
+*/
 @media (min-width: 500px) {
     :root {
         --header-padding-block: 1em;
     }
     .body-header {
-        grid-template-areas: "about projects contact light-theme";
+        grid-template-areas:
+            "about projects contact light-theme"
+            "external-toggle external-toggle external-toggle external-toggle";
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 1fr;
+        grid-template-rows: repeat(2, auto);
     } /* end of .body-header */
 }
 
@@ -715,13 +732,17 @@ footer {
     }
 }
 
-/* move header on top
-1, 1, 4 col, 1 row .body-header */
+/*  Top .body-header
+    6 columns: auto 1fr repeat(4, 8rem)
+    1 row
+ */
 @media (min-width: 800px) {
     .body-header {
         display: grid;
         justify-content: center;
-        grid-template-areas: "h1 . about projects contact light-theme";
+        grid-template-areas:
+            "h1 . about projects contact light-theme"
+            ". . . . external-toggle external-toggle";
         grid-template-columns: auto 1fr repeat(4, 8rem);
         padding-inline: var(--section-padding-inline);
         position: sticky;
@@ -814,6 +835,14 @@ footer {
         }
     }
 }
-/* 426 - 768px */
 
-/* 769 - 1024px */
+@media (min-width: 1366px) {
+    .body-header {
+        display: grid;
+        grid-template-areas: "h1 . about projects contact light-theme . external-toggle";
+        grid-template-columns: auto 1fr repeat(4, 8rem) 1fr 16rem;
+    }
+    /* 426 - 768px */
+
+    /* 769 - 1024px */
+}
