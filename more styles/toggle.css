@@ -1,0 +1,71 @@
+.external-toggle {
+    --height: 0.8rem;
+    --width: calc(2.5 * var(--height));
+    --diameter: calc(1.5 * var(--height));
+    grid-area: external-toggle;
+    display: grid;
+    grid-template-areas: "text1 circle-and-bg text2";
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5rem;
+    cursor: pointer;
+    padding-block: var(--header-padding-block);
+
+    &:hover {
+        backdrop-filter: brightness(1.5);
+    }
+
+    /* hidden actual checkbox */
+    & > input {
+        display: none;
+    }
+
+    /* text1 */
+    & > .text1 {
+        grid-area: text1;
+    }
+
+    /* text1 */
+    & > .text2 {
+        grid-area: text2;
+    }
+
+    /* bg */
+    &::before {
+        grid-area: circle-and-bg;
+        content: "";
+        height: var(--height);
+        align-self: center;
+        width: var(--width);
+        background-color: grey;
+        border-radius: 1rem;
+        /* smoothly move circle */
+        transition: all 500ms ease-out;
+    }
+
+    /* circle */
+    &::after {
+        grid-area: circle-and-bg;
+        content: "";
+        width: var(--diameter);
+        aspect-ratio: 1;
+        background-color: var(--color-text);
+        border-radius: 100%;
+        /* smoothly move circle */
+        transition: all 250ms ease-out;
+    }
+
+    /* when hidden input is checked, move circle to justify-end */
+    &:has(input:checked) {
+        /* bg */
+        &&::before {
+        }
+
+        /* circle */
+        &::after {
+            /* correct thing, but not transitionable */
+            /* justify-self: end; */
+            transform: translateX(calc(var(--width) - var(--diameter)));
+        }
+    }
+}
