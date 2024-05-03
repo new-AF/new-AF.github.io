@@ -2,7 +2,7 @@
     --border-width: 0.25rem;
 
     /* dark theme */
-    --dark-body-bg: #192428;
+    --dark-body-bg: #002451;
     --dark-text-color: #ffa500;
     --dark-primary-button-bg: #ffa500;
     --dark-primary-button-text-color: var(--dark-body-bg);
@@ -14,7 +14,7 @@
     --dark-nav-bg: var(--dark-card-bg);
 
     /* light theme */
-    --white-body-bg: snow;
+    --white-body-bg: aliceblue;
     --white-text-color: #141e46; /*#bb2525;*/
     --white-primary-button-bg: #ffa500;
     --white-primary-button-text-color: var(--white-text-color);
@@ -260,52 +260,50 @@ body {
 
     /* themes and accessibility */
     & > .accessibility {
-        padding-inline: var(--section-padding-inline);
-        cursor: auto;
         position: fixed;
         left: 0;
         bottom: 0;
         width: 100%;
-        text-transform: none;
+        padding-inline: var(--section-padding-inline);
+        z-index: var(--z-index-accessibility);
+
         display: grid;
+        grid-template-columns: repeat(3, auto) 8rem;
+        justify-content: center;
         grid-auto-flow: column;
+
+        text-transform: none;
         background-color: inherit;
         box-shadow: var(--card-box-shadow);
         accent-color: var(--color-text);
-        z-index: var(--z-index-accessibility);
 
-        & > .container {
-            justify-self: center;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr) 0.5fr;
+        & > * {
+            /* outline: 0.1rem solid green; */
+        }
 
-            & > * {
-                /* outline: 0.1rem solid green; */
+        & > .x-mark-svg {
+            cursor: pointer;
+            width: 100%;
+            height: 8rem;
+
+            & > path {
+                transform: scale(0.5) translate(50%, 50%);
             }
 
-            & > .x-mark-svg {
-                width: 100%;
-                height: 8rem;
-
-                & > path {
-                    transform: scale(0.5) translate(50%, 50%);
-                }
-
-                &:hover {
-                    backdrop-filter: brightness(1.5);
-                }
+            &:hover {
+                backdrop-filter: brightness(1.5);
             }
         }
 
         fieldset {
             border: none;
+            display: grid;
+            grid-template-columns: min-content auto;
+            grid-template-rows: repeat(3, 1fr);
         }
 
         label {
             cursor: pointer;
-            display: grid;
-            grid-template-columns: min-content 1fr;
-            justify-items: start;
             align-items: center;
             padding-block: 0.5em;
             column-gap: 0.5em;
@@ -329,11 +327,6 @@ body {
 
         .custom-input {
             width: 100%;
-        }
-
-        .x-mark-svg {
-            cursor: pointer;
-            width: 2em;
         }
     }
 }

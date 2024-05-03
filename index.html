@@ -91,102 +91,111 @@
                 </svg>
             </label>
 
-            <article class="accessibility hidden">
-                <div class="container">
-                    <fieldset>
-                        <legend>Theme</legend>
-                        <label
-                            ><input
-                                type="radio"
-                                name="radio-theme"
-                                checked
-                                class="radio-theme-default"
-                            />Grey-ish (default)</label
-                        >
-                        <label
-                            ><input
-                                type="radio"
-                                name="radio-theme"
-                                class="radio-theme-black"
-                            />Black</label
-                        >
-                        <label
-                            ><input
-                                type="radio"
-                                name="radio-theme"
-                                class="radio-theme-white"
-                            />White</label
-                        >
-                    </fieldset>
+            <article class="accessibility">
+                <!-- themes -->
+                <fieldset class="theme">
+                    <legend class="header lang">Theme</legend>
 
-                    <fieldset>
-                        <legend>Font Size</legend>
-                        <label
-                            ><input
-                                type="radio"
-                                name="radio-font-size"
-                                class="radio-font-size-default"
-                                checked
-                            />Normal (default)</label
-                        >
-                        <label
-                            ><input
-                                type="radio"
-                                name="radio-font-size"
-                                class="radio-font-size-xl"
-                            />Extra Large</label
-                        >
-                        <label
-                            ><input
-                                type="radio"
-                                name="radio-font-size"
-                                class="radio-font-size-xxl"
-                            />Extra Extra Large</label
-                        >
-                        <!-- <label class="custom-label" for="custom-font-size"
-                        >Custom (pts):</label
+                    <input
+                        id="dark-theme-1"
+                        type="radio"
+                        name="radio-theme"
+                        checked
+                        class="radio-theme-default"
+                    />
+                    <label for="dark-theme-1" class="label-dark-theme-1 lang"
+                        >Dark Blue (default)</label
                     >
                     <input
-                        type="number"
-                        id="custom-font-size"
-                        class="custom-input"
-                    /> -->
-                    </fieldset>
-
-                    <fieldset>
-                        <legend>Font Family</legend>
-                        <label
-                            ><input
-                                type="radio"
-                                name="radio-font-family"
-                                class="radio-font-family-default"
-                                checked
-                            />LTSaeada (default)</label
-                        >
-                        <label
-                            ><input
-                                type="radio"
-                                name="radio-font-family"
-                                class="radio-font-family-system"
-                            />Current System</label
-                        >
-                        <!-- <label><input type="radio" />OpenDyslexic</label> -->
-                    </fieldset>
-
-                    <!-- .x-mark-svg -->
-                    <svg
-                        class="x-mark-svg"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 384 512"
-                        fill="currentColor"
-                        onclick="document.querySelector('.accessibility').classList.add('hidden')"
+                        id="dark-theme-2"
+                        type="radio"
+                        name="radio-theme"
+                        class="radio-theme-black"
+                    />
+                    <label for="dark-theme-2" class="label-dark-theme-2 lang"
+                        >Dark Brown</label
                     >
-                        <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                        <path
-                            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
-                        />
-                    </svg>
-                </div>
+                    <input
+                        id="white-theme-1"
+                        type="radio"
+                        name="radio-theme"
+                        class="radio-theme-white"
+                    />
+                    <label for="white-theme-1" class="label-white-theme-1 lang"
+                        >White</label
+                    >
+                </fieldset>
+
+                <!-- font sizes -->
+                <fieldset class="font-size">
+                    <legend class="header lang">Font Size</legend>
+                    <input
+                        id="font-size-1"
+                        type="radio"
+                        name="radio-font-size"
+                        class="radio-font-size-default"
+                        checked
+                    />
+                    <label for="font-size-1" class="label-font-size-1 lang"
+                        >Normal (default)</label
+                    >
+                    <input
+                        id="font-size-2"
+                        type="radio"
+                        name="radio-font-size"
+                        class="radio-font-size-xl"
+                    />
+                    <label for="font-size-2" class="label-font-size-2 lang"
+                        >Extra Large</label
+                    >
+                    <input
+                        id="font-size-3"
+                        type="radio"
+                        name="radio-font-size"
+                        class="radio-font-size-xxl"
+                    />
+                    <label for="font-size-3" class="label-font-size-3 lang"
+                        >Extra Extra Large</label
+                    >
+                </fieldset>
+
+                <!-- font family -->
+                <fieldset class="font-family">
+                    <legend class="header lang">Font Family</legend>
+                    <input
+                        id="font-family-1"
+                        type="radio"
+                        name="radio-font-family"
+                        class="radio-font-family-default"
+                        checked
+                    />
+                    <label for="font-family-1" class="label-font-family-1"
+                        >LTSaeada (default)</label
+                    >
+                    <input
+                        id="font-family-2"
+                        type="radio"
+                        name="radio-font-family"
+                        class="radio-font-family-system"
+                    />
+                    <label for="font-family-2" class="label-font-family-2"
+                        >Current System</label
+                    >
+                </fieldset>
+
+                <!-- x mark close -->
+                <svg
+                    class="x-mark-svg"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 384 512"
+                    fill="currentColor"
+                    onclick="document.querySelector('.accessibility').classList.add('hidden')"
+                >
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                        d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                    />
+                </svg>
             </article>
 
             <label class="external-toggle">
@@ -377,6 +386,47 @@
                 [".projects .lang", "Izdvojeni radovi"],
                 [".contact .lang", "Kontakt"],
                 [".light-theme .lang", "Teme i Pristupačnost"],
+                [".body-header .accessibility .theme .header.lang", "Tema"],
+                [
+                    ".body-header .accessibility .theme .label-dark-theme-1.lang",
+                    "Tamno Plava (zadana opcija)",
+                ],
+                [
+                    ".body-header .accessibility .theme .label-dark-theme-2.lang",
+                    "Tamno Smeđa",
+                ],
+                [
+                    ".body-header .accessibility .theme .label-white-theme-1.lang",
+                    "Bijela",
+                ],
+                [
+                    ".body-header .accessibility .font-size  .header.lang",
+                    "Veličina slova",
+                ],
+                [
+                    ".body-header .accessibility .font-size .label-font-size-1.lang",
+                    "Normalna (zadana opcija)",
+                ],
+                [
+                    ".body-header .accessibility .font-size .label-font-size-2.lang",
+                    "Velika Slova",
+                ],
+                [
+                    ".body-header .accessibility .font-size .label-font-size-3.lang",
+                    "Extra Velika Slova",
+                ],
+                [
+                    ".body-header .accessibility .font-family .header.lang",
+                    "Font",
+                ],
+                [
+                    ".body-header .accessibility .font-family .label-font-family-1",
+                    "LTSaeada (zadana opcija)",
+                ],
+                [
+                    ".body-header .accessibility .font-family .label-font-family-2",
+                    "Sistemski zadani",
+                ],
                 [".welcome.lang", "Dobrodošli"],
                 [".i-am.lang", "Ja sam Abdullah"],
                 [
@@ -395,7 +445,7 @@
                 ],
                 [
                     ".projects .p1 .description.lang",
-                    "Lokalno obradite više fajlove i brojite riječi, redova i byte-ove u svaki fajl.",
+                    "Lokalno obradite više fajlova i brojite riječi, redova i byte-ove u svaki fajl.",
                 ],
                 [".projects .p2 .lang", "Preglednik Markdown Fajlova"],
                 [
