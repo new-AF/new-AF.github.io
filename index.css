@@ -38,6 +38,8 @@
     --color-info-bg: var(--dark-info-bg);
     --color-nav-bg: var(--dark-nav-bg);
 
+    --color-text-25: color-mix(in srgb, var(--color-text) 25%, grey);
+
     /* z-indicies */
     --z-index-accessibility: 4;
     --z-index-body-header: 3;
@@ -413,9 +415,36 @@ section.about {
     & > .links {
         grid-area: links;
         justify-self: start;
-        row-gap: var(--about-row-gap);
-        font-size: var(--font-size-links);
+
         display: grid;
+        grid-auto-flow: column;
+        column-gap: var(--about-row-gap);
+
+        font-size: var(--font-size-links);
+        list-style-type: none;
+        padding-left: 0;
+
+        & > li > a {
+            & > span {
+                display: none;
+            }
+
+            & > svg {
+                transition: fill 150ms ease-out;
+            }
+
+            &:hover {
+                & > svg {
+                    fill: var(--color-text);
+                }
+            }
+
+            display: grid;
+            grid-template-columns: 2rem;
+            grid-template-rows: 2rem;
+
+            border: unset;
+        }
     }
 
     a {
