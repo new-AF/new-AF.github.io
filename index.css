@@ -779,6 +779,7 @@ footer {
     /* If pin is unchecked do below: */
     :root:not(:has(.pin-checkbox:checked)) {
         .body-header {
+            position: unset;
             background-color: var(--color-bg);
             box-shadow: unset;
         }
