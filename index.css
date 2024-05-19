@@ -223,7 +223,7 @@ body {
 
         &:hover {
             background-color: unset;
-            backdrop-filter: brightness(1.75);
+            backdrop-filter: brightness(1.75) !important;
         }
 
         &:active {
@@ -337,6 +337,7 @@ body {
         }
     }
 
+    /* Default state: checked */
     & > .pin {
         display: none;
         grid-area: pin;
@@ -783,6 +784,9 @@ footer {
             background-color: var(--color-bg);
             box-shadow: unset;
         }
+        .pin {
+            backdrop-filter: brightness(1);
+        }
         --pin-degree: var(--pin-off-degree);
     }
 
@@ -812,6 +816,7 @@ footer {
 
         & > .pin {
             display: grid;
+            backdrop-filter: brightness(1.0875);
         }
     }
 
@@ -913,6 +918,10 @@ footer {
             &:hover {
                 filter: brightness(1);
             }
+        }
+
+        .pin {
+            backdrop-filter: brightness(1.375);
         }
     }
 
