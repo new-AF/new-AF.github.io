@@ -194,7 +194,6 @@ body {
             height: 100%;
             display: grid;
             align-content: center;
-            border-bottom: unset;
         }
     }
 
@@ -462,8 +461,7 @@ section.about {
             display: grid;
             grid-template-columns: 3ch;
             grid-template-rows: 3ch;
-
-            border: unset;
+            padding-block-end: 1em;
         }
     }
 
