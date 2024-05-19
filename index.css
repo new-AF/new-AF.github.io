@@ -460,8 +460,8 @@ section.about {
             }
 
             display: grid;
-            grid-template-columns: 2rem;
-            grid-template-rows: 2rem;
+            grid-template-columns: 3ch;
+            grid-template-rows: 3ch;
 
             border: unset;
         }
