@@ -38,6 +38,7 @@
     --color-info-bg: var(--dark-info-bg);
     --color-nav-bg: var(--dark-nav-bg);
 
+    --color-text-80: color-mix(in srgb, var(--color-text) 50%, grey);
     --color-text-25: color-mix(in srgb, var(--color-text) 25%, grey);
 
     /* z-indicies */
@@ -45,6 +46,11 @@
     --z-index-body-header: 3;
     --z-index-section-header: 2;
     --z-index-play-icon: 1;
+
+    /* pin */
+    --pin-on-degree: 45deg;
+    --pin-off-degree: 0deg;
+    --pin-degree: var(--pin-on-degree);
 
     /* main */
     /* this is also padding-block-start for .about
@@ -175,8 +181,7 @@ body {
     font-weight: 600;
 
     background-color: var(--color-nav-bg);
-
-    box-shadow: 0 -0.2rem 1rem black;
+    box-shadow: 0 -0.25rem 1rem black;
 
     h1 {
         grid-area: h1;
@@ -197,7 +202,7 @@ body {
         font: inherit;
         color: inherit;
         border: none;
-        background-color: inherit;
+        /* background-color: inherit; */
 
         --row-gap: 0.25rem;
         max-width: var(--text-max-length);
@@ -329,6 +334,15 @@ body {
 
         .custom-input {
             width: 100%;
+        }
+    }
+
+    & > .pin {
+        display: none;
+        grid-area: pin;
+        svg {
+            transform: rotate(var(--pin-degree));
+            transition: transform 0.5s;
         }
     }
 }
@@ -691,6 +705,7 @@ footer {
 :root:has(.radio-font-family-system:checked) {
     font-family: system-ui;
 }
+
 /* @media (prefers-color-scheme: light) {
 } */
 
@@ -736,6 +751,7 @@ footer {
     } /* end of .body-header */
 }
 
+/* Bottom */
 @media (min-width: 600px) {
     section.projects .project {
         grid-template-areas:
@@ -754,21 +770,32 @@ footer {
     }
 }
 
-/*  Top .body-header
-    6 columns: auto 1fr repeat(4, 8rem)
+/*  Top 1 move everything to the Top
+    .body-header
+    4 columns: repeat(4, 8rem)
     1 row
  */
 @media (min-width: 800px) {
+    /* If pin is unchecked do below: */
+    :root:not(:has(.pin-checkbox:checked)) {
+        .body-header {
+            background-color: var(--color-bg);
+            box-shadow: unset;
+        }
+        --pin-degree: var(--pin-off-degree);
+    }
+
     .body-header {
+        position: sticky;
+        top: 0;
         display: grid;
         justify-content: center;
         grid-template-areas:
-            "h1 . about projects contact light-theme"
-            ". . . . external-toggle external-toggle";
-        grid-template-columns: auto 1fr repeat(4, 8rem);
-        padding-inline: var(--section-padding-inline);
-        position: sticky;
-        top: 0;
+            "about projects h1 contact light-theme pin"
+            ". external-toggle external-toggle external-toggle . pin";
+        grid-template-columns: repeat(5, 1fr) 0.5fr;
+        grid-template-rows: repeat(2, min-content);
+        /* padding-inline: var(--section-padding-inline); */
 
         .accessibility {
             bottom: unset;
@@ -776,8 +803,14 @@ footer {
         }
 
         & > h1 {
+            text-align: center;
             padding-inline-start: 0;
+            padding-block: 1rem;
             display: unset;
+        }
+
+        & > .pin {
+            display: grid;
         }
     }
 
@@ -803,6 +836,10 @@ footer {
             "footer";
     }
 }
+
+/* Top 2
+    center projects
+*/
 @media (min-width: 1024px) {
     .body-header {
         display: grid;
@@ -858,12 +895,26 @@ footer {
     }
 }
 
+/* Top 3 change Top */
 @media (min-width: 1366px) {
     .body-header {
         display: grid;
-        grid-template-areas: "h1 . about projects contact light-theme . external-toggle";
-        grid-template-columns: auto 1fr repeat(4, 8rem) 1fr 16rem;
+        grid-template-areas: ". h1 . about projects contact  . external-toggle light-theme pin .";
+        grid-template-columns:
+            var(--section-padding-inline) auto 1fr repeat(3, 8rem)
+            1fr 16rem 8rem 1fr var(--section-padding-inline);
+
+        .external-toggle,
+        .light-theme,
+        .pin {
+            filter: brightness(0.8);
+            transition: filter 150ms;
+            &:hover {
+                filter: brightness(1);
+            }
+        }
     }
+
     /* 426 - 768px */
 
     /* 769 - 1024px */

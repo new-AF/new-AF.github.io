@@ -16,7 +16,7 @@
     <body>
         <!-- header -->
         <header class="body-header">
-            <h1>Abdullah Fatota</h1>
+            <h1 class="title">Abdullah Fatota</h1>
             <nav>
                 <!-- .about -->
                 <a class="nav-button top" href="#about">
@@ -203,6 +203,28 @@
                 <span class="text1">🇬🇧 English</span>
                 <span class="text2">Bosanski 🇧🇦</span>
             </label>
+
+            <label
+                class="nav-button pin"
+                aria-label="visually unpin or pin header"
+            >
+                <input
+                    class="pin-checkbox"
+                    type="checkbox"
+                    checked
+                    style="display: none"
+                />
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 384 512"
+                    fill="currentColor"
+                >
+                    <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                        d="M32 32C32 14.3 46.3 0 64 0H320c17.7 0 32 14.3 32 32s-14.3 32-32 32H290.5l11.4 148.2c36.7 19.9 65.7 53.2 79.5 94.7l1 3c3.3 9.8 1.6 20.5-4.4 28.8s-15.7 13.3-26 13.3H32c-10.3 0-19.9-4.9-26-13.3s-7.7-19.1-4.4-28.8l1-3c13.8-41.5 42.8-74.8 79.5-94.7L93.5 64H64C46.3 64 32 49.7 32 32zM160 384h64v96c0 17.7-14.3 32-32 32s-32-14.3-32-32V384z"
+                    />
+                </svg>
+            </label>
         </header>
 
         <!-- main -->
@@ -372,14 +394,15 @@
                 <header class="header">
                     <h2 class="lang">Contact</h2>
                 </header>
-                <p class="open-position lang">
-                    <span>
+                <article class="open-position">
+                    <p class="text-1 lang">
                         I'm always interested in collaborating with innovative
-                        teams. For any questions or offers feel free to reach
-                        out!
-                    </span>
-                    <span></span>
-                </p>
+                        teams.
+                    </p>
+                    <p class="text-2 lang">
+                        For any questions or offers feel free to reach out!
+                    </p>
+                </article>
 
                 <form
                     class="form"
@@ -505,8 +528,12 @@
                 ],
                 [".contact .header .lang", "Kontakt"],
                 [
-                    ".contact .open-position.lang",
-                    "Uvijek sam zainteresovan za saradnju sa inovativnim timovima. O bilo kojih pitanja ili ponuda slobodno se javite putem ove forme!",
+                    ".contact .open-position .text-1.lang",
+                    "Uvijek sam zainteresovan za saradnju sa inovativnim timovima.",
+                ],
+                [
+                    ".contact .open-position .text-2.lang",
+                    "O bilo kojih pitanja ili ponuda slobodno se javite putem ove forme!",
                 ],
                 [
                     ".contact #email-label.lang",
