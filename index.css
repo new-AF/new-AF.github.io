@@ -183,14 +183,19 @@ body {
     background-color: var(--color-nav-bg);
     box-shadow: 0 -0.25rem 1rem black;
 
-    h1 {
+    .title {
         grid-area: h1;
         display: none;
         word-spacing: 0.25em;
-        align-self: center;
-        padding-inline: var(--header-elemnts-padding);
         font-size: 1.3em;
         font-weight: bold;
+
+        a {
+            height: 100%;
+            display: grid;
+            align-content: center;
+            border-bottom: unset;
+        }
     }
 
     nav {
@@ -807,10 +812,8 @@ footer {
             top: 0;
         }
 
-        & > h1 {
+        & > .title {
             text-align: center;
-            padding-inline-start: 0;
-            padding-block: 1rem;
             display: unset;
         }
 
