@@ -71,7 +71,7 @@
                 class="nav-button light-theme"
                 role="button"
                 for="light-theme-checkbox"
-                onclick="document.querySelector('.accessibility').classList.remove('hidden')"
+                onclick="document.querySelector('.accessibility').classList.remove('hide-accessibility')"
             >
                 <!-- <input/> -->
                 <input id="light-theme-checkbox" type="checkbox" />
@@ -93,97 +93,38 @@
                 </svg>
             </label>
 
-            <article class="accessibility hidden">
-                <!-- themes -->
-                <fieldset class="theme">
-                    <legend class="header lang">Theme</legend>
+            <article class="accessibility hide-accessibility">
+                <template class="radio-button">
+                    <input type="radio" />
+                    <label></label>
+                </template>
 
-                    <input
-                        id="dark-theme-1"
-                        type="radio"
-                        name="radio-theme"
-                        checked
-                        class="radio-theme-default"
-                    />
-                    <label for="dark-theme-1" class="label-dark-theme-1 lang"
-                        >Dark Blue (default)</label
+                <!-- theme -->
+                <radio-group class="theme" data-header-title="Theme">
+                    <radio-button>Dark Blue (default)</radio-button>
+                    <radio-button data-class="radio-theme-black"
+                        >Night</radio-button
                     >
-                    <input
-                        id="dark-theme-2"
-                        type="radio"
-                        name="radio-theme"
-                        class="radio-theme-black"
-                    />
-                    <label for="dark-theme-2" class="label-dark-theme-2 lang"
-                        >Dark Brown</label
+                    <radio-button checked data-class="radio-theme-white"
+                        >Day</radio-button
                     >
-                    <input
-                        id="white-theme-1"
-                        type="radio"
-                        name="radio-theme"
-                        class="radio-theme-white"
-                    />
-                    <label for="white-theme-1" class="label-white-theme-1 lang"
-                        >White</label
-                    >
-                </fieldset>
+                </radio-group>
 
                 <!-- font sizes -->
-                <fieldset class="font-size">
-                    <legend class="header lang">Font Size</legend>
-                    <input
-                        id="font-size-1"
-                        type="radio"
-                        name="radio-font-size"
-                        class="radio-font-size-default"
-                        checked
-                    />
-                    <label for="font-size-1" class="label-font-size-1 lang"
-                        >Normal (default)</label
-                    >
-                    <input
-                        id="font-size-2"
-                        type="radio"
-                        name="radio-font-size"
-                        class="radio-font-size-xl"
-                    />
-                    <label for="font-size-2" class="label-font-size-2 lang"
-                        >Extra Large</label
-                    >
-                    <input
-                        id="font-size-3"
-                        type="radio"
-                        name="radio-font-size"
-                        class="radio-font-size-xxl"
-                    />
-                    <label for="font-size-3" class="label-font-size-3 lang"
-                        >Extra Extra Large</label
-                    >
-                </fieldset>
+                <radio-group class="font-size" data-header-title="Font Size">
+                    <radio-button checked>Normal (default)</radio-button>
+                    <radio-button> Large</radio-button>
+                    <radio-button>Extra Large</radio-button>
+                </radio-group>
 
                 <!-- font family -->
-                <fieldset class="font-family">
-                    <legend class="header lang">Font Family</legend>
-                    <input
-                        id="font-family-1"
-                        type="radio"
-                        name="radio-font-family"
-                        class="radio-font-family-default"
-                        checked
-                    />
-                    <label for="font-family-1" class="label-font-family-1"
-                        >LTSaeada (default)</label
-                    >
-                    <input
-                        id="font-family-2"
-                        type="radio"
-                        name="radio-font-family"
-                        class="radio-font-family-system"
-                    />
-                    <label for="font-family-2" class="label-font-family-2"
-                        >Current System</label
-                    >
-                </fieldset>
+                <radio-group
+                    class="font-family"
+                    data-header-title="Font Family"
+                >
+                    <radio-button checked>LTSaeada (default)</radio-button>
+                    <radio-button> Current System</radio-button>
+                </radio-group>
 
                 <!-- x mark close -->
                 <svg
@@ -191,7 +132,7 @@
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 384 512"
                     fill="currentColor"
-                    onclick="document.querySelector('.accessibility').classList.add('hidden')"
+                    onclick="document.querySelector('.accessibility').classList.add('hide-accessibility')"
                 >
                     <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                     <path
@@ -320,107 +261,68 @@
                     <p class="lang">Click on any web app, to run it live.</p>
                 </div>
 
-                <a
-                    class="project p1"
-                    href="https://new-af.github.io/Web-App-Count-File-Words-Lines-Bytes/"
+                <template
+                    class="project-card"
+                    data-class="project"
+                    data-image-class="image"
+                    data-role="button"
+                    data-aria-label="Button to run the project in an embedded iframe"
+                    data-alt="Image preview of xx web app"
                 >
                     <header>
-                        <h3 class="lang">Count File Words, Lines & Bytes</h3>
+                        <h3 class="title"></h3>
                     </header>
-                    <picture
-                        role="button"
-                        aria-label="Button to run the project in an embedded iframe"
-                    >
-                        <img
-                            class="image"
-                            src="p1.png"
-                            alt="Image preview of 'Count File Words, Lines & Bytes' web app"
-                        />
-                    </picture>
-                    <p class="description lang">
-                        Locally upload mutliple files, and the count the number
-                        of words, lines and bytes in each file.
-                    </p>
-                    <ul class="features">
-                        <li>No remote upload</li>
-                        <li>No bloated 3rd-party JavaScript dependencies</li>
-                        <li>Asynchronous support for multiple files</li>
-                    </ul>
-                    <ul class="stack">
-                        <li>Web APIs</li>
-                        <li>Vanilla JavaScript</li>
-                        <li>CSS</li>
-                    </ul>
-                </a>
 
-                <a
-                    class="project p2"
-                    href="https://new-af.github.io/react-markown-previewer/"
-                >
-                    <header>
-                        <h3 class="lang">Markdown Editor</h3>
-                    </header>
-                    <picture
-                        role="button"
-                        aria-label="Button to run the project in an embedded iframe"
-                    >
-                        <img
-                            class="image"
-                            src="p2.png"
-                            alt="Image preview of 'Markdown Editor' web app"
-                        />
+                    <picture>
+                        <img />
                     </picture>
-                    <p class="description lang">
-                        Render plain Markdown text into styled and formatted
-                        output as you type.
-                    </p>
-                    <ul class="features">
-                        <li>Markdown rendering in real-time</li>
-                        <li>Output PDF download</li>
-                    </ul>
-                    <ul class="stack">
-                        <li>React</li>
-                        <li>Redux Toolkit</li>
-                        <li>CSS</li>
-                    </ul>
-                </a>
 
-                <a
-                    class="project p3"
-                    href="https://timestamp-microservice-t7m9.onrender.com/"
+                    <p class="description"></p>
+
+                    <a class="live-link button-link">Live Link</a>
+
+                    <a class="repo-link button-link">Repository Link</a>
+
+                    <ul class="features"></ul>
+
+                    <ul class="stack"></ul>
+                </template>
+
+                <project-card
+                    data-title="Count File Words, Lines & Bytes"
+                    data-live-link="https://new-af.github.io/Web-App-Count-File-Words-Lines-Bytes/"
+                    data-repo-link="https://github.com/new-AF/Web-App-Count-File-Words-Lines-Bytes"
+                    data-image-src="p1.png"
+                    data-description="Locally upload mutliple files, and the count the number
+                of words, lines and bytes in each file."
+                    data-features="No remote upload | No bloated 3rd-party JavaScript dependencies | Asynchronous support for multiple files"
+                    data-stack="Web APIs | Vanilla JavaScript | CSS"
                 >
-                    <header>
-                        <h3 class="lang">Timestamp Microservice</h3>
-                    </header>
-                    <picture
-                        role="button"
-                        aria-label="Button to run the project in an embedded iframe"
-                    >
-                        <img
-                            class="image"
-                            src="p3.png"
-                            alt="Image preview of
-                        'Timestamp Microservice' web app"
-                        />
-                    </picture>
-                    <p class="description lang">
-                        GUI and API to convert representation of dates between
-                        text & JavaScript timestamp formats.
-                    </p>
-                    <ul class="features">
-                        <li>GUI interface</li>
-                        <li>JSON API interface</li>
-                        <li>
-                            Convesrion between Unix timestamp and Date-Time
-                            string
-                        </li>
-                    </ul>
-                    <ul class="stack">
-                        <li>Express</li>
-                        <li>React</li>
-                        <li>Redux Toolkit</li>
-                    </ul>
-                </a>
+                </project-card>
+
+                <project-card
+                    data-title="Markdown Editor"
+                    data-live-link="https://new-af.github.io/react-markown-previewer/"
+                    data-repo-link="https://github.com/new-AF/react-markown-previewer"
+                    data-image-src="p2.png"
+                    data-description="Render plain Markdown text into styled and formatted
+                    output as you type."
+                    data-features="Markdown rendering in real-time | Output PDF download"
+                    data-stack="React | Redux Toolkit | CSS"
+                >
+                </project-card>
+
+                <project-card
+                    data-title="Timestamp Microservice"
+                    data-live-link="https://timestamp-microservice-t7m9.onrender.com/"
+                    data-repo-link="https://github.com/new-AF/timestamp-microservice"
+                    data-image-src="p3.png"
+                    data-description="GUI and API to convert representation of dates between
+                text & JavaScript timestamp formats."
+                    data-features="GUI interface | JSON API interface | Convesrion between Unix timestamp and Date-Time string"
+                    data-stack="Express | React | Redux Toolkit"
+                >
+                </project-card>
             </section>
 
             <!-- contact -->
@@ -587,12 +489,12 @@
 
             /* fill in LANG_EN with default english textContents for 1st time */
             document.addEventListener("DOMContentLoaded", () => {
-                LANG_BA.forEach((value, key) => {
-                    const element = document.querySelector(key);
-                    const text = element.textContent;
-                    LANG_EN.set(key, text);
-                    // console.log(text);
-                });
+                // LANG_BA.forEach((value, key) => {
+                //     const element = document.querySelector(key);
+                //     const text = element.textContent;
+                //     LANG_EN.set(key, text);
+                //     // console.log(text);
+                // });
                 // console.log(LANG_EN);
             });
 
@@ -611,5 +513,6 @@
                 });
             });
         </script>
+        <script src="index.js"></script>
     </body>
 </html>
