@@ -118,7 +118,7 @@ footer {
 }
 @font-face {
     font-family: font1;
-    src: url(LTSaeada-Medium.otf);
+    src: url(./fonts/LTSaeada-Medium.otf);
 }
 my-header {
     h1 {
