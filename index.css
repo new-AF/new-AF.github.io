@@ -41,18 +41,11 @@
         #2f366a,
         #3c3c72
     );
-    --theme-white-bg: linear-gradient(
-        to right top,
-        #eb7669,
-        #f17b73,
-        #f6807e,
-        #fb8588,
-        #ff8b92
-    );
+    --theme-white-bg: #fd6b33;
 
     /* for places that don't support 'linear-gradient' bg and color */
     --theme-darkBlue-bg-color: #002451;
-    --theme-white-bg-color: #ff8b92;
+    --theme-white-bg-color: #fd6b33;
 
     --theme-darkBlue-text: #ffa500;
     --theme-white-text: #141e46;
