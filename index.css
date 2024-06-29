@@ -53,6 +53,7 @@
     --transition-time-style: 100ms ease-out;
 
     --main-max-width: 900px;
+    --main-row-gap: var(--padding-block-200);
 }
 * {
     margin: 0;
@@ -94,7 +95,7 @@ main {
     max-width: var(--main-max-width);
 
     display: grid;
-    row-gap: var(--padding-block-100);
+    row-gap: var(--main-row-gap);
 }
 a {
     color: inherit;
@@ -271,7 +272,8 @@ contact-section {
     }
 
     display: grid;
-    padding: var(--padding-block-200);
+    padding-inline: var(--padding-block-200);
+    padding-block: var(--main-row-gap);
 
     row-gap: var(--padding-block-100);
 }
@@ -363,5 +365,17 @@ social-media {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         column-gap: var(--padding-block-200);
+    }
+
+    about-section p:first-child {
+        line-height: 1;
+    }
+
+    about-section,
+    blog-projects,
+    contact-section {
+        border-top: thin solid;
+        padding-block: 0;
+        padding-block-start: var(--main-row-gap);
     }
 }
