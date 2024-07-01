@@ -246,7 +246,7 @@ project-card {
     row-gap: var(--padding-block-100);
 
     backdrop-filter: var(--brightness-125);
-    box-shadow: 0 0 var(--padding-block-50) gray;
+    box-shadow: 0 0 var(--padding-block-50) var(--theme-darkBlue-bg-color);
 
     padding: var(--padding);
     border-radius: var(--border-radius);
