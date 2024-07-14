@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title class="lang title">Abdullah Fatota | Software Engineer</title>
+        <link rel="shortcut icon" href="code.svg" type="image/x-icon" />
+        <link rel="stylesheet" href="reset.css" />
+        <link rel="stylesheet" href="shared.css" />
+        <link rel="stylesheet" href="projects.css" />
+    </head>
+
+    <template class="my-header">
+        <h1 class="change title"></h1>
+    </template>
+
+    <template class="the-text"></template>
+
+    <template class="nav-button">
+        <a>
+            <the-text class="change title"></the-text>
+            <!--  <svg>  -->
+        </a>
+    </template>
+
+    <template class="blog-projects"></template>
+
+    <template
+        class="project-card"
+        data-role="button"
+        data-aria-label="Button to run the project in an embedded iframe"
+        data-alt="Image preview of % web app"
+    >
+        <header>
+            <img class="image" />
+            <h3 class="title"></h3>
+        </header>
+
+        <p class="description"></p>
+
+        <a class="live-link button-link default">Live Demo</a>
+
+        <a class="repo-link button-link">Code Repo</a>
+
+        <ul class="features"></ul>
+
+        <ul class="stack"></ul>
+    </template>
+
+    <body>
+        <my-header data-title="Blog & Projects">
+            <!-- prettier-ignore -->
+            <nav>
+                <nav-button
+                    data-only-icon="true"
+                    data-href="javascript:history.back()"
+                >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288 480 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-370.7 0 73.4-73.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-128 128z"/></svg>
+                </nav-button>
+            </nav>
+        </my-header>
+        <main>
+            <blog-projects
+                id="blog-projects"
+                data-title="Recent Projects ↓"
+                data-blogs-json="Blogs"
+                data-json-entries="My_JSONS.blog-projects"
+            >
+                <project-card
+                    data-title="Count File Words, Lines & Bytes"
+                    data-live-link="https://new-af.github.io/Web-App-Count-File-Words-Lines-Bytes/"
+                    data-repo-link="https://github.com/new-AF/Web-App-Count-File-Words-Lines-Bytes"
+                    data-image-src="p1.png"
+                    data-description="Locally upload mutliple files, and the count the number
+of words, lines and bytes in each file."
+                    data-features="No remote upload | No bloated 3rd-party JavaScript dependencies | Asynchronous support for multiple files"
+                    data-stack="Web APIs | Vanilla JavaScript | CSS"
+                >
+                </project-card>
+
+                <project-card
+                    data-title="Markdown Editor"
+                    data-live-link="https://new-af.github.io/react-markown-previewer/"
+                    data-repo-link="https://github.com/new-AF/react-markown-previewer"
+                    data-image-src="p2.png"
+                    data-description="Render plain Markdown text into styled and formatted
+    output as you type."
+                    data-features="Markdown rendering in real-time | Output PDF download"
+                    data-stack="React | Redux Toolkit | CSS"
+                >
+                </project-card>
+
+                <project-card
+                    data-title="Timestamp Microservice"
+                    data-live-link="https://timestamp-microservice-t7m9.onrender.com/"
+                    data-repo-link="https://github.com/new-AF/timestamp-microservice"
+                    data-image-src="p3.png"
+                    data-description="GUI and API to convert representation of dates between
+text & JavaScript timestamp formats."
+                    data-features="GUI interface | JSON API interface | Convesrion between Unix timestamp and Date-Time string"
+                    data-stack="Express | React | Redux Toolkit"
+                >
+                </project-card>
+            </blog-projects>
+        </main>
+        <footer>
+            <small
+                >© 2024 👨‍💻 & 🎨 by Abdullah Fatota, using Web Components • CSS •
+                SVG</small
+            >
+            <small
+                >Dark theme values CC BY-SA 4.0
+                <a href="https://www.fffuel.co/tttemplates/"
+                    >✨ design by fffuel</a
+                ></small
+            >
+        </footer>
+        <script src="index.js"></script>
+    </body>
+</html>

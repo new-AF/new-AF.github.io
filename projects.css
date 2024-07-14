@@ -1,0 +1,94 @@
+html {
+    height: 100vh;
+    overflow-y: hidden;
+}
+body {
+    display: grid;
+    justify-content: center;
+    row-gap: var(--padding-block-large);
+
+    /* scroll-snap-type: y mandatory; */
+
+    height: 100vh;
+    overflow-y: scroll;
+}
+my-header {
+    h1 {
+        grid-area: title;
+    }
+    nav-button {
+        grid-area: back;
+    }
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "back title .";
+    column-gap: 0;
+}
+main {
+    display: grid;
+    grid-template-columns: 400px;
+    grid-auto-flow: row;
+    justify-content: center;
+    gap: var(--padding-block-large);
+}
+blog-projects {
+    display: contents;
+
+    /* outline: solid 1px blue; */
+    padding-inline: var(--padding-block-large);
+
+    column-gap: var(--padding-block-large);
+    row-gap: var(--padding-block-large);
+}
+project-card {
+    scroll-snap-align: start;
+
+    --border-radius: var(--padding-block-big);
+    --padding: var(--padding-block-base);
+    --child-border-radius-base: calc(var(--border-radius) - var(--padding));
+    --child-border-radius-400: calc(var(--child-border-radius-base) * 4);
+    --child-border-radius-200: calc(var(--child-border-radius-base) * 2);
+
+    header {
+        display: contents;
+
+        .title {
+            font-size: var(--font-size-big);
+            font-weight: normal;
+            padding: var(--padding-block-big);
+        }
+    }
+
+    .image {
+        display: none;
+        object-fit: cover;
+        object-position: center;
+
+        border-radius: var(--child-border-radius-base);
+    }
+
+    .button-link {
+        &.default {
+        }
+        box-shadow: none !important;
+        border: none;
+        &:hover {
+            border: none !important;
+        }
+    }
+
+    .description,
+    .features,
+    .stack {
+        display: none;
+    }
+
+    display: grid;
+    grid-template-rows: max-content 2fr 1fr;
+
+    box-shadow: 0 0 var(--padding-block-small) var(--theme-darkBlue-bg-color);
+    border-radius: var(--border-radius);
+
+    backdrop-filter: var(--brightness-117_5);
+    overflow: hidden;
+}

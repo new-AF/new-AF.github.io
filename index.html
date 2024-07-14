@@ -12,11 +12,12 @@
         with the help of the team"
         />
         <title class="lang title">Abdullah Fatota | Software Engineer</title>
+        <link rel="stylesheet" href="reset.css" />
+        <link rel="stylesheet" href="shared.css" />
         <link rel="stylesheet" href="index.css" />
         <link rel="shortcut icon" href="code.svg" type="image/x-icon" />
     </head>
 
-    <!-- templates ---------------------------------------- -->
     <template class="my-header">
         <h1 class="change title"></h1>
     </template>
@@ -30,34 +31,11 @@
         </a>
     </template>
 
-    <template class="blog-projects"></template>
-
-    <template
-        class="project-card"
-        data-role="button"
-        data-aria-label="Button to run the project in an embedded iframe"
-        data-alt="Image preview of % web app"
-    >
-        <header>
-            <img class="image" />
-
-            <h3 class="title"></h3>
-        </header>
-
-        <p class="description"></p>
-
-        <a class="live-link button-link default">Live Link</a>
-
-        <a class="repo-link button-link">Repository Link</a>
-
-        <ul class="features"></ul>
-
-        <ul class="stack"></ul>
-    </template>
-
     <template class="about-section">
         <!-- <p> -->
     </template>
+
+    <template class="blog-projects"></template>
 
     <template class="contact-social">
         <a class="button-link">
@@ -70,7 +48,6 @@
 
     <template class="svg-icon"> </template>
 
-    <!-- body ---------------------------------------- -->
     <body>
         <!-- prettier-ignore -->
         <my-header data-title="Abdullah Fatota">
@@ -80,7 +57,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
                 </nav-button>
 
-                <nav-button data-title="Blog & Projects" data-href="#blog-projects">
+                <nav-button data-title="Blog & Projects" data-href="projects.html">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
                 </nav-button>
 
@@ -93,56 +70,18 @@
 
         <main>
             <about-section
-                class="readable-text"
                 id="about"
-                data-title="About"
+                data-title="About me ↓"
                 data-show-title="false"
                 data-text="Welcome, | I am a software engineer with a love for healthy supportive teams, solving user problems and developing new features."
                 data-hero-image="teamwork-makes-the-dream-work-smaller.jpg"
             >
             </about-section>
 
-            <blog-projects
-                id="blog-projects"
-                data-title="Blogs & Projects"
-                data-blogs-json="Blogs"
-                data-json-entries="My_JSONS.blog-projects"
-            >
-                <project-card
-                    data-title="Count File Words, Lines & Bytes"
-                    data-live-link="https://new-af.github.io/Web-App-Count-File-Words-Lines-Bytes/"
-                    data-repo-link="https://github.com/new-AF/Web-App-Count-File-Words-Lines-Bytes"
-                    data-image-src="p1.png"
-                    data-description="Locally upload mutliple files, and the count the number
-        of words, lines and bytes in each file."
-                    data-features="No remote upload | No bloated 3rd-party JavaScript dependencies | Asynchronous support for multiple files"
-                    data-stack="Web APIs | Vanilla JavaScript | CSS"
-                >
-                </project-card>
-
-                <project-card
-                    data-title="Markdown Editor"
-                    data-live-link="https://new-af.github.io/react-markown-previewer/"
-                    data-repo-link="https://github.com/new-AF/react-markown-previewer"
-                    data-image-src="p2.png"
-                    data-description="Render plain Markdown text into styled and formatted
-            output as you type."
-                    data-features="Markdown rendering in real-time | Output PDF download"
-                    data-stack="React | Redux Toolkit | CSS"
-                >
-                </project-card>
-
-                <project-card
-                    data-title="Timestamp Microservice"
-                    data-live-link="https://timestamp-microservice-t7m9.onrender.com/"
-                    data-repo-link="https://github.com/new-AF/timestamp-microservice"
-                    data-image-src="p3.png"
-                    data-description="GUI and API to convert representation of dates between
-        text & JavaScript timestamp formats."
-                    data-features="GUI interface | JSON API interface | Convesrion between Unix timestamp and Date-Time string"
-                    data-stack="Express | React | Redux Toolkit"
-                >
-                </project-card>
+            <!-- prettier-ignore -->
+            <blog-projects>
+                <nav-button data-title="Projects" data-href="projects.html">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"/></svg>                </nav-button>
             </blog-projects>
 
             <!-- prettier-ignore -->
@@ -162,8 +101,16 @@
         </main>
 
         <footer>
-            <small>© 2024 Abdullah Fatota</small>
-            <small>Built with Web Components | HTML | CSS | SVG</small>
+            <small
+                >© 2024 👨‍💻 & 🎨 by Abdullah Fatota, using Web Components • CSS •
+                SVG</small
+            >
+            <small
+                >Dark theme values CC BY-SA 4.0
+                <a href="https://www.fffuel.co/tttemplates/"
+                    >✨ design by fffuel</a
+                ></small
+            >
         </footer>
         <script src="index.js"></script>
     </body>

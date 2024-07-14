@@ -30,22 +30,22 @@ class MyHTMLElement extends HTMLElement {
     /* mapping = {'data-project-title' : 'project-title'} */
     constructor(
         templateSelector,
-        attributes = {},
-        handlers = {},
-        afterHandlers = {},
-        runLater = {},
-        defaultHandlers = {
-            class: "handleClass",
-            id: "processID",
-        },
-        prepend = true
+        {
+            attributes = {},
+            handlers = {},
+            afterHandlers = {},
+            runLater = {},
+            defaultHandlers = {
+                class: "handleClass",
+                id: "processID",
+            },
+            prepend = true,
+        } = {}
     ) {
         super();
         if (isUndefinedOrNull(templateSelector)) return;
 
-        const template = document.querySelector(templateSelector);
-        const content = template.content.cloneNode(true);
-        this[prepend === true ? "prepend" : "append"](content);
+        const template = this._init(templateSelector, prepend);
 
         this.runLater = runLater;
         this.afterHandlers = afterHandlers;
@@ -59,6 +59,12 @@ class MyHTMLElement extends HTMLElement {
         this._populate_Data_Attributes_Then_Remove_From(this);
         this._processAttributes();
         this._processRunLater_1();
+    }
+    _init(templateSelector, prepend) {
+        const template = document.querySelector(templateSelector);
+        const content = template.content.cloneNode(true);
+        this[prepend === true ? "prepend" : "append"](content);
+        return template;
     }
     _processRunLater_1() {
         if (isObjectEmpty(this.runLater)) return;
@@ -137,53 +143,10 @@ class MyHTMLElement extends HTMLElement {
 }
 class MyHeader extends MyHTMLElement {
     constructor(attributes) {
-        super("template.my-header", attributes, { title: "processTitle" });
-    }
-    processTitle(title) {
-        selectorSetTextContent(this, ".change.title", title);
-    }
-}
-class LanguageSelector extends MyHTMLElement {
-    constructor(attributes) {
-        super(
-            "template.language-selector",
+        super("template.my-header", {
             attributes,
-            {
-                title: "processTitle",
-            },
-            { langs: "processLangs" }
-        );
-    }
-    processTitle(title) {
-        selectorSetTextContent(this, ".change.title", title);
-    }
-    processLangs(text) {
-        const array = text.split("|");
-        const fieldset = this.querySelector("fieldset");
-        const els = array.map(
-            (str) => `<my-radio data-title="${str.trim()}"></my-radio>`
-        );
-        fieldset.innerHTML += els.join("");
-    }
-}
-class MyRadio extends MyHTMLElement {
-    constructor(attributes) {
-        super("template.my-radio", attributes, {
-            title: "processTitle",
+            handlers: { title: "processTitle" },
         });
-    }
-    processTitle(title) {
-        selectorSetTextContent(this, ".change.title", title);
-    }
-}
-class Sticky_Header_Toggle extends MyHTMLElement {
-    constructor(attributes) {
-        super("template.sticky-header-toggle", attributes, {});
-    }
-}
-class Themes_A18y extends MyHTMLElement {
-    constructor(attributes) {
-        super("template.themes-a18y", attributes, { title: "processTitle" });
     }
     processTitle(title) {
         selectorSetTextContent(this, ".change.title", title);
@@ -191,13 +154,14 @@ class Themes_A18y extends MyHTMLElement {
 }
 class NavButton extends MyHTMLElement {
     constructor(attributes) {
-        super(
-            "template.nav-button",
+        super("template.nav-button", {
             attributes,
-            {},
-            {},
-            { title: "changeTitle", href: "changeHref" }
-        );
+            runLater: {
+                title: "changeTitle",
+                href: "changeHref",
+                "only-icon": "processOnlyIcon",
+            },
+        });
     }
     _moveSVG() {
         const svg = this.querySelector("svg");
@@ -217,32 +181,44 @@ class NavButton extends MyHTMLElement {
         if (isUndefinedOrNull(text)) return;
         setTextContent(text, title);
     }
+    processOnlyIcon(value) {
+        if (value !== "true") return;
+        this.querySelector("the-text").remove();
+    }
 }
 class TheText extends MyHTMLElement {
     constructor(attributes) {
-        super("template.the-text", attributes, {
-            title: "changeTitle",
+        super("template.the-text", {
+            attributes,
+            handlers: {
+                title: "changeTitle",
+            },
         });
     }
     changeTitle(title) {
         setTextContent(this, title);
     }
 }
-class BlogProjects extends MyHTMLElement {
-    constructor(attributes) {
-        super("template.blog-projects", attributes);
+class MySection extends MyHTMLElement {
+    constructor(template, originalObj) {
+        const obj = { ...originalObj };
+        super(template, obj);
     }
 }
+
 class ProjectCard extends MyHTMLElement {
     constructor(attributes) {
-        super("template.project-card", attributes, {
-            title: "changeTitle",
-            "live-link": "changeLiveLink",
-            "repo-link": "changeRepoLink",
-            "image-src": "changeImageSrc",
-            description: "changeDescription",
-            features: "changeFeatures",
-            stack: "changeStack",
+        super("template.project-card", {
+            attributes,
+            handlers: {
+                title: "changeTitle",
+                "live-link": "changeLiveLink",
+                "repo-link": "changeRepoLink",
+                "image-src": "changeImageSrc",
+                description: "changeDescription",
+                features: "changeFeatures",
+                stack: "changeStack",
+            },
         });
     }
     changeTitle(title) {
@@ -262,9 +238,12 @@ class ProjectCard extends MyHTMLElement {
         selectorSetTextContent(this, ".description", text);
     }
 }
-class AboutSection extends MyHTMLElement {
+class AboutSection extends MySection {
     constructor(attributes) {
-        super("template.about-section", attributes, { text: "changeText" });
+        super("template.about-section", {
+            attributes,
+            handlers: { text: "changeText" },
+        });
     }
     changeText(text) {
         const array = text
@@ -280,9 +259,14 @@ class AboutSection extends MyHTMLElement {
         this.append(...ps);
     }
 }
-class ContactSection extends MyHTMLElement {
+class BlogProjects extends MySection {
     constructor(attributes) {
-        super("template.contact-section", attributes, {});
+        super("template.blog-projects", { attributes });
+    }
+}
+class ContactSection extends MySection {
+    constructor(attributes) {
+        super("template.contact-section", { attributes });
     }
     changeTitle(title) {
         selectorSetTextContent(this, ".change.title", title);
@@ -290,13 +274,10 @@ class ContactSection extends MyHTMLElement {
 }
 class SocialMedia extends MyHTMLElement {
     constructor(attributes) {
-        super(
-            "template.contact-social",
+        super("template.contact-social", {
             attributes,
-            {},
-            {},
-            { title: "changeTitle", link: "changeLink" }
-        );
+            runLater: { title: "changeTitle", link: "changeLink" },
+        });
     }
     connectedCallback() {
         this._moveSVG();
@@ -342,10 +323,6 @@ function setFillSVG(baseElement, query) {
 }
 My_JSONS = {};
 customElements.define("my-header", MyHeader);
-customElements.define("language-selector", LanguageSelector);
-customElements.define("my-radio", MyRadio);
-customElements.define("sticky-header-toggle", Sticky_Header_Toggle);
-customElements.define("themes-a18y", Themes_A18y);
 customElements.define("nav-button", NavButton);
 customElements.define("the-text", TheText);
 customElements.define("blog-projects", BlogProjects);
