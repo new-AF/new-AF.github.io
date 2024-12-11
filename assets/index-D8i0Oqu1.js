@@ -183,7 +183,8 @@ attributes from the original svg element.`]}),`
 `,m.jsx(e.p,{children:`Have you ever tried to split a single HSL color into multiple shades aka different\r
 L-values ?`}),`
 `,m.jsx(e.p,{children:"then you know how tedious the entire process is: copying pasting the L-value, fiddling with the calculator, pasting back into the editor, etc... yuck!."}),`
-`,m.jsxs(e.p,{children:["Enjoy this straightforward tool which generates the shades instantly. You could also ",m.jsx(aM,{text:"Buy me a coffee!"})]})]})}function sM(t={}){return m.jsx(iM,{...t,children:m.jsx(oM,{...t})})}const lM=function({children:e,className:n}){return m.jsx(ap,{className:n,children:e})};function cM(t){const e={a:"a",h1:"h1",h2:"h2",li:"li",p:"p",ul:"ul",...t.components};return m.jsxs(m.Fragment,{children:[m.jsx(e.h2,{children:"Challenge homepage"}),`
+`,m.jsx(e.p,{children:"Enjoy this straightforward tool which generates the shades instantly."}),`
+`,m.jsxs("p",{style:{display:"flex",alignItems:"center",columnGap:"var(--new-gap-small)",lineHeight:"1"},children:[m.jsx("span",{children:"You could also"}),m.jsx(aM,{text:"Buy me a coffee!"})]})]})}function sM(t={}){return m.jsx(iM,{...t,children:m.jsx(oM,{...t})})}const lM=function({children:e,className:n}){return m.jsx(ap,{className:n,children:e})};function cM(t){const e={a:"a",h1:"h1",h2:"h2",li:"li",p:"p",ul:"ul",...t.components};return m.jsxs(m.Fragment,{children:[m.jsx(e.h2,{children:"Challenge homepage"}),`
 `,m.jsx(e.p,{children:m.jsx(e.a,{href:"https://scrimba.com/javascriptmas-c0javascriptmas",children:"https://scrimba.com/javascriptmas-c0javascriptmas"})}),`
 `,m.jsx(e.p,{children:"These are 24 JavaScript challenges to be solved by December the 24. They are both tedious and fun."}),`
 `,m.jsx(e.h2,{children:"My solutions:"}),`
