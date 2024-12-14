@@ -207,7 +207,7 @@ L-values ?`}),`
 `,m.jsx(e.h1,{children:"Day 1 - Grandpa's Gift List 🎅"}),`
 `,m.jsx(e.p,{children:'The task is to ignore repeated inputs and display only unique values. Also ignore any sequence of whitespace, so both "cat bed" and "cat       bed" are identical.'}),`
 `,m.jsx("iframe",{src:"../Javascriptmas 2024 (Scrimba)/Day 1 - Grandpa's Gift List 🎅/index.html",title:"Day 1",onLoad:n=>{const r=n.currentTarget;r.height=2*r.contentWindow.document.body.scrollHeight}}),`
-`,m.jsx(e.p,{children:"Crux of the solution is the regex which collapses consecutive whitespaces. Finally is the O(n) solution checking the array for duplicates ."}),`
+`,m.jsx(e.p,{children:"Crux of the solution is the regex which collapses consecutive whitespaces. Finally is the O(n) solution checking the array for duplicates."}),`
 `,m.jsx(e.pre,{children:m.jsx(e.code,{className:"language-jsx",children:`const removeWhitespace = (str) => {
     const pass1 = str.replace(/\\s+/g, " ");
     const pass2 = pass1.trim();
