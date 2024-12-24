@@ -1,0 +1,144 @@
+:root {
+    --bg: #271d16;
+    --card: #3d342d;
+
+    --text: #fff898;
+
+    --button: hsl(46, 100%, 50%);
+    --button-hover: hsl(46, 100%, 70%);
+    --button-active: hsl(46, 100%, 47%);
+    --button-text: #503030;
+
+    --font-size-large: calc(1.3 * var(--font-size-big));
+    --font-size-big: calc(1.3 * var(--font-size-base));
+
+    --font-size-base: 1rem;
+
+    --font-size-small: calc(var(--font-size-base) / 1.3);
+    --font-size-small-spacing: 0.4pt;
+
+    --new-gap-mega: calc(4 * var(--new-gap-large));
+    --new-gap-large: calc(2 * var(--new-gap-medium));
+    --new-gap-medium: 1rem;
+    --new-gap-small: calc(0.4 * var(--new-gap-medium));
+    --new-gap-tiny: calc(0.2 * var(--new-gap-medium));
+
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    padding-block: var(--new-gap-large);
+    color: #c1c1c1;
+    display: flex;
+    row-gap: var(--new-gap-large);
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100vh;
+}
+
+header {
+    background: #0056b3;
+    color: #fff;
+    padding: 0 20px;
+    text-align: center;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+header,
+section {
+    border-radius: var(--new-gap-tiny);
+}
+
+header h1 {
+    margin: 0.5em 0;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+h2 {
+    padding: 30px;
+    font-size: 30px;
+}
+
+section {
+    padding: 20px 20px 0 20px;
+    background: #3d342d;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background: hsl(209, 100%, 30%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    transition: transform 0.1s, background-color 0.1s;
+
+    &:hover {
+        background-color: hsl(209, 100%, 36%);
+    }
+
+    &:active {
+        outline: auto;
+        transform: scale(0.98);
+        background-color: hsl(209, 100%, 24%);
+    }
+}
+
+.footer-txt {
+    text-align: center;
+}
+
+.footer-txt a {
+    color: inherit;
+    border-bottom: medium dotted;
+    text-decoration: none;
+    text-decoration: none;
+
+    &:hover {
+        border-bottom-style: solid;
+    }
+}
+
+.message {
+    display: none;
+    padding: 0 30px;
+}

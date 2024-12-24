@@ -1,0 +1,130 @@
+:root {
+    --green: #024f1a;
+    --color: snow;
+    --header-one-color: rgba(255, 255, 255, 0.85);
+    --header-two-color: rgba(255, 255, 255, 0.7);
+    --header-three-color: rgba(255, 255, 255, 0.55);
+    --line-color: rgba(0, 0, 0, 0.2);
+
+    --font-size-header-one: 3rem;
+    --font-size-header-two: 1rem;
+    --font-size-header-three: 1.4rem;
+
+    --z-index-about: 1;
+
+    --new-gap-mega: 5rem;
+    --new-gap-large: 1.5rem;
+    --new-gap-medium: 1rem;
+    --new-gap-small: 0.9rem;
+    --new-gap-tiny: 0.2rem;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    padding: var(--new-gap-mega);
+    background-color: var(--green);
+    min-height: 100vh;
+    /* overflow-y: hidden; */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    position: relative;
+    width: 400px;
+    aspect-ratio: 1 / 1.4;
+    overflow: hidden;
+    outline: medium solid rgba(255, 250, 250, 0.808);
+}
+
+.header-one,
+.header-two,
+.header-three {
+    position: absolute;
+    z-index: var(--z-index-about);
+}
+
+.header-one,
+.header-three {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.header-one {
+    padding-block: var(--new-gap-large);
+    padding-inline: var(--new-gap-small);
+
+    font-size: var(--font-size-header-one);
+    color: var(--header-one-color);
+    right: 0;
+}
+
+.header-two {
+    font-family: sans-serif;
+    font-size: var(--font-size-header-two);
+    padding-inline: var(--new-gap-medium);
+    display: grid;
+    row-gap: var(--new-gap-medium);
+    justify-items: center;
+
+    text-align: center;
+    width: 23ch;
+    line-height: 2;
+    letter-spacing: 0.5pt;
+
+    text-transform: uppercase;
+    color: var(--header-two-color);
+    right: 0;
+    top: 9rem;
+
+    &::before,
+    &::after {
+        content: "";
+        width: 70%;
+        border-top: medium solid var(--green);
+        filter: brightness(0.8);
+    }
+}
+
+.header-three {
+    /* transform: translateY(15rem); */
+    position: absolute;
+    bottom: 2rem;
+    font-size: var(--font-size-header-three);
+    background-color: var(--header-three-color);
+    width: 100%;
+    text-align: center;
+
+    padding-block: var(--new-gap-small);
+
+    display: grid;
+    row-gap: var(--new-gap-small);
+
+    .title {
+        font-size: 2em;
+    }
+
+    .sub-header {
+        display: grid;
+        row-gap: var(--new-gap-tiny);
+    }
+
+    .sub-title {
+        font-weight: unset;
+        font-size: 0.7em;
+    }
+
+    .sub-sub-title {
+        font-style: italic;
+        font-weight: bold;
+    }
+}
+
+.santa {
+    z-index: 0;
+    width: 200px;
+    transform: translate(-5rem, 8rem) scale(1.5);
+}

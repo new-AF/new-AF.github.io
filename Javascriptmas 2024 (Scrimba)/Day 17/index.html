@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 
+Santa needs extra help in the run up to Christmas so he has created this advert with a form to allow elves and helpers to sign up.
+
+In the small print, it says “we believe in equal opportunities”. But there is no evidence of that in this website because it has a ton of accessibility issues!
+
+**Task**
+Your task is to find and correct the accessibility issues. There are broadly four areas to think about. I have put details in hint.md but why not try to solve the issues without checking hint.md first!
+
+You will need to change code in index.html and index.css to complete this challenge.
+ -->
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Santa Needs You</title>
+        <link rel="stylesheet" href="index.css" />
+    </head>
+
+    <body>
+        <header>
+            <h1>Santa Needs You!</h1>
+            <img
+                src="santa-needs-you.png"
+                alt="AI generated image of Santa pointing at (you) that is the person looking at the image"
+            />
+            <p>We're recruiting elves and helpers!</p>
+        </header>
+        <section>
+            <form class="signup-form">
+                <fieldset class="form-group">
+                    <label for="name">Enter your name:</label>
+                    <input type="text" id="name" name="name" />
+                </fieldset>
+                <fieldset class="form-group">
+                    <label for="email">Enter your email:</label>
+                    <input type="email" id="email" name="email" />
+                </fieldset>
+                <div class="form-group">
+                    <button type="submit">Apply Now</button>
+                </div>
+            </form>
+            <p class="message">Email received! Thank you 🎅</p>
+            <h2>"Excellent pay and conditions. Plenty of travel!"</h2>
+            <p class="footer-txt">
+                We believe in equal opportunities.
+                <a href="">Click to read the Terms and conditions</a>.
+            </p>
+        </section>
+        <script src="index.js"></script>
+    </body>
+</html>
