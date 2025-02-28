@@ -293,6 +293,7 @@ function checkDuplicate() {
 `,u.jsx(e.h2,{children:"Day 4 - Christmas Movie Emoji Quiz 🎬"}),`
 `,u.jsx(e.h2,{children:"Day 5 - Find the anagrams"})]})}function Lx(t={}){return u.jsx(xx,{...t,children:u.jsx(Mx,{...t})})}const wx=function({title:e="Deploying Node/Express on Vercel",className:n="civet",children:r}){return u.jsx(li,{title:e,className:n,dateCreated:"28-02-2024",children:r})};function Px(t){const e={code:"code",img:"img",li:"li",p:"p",pre:"pre",ul:"ul",...t.components};return u.jsxs(u.Fragment,{children:[u.jsx(e.p,{children:"What you will need:"}),`
 `,u.jsxs(e.ul,{children:[`
+`,u.jsxs(e.li,{children:[u.jsx(e.code,{children:"pnpm"})," or ",u.jsx(e.code,{children:"npm"})," pacakge manager."]}),`
 `,u.jsx(e.li,{children:"Git installed on your machine."}),`
 `,u.jsx(e.li,{children:"A GitHub account with a (private) repo."}),`
 `,u.jsx(e.li,{children:"A Vercel account."}),`
