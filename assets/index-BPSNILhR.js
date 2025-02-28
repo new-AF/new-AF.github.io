@@ -320,7 +320,7 @@ function checkDuplicate() {
 `})}),`
 `,u.jsx(e.p,{children:"Step 3"}),`
 `,u.jsx(e.p,{children:u.jsx(e.code,{children:"/api/index.js"})}),`
-`,u.jsxs(e.p,{children:["Create a folder ",u.jsx(e.code,{children:"api"})," this will house your server Express logic ",u.jsx(e.code,{children:"index.js"})]}),`
+`,u.jsxs(e.p,{children:["Create a folder ",u.jsx(e.code,{children:"api"})," this will house your server Express logic"]}),`
 `,u.jsx(e.pre,{children:u.jsx(e.code,{children:`import express from "express";
 
 const app = express();
