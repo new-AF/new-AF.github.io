@@ -302,7 +302,7 @@ function checkDuplicate() {
 `,u.jsxs(e.p,{children:[u.jsx(e.code,{children:"pnpm init"})," or ",u.jsx(e.code,{children:"npm init"})]}),`
 `,u.jsx(e.h1,{children:"Step 2"}),`
 `,u.jsxs(e.p,{children:["Modify your ",u.jsx(e.code,{children:"package.json"})]}),`
-`,u.jsx(e.pre,{children:u.jsx(e.code,{children:`{
+`,u.jsx(e.pre,{children:u.jsx(e.code,{className:"language-json",children:`{
     "name": "my-express-app",
     "version": "1.0.0",
     "type": "module",
@@ -322,7 +322,7 @@ function checkDuplicate() {
 `,u.jsx(e.h1,{children:"Step 3"}),`
 `,u.jsx(e.p,{children:u.jsx(e.code,{children:"/api/index.js"})}),`
 `,u.jsxs(e.p,{children:["Create a folder ",u.jsx(e.code,{children:"api"})," this will house your server Express logic"]}),`
-`,u.jsx(e.pre,{children:u.jsx(e.code,{children:`import express from "express";
+`,u.jsx(e.pre,{children:u.jsx(e.code,{className:"language-js",children:`import express from "express";
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -334,11 +334,10 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
     console.log(\`App running on port \${port}\`);
 });
-
 `})}),`
 `,u.jsx(e.h1,{children:"Step 4"}),`
 `,u.jsx(e.p,{children:u.jsx(e.code,{children:"./vercel.json"})}),`
-`,u.jsx(e.pre,{children:u.jsx(e.code,{children:`{
+`,u.jsx(e.pre,{children:u.jsx(e.code,{className:"language-json",children:`{
     "version": 2,
     "builds": [
         {
