@@ -425,7 +425,8 @@ button:hover {
 `,u.jsx(Gt,{}),`
 `,u.jsx(e.h1,{children:"Step 6"}),`
 `,u.jsxs(e.p,{children:[u.jsx(e.code,{children:"./gitignore"})," create the file, add the below entry and save it."]}),`
-`,u.jsx(e.p,{children:u.jsx(e.code,{children:"node_modules"})}),`
+`,u.jsx(e.pre,{children:u.jsx(e.code,{className:"language-plaintext",children:`node_modules
+`})}),`
 `,u.jsx(Gt,{}),`
 `,u.jsx(e.h1,{children:"Step 7"}),`
 `,u.jsxs(e.p,{children:["Create the (private) repo on your GitHub account e.g. ",u.jsx(e.code,{children:"my-express-app"})]}),`
