@@ -291,7 +291,7 @@ function checkDuplicate() {
 `,_.jsx(e.h2,{children:"Day 2 - Ugly Advent Calendar"}),`
 `,_.jsx(e.h2,{children:"Day 3 - Santa's Emoji Hack"}),`
 `,_.jsx(e.h2,{children:"Day 4 - Christmas Movie Emoji Quiz 🎬"}),`
-`,_.jsx(e.h2,{children:"Day 5 - Find the anagrams"})]})}function Bx(t={}){return _.jsx(Ux,{...t,children:_.jsx(Fx,{...t})})}const Gx=function({title:e="Deploy Express/Node Apps on Vercel",className:n="civet",dateCreated:r="28-02-2025",dateLastUpdated:a="02-03-2025",image:i="/vercel.jpg",children:o}){return _.jsx(_i,{title:e,className:n,dateCreated:r,dateLastUpdated:a,image:i,children:o})};function Yx(t){const e={code:"code",h1:"h1",img:"img",li:"li",p:"p",pre:"pre",ul:"ul",...t.components};return _.jsxs(_.Fragment,{children:[_.jsx(e.h1,{children:"Before we begin, you will need:"}),`
+`,_.jsx(e.h2,{children:"Day 5 - Find the anagrams"})]})}function Bx(t={}){return _.jsx(Ux,{...t,children:_.jsx(Fx,{...t})})}const Gx=function({title:e="Deploy Express/Node Apps on Vercel",className:n="civet",dateCreated:r="28-02-2025",dateLastUpdated:a="12-03-2025",image:i="/vercel.jpg",children:o}){return _.jsx(_i,{title:e,className:n,dateCreated:r,dateLastUpdated:a,image:i,children:o})};function Yx(t){const e={code:"code",h1:"h1",img:"img",li:"li",p:"p",pre:"pre",ul:"ul",...t.components};return _.jsxs(_.Fragment,{children:[_.jsx(e.h1,{children:"Before we begin, you will need:"}),`
 `,_.jsxs(e.ul,{children:[`
 `,_.jsxs(e.li,{children:[_.jsx(e.code,{children:"pnpm"})," or ",_.jsx(e.code,{children:"npm"})," pacakge manager installed."]}),`
 `,_.jsx(e.li,{children:"Git installed on your machine."}),`
