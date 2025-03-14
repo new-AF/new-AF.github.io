@@ -346,6 +346,7 @@ app.listen(port, () => {
 `})}),`
 `,u.jsx(zt,{}),`
 `,u.jsx(e.h1,{children:"Step 4"}),`
+`,u.jsx(e.p,{children:"Your root web page, the HTML."}),`
 `,u.jsx(e.p,{children:u.jsx(e.code,{children:"./public/index.html"})}),`
 `,u.jsx(e.pre,{children:u.jsx(e.code,{className:"language-html",children:`<!DOCTYPE html>
 <html lang="en">
@@ -362,7 +363,7 @@ app.listen(port, () => {
 `})}),`
 `,u.jsx(zt,{}),`
 `,u.jsx(e.h1,{children:"Step 4.5"}),`
-`,u.jsx(e.p,{children:"Add a dark theme"}),`
+`,u.jsx(e.p,{children:"Add CSS to your HTML: A dark theme."}),`
 `,u.jsx(e.p,{children:u.jsx(e.code,{children:"./public/index.css"})}),`
 `,u.jsx(e.pre,{children:u.jsx(e.code,{className:"language-css",children:`/* Base Colors */
 :root {
@@ -406,6 +407,7 @@ button:hover {
 `})}),`
 `,u.jsx(zt,{}),`
 `,u.jsx(e.h1,{children:"Step 5"}),`
+`,u.jsx(e.p,{children:"Configure Vercel's services to run your Node/Express app."}),`
 `,u.jsx(e.p,{children:u.jsx(e.code,{children:"./vercel.json"})}),`
 `,u.jsx(e.pre,{children:u.jsx(e.code,{className:"language-json",children:`{
     "version": 2,
@@ -425,12 +427,12 @@ button:hover {
 `})}),`
 `,u.jsx(zt,{}),`
 `,u.jsx(e.h1,{children:"Step 6"}),`
+`,u.jsxs(e.p,{children:["Create the (private) repo on your GitHub account e.g. ",u.jsx(e.code,{children:"my-express-app"})]}),`
+`,u.jsx(zt,{}),`
+`,u.jsx(e.h1,{children:"Step 7"}),`
 `,u.jsxs(e.p,{children:[u.jsx(e.code,{children:"./gitignore"})," create the file, add the below entry and save it."]}),`
 `,u.jsx(e.pre,{children:u.jsx(e.code,{className:"language-plaintext",children:`node_modules
 `})}),`
-`,u.jsx(zt,{}),`
-`,u.jsx(e.h1,{children:"Step 7"}),`
-`,u.jsxs(e.p,{children:["Create the (private) repo on your GitHub account e.g. ",u.jsx(e.code,{children:"my-express-app"})]}),`
 `,u.jsx(zt,{}),`
 `,u.jsx(e.h1,{children:"Step 8"}),`
 `,u.jsx(e.p,{children:"Push to GitHub"}),`
