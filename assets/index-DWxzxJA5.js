@@ -446,9 +446,9 @@ button:hover {
 `,u.jsx(e.p,{children:"A Tree is a non-linear recursive data structure, where each node has children nodes of its own. Non-linear means nodes are not accessed one after the other in one direction, like in an Array, Stack or Queue. Instead Different paths can be taken, for example from the root node to any of the children nodes."}),`
 `,u.jsx(e.h1,{children:"Tree Types"}),`
 `,u.jsxs(e.p,{children:["A Tree is designated by how many children each child node has. A ",u.jsx(e.em,{children:"1-ary"})," tree where each node has at most 1 child,"]}),`
-`,u.jsx(e.h1,{children:"Binary Tree"}),`
+`,u.jsx(e.h1,{children:"A Binary Tree"}),`
 `,u.jsxs(e.p,{children:["A ",u.jsx(e.em,{children:"Binary"})," or 2-ary is a data structure where each node has at most 2 nodes: 0, 1, 2 children, which can be called the ",u.jsx(e.em,{children:"Left node"})," and ",u.jsx(e.em,{children:"Right node"})]}),`
-`,u.jsx(e.h1,{children:"Binary Search Tree (BST)"}),`
+`,u.jsx(e.h1,{children:"A Binary Search Tree (BST)"}),`
 `,u.jsx(e.p,{children:"A BST has an additional constraint:"}),`
 `,u.jsxs(e.ul,{children:[`
 `,u.jsx(e.li,{children:"where the root node can have any value, but"}),`
