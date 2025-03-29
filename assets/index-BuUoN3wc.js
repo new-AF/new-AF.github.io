@@ -442,18 +442,19 @@ button:hover {
 `,u.jsx(Wt,{}),`
 `,u.jsx(e.h1,{children:"Step 10"}),`
 `,u.jsx(e.p,{children:u.jsx(e.img,{src:"/vercel%203.png",alt:'White page hosted on vercel with text "Hello, Vercel!"'})}),`
-`,u.jsx(e.p,{children:"After the build step Vercel should have your Express app up and running!"})]})}function DL(t={}){return u.jsx(IL,{...t,children:u.jsx(AL,{...t})})}const xL=Object.freeze(Object.defineProperty({__proto__:null,default:DL},Symbol.toStringTag,{value:"Module"})),wL=function({className:e,children:n,image:r="",title:a="Binary Search Trees, in JavaScript",dateCreated:i="13-03-2025",dateLastUpdated:o="29-03-2025"}){return u.jsx(Nr,{title:a,image:r,className:e,dateCreated:i,dateLastUpdated:o,children:n})};function LL(t){const e={code:"code",em:"em",h1:"h1",li:"li",p:"p",pre:"pre",ul:"ul",...t.components};return u.jsxs(u.Fragment,{children:[u.jsx(e.h1,{children:"The Tree Data Structre"}),`
-`,u.jsx(e.p,{children:"A Tree is a non-linear recursive data structure, where each node has children nodes of its own. Non-linear means nodes are not accessed one after the other in one direction, like in an Array, Stack or Queue. Instead Different paths can be taken, for example from the root node to any of the children nodes."}),`
+`,u.jsx(e.p,{children:"After the build step Vercel should have your Express app up and running!"})]})}function DL(t={}){return u.jsx(IL,{...t,children:u.jsx(AL,{...t})})}const xL=Object.freeze(Object.defineProperty({__proto__:null,default:DL},Symbol.toStringTag,{value:"Module"})),wL=function({className:e,children:n,image:r="",title:a="Binary Search Trees, in JavaScript",dateCreated:i="13-03-2025",dateLastUpdated:o="29-03-2025"}){return u.jsx(Nr,{title:a,image:r,className:e,dateCreated:i,dateLastUpdated:o,children:n})};function LL(t){const e={code:"code",em:"em",h1:"h1",li:"li",p:"p",pre:"pre",ul:"ul",...t.components};return u.jsxs(u.Fragment,{children:[u.jsx(e.h1,{children:"Tree Data Structre"}),`
+`,u.jsx(e.p,{children:"A Tree is a non-linear recursive data structure, where each node has children nodes of its own. Non-linear means nodes are not accessed one after the other in one direction, like in an Array, Stack or Queue. Instead different paths can be taken, from the root node to any of the children nodes."}),`
 `,u.jsx(e.h1,{children:"Tree Types"}),`
-`,u.jsxs(e.p,{children:["A Tree's type is the maximum number of children that each child node can have. A ",u.jsx(e.em,{children:"1-ary"})," tree where each node has at most 1 child.. In A ",u.jsx(e.em,{children:"2-ary"})," or ",u.jsx(e.em,{children:"Binary"})," tree each node can have at most 2 children, A ",u.jsx(e.em,{children:"3-ary"})," tree 3 children and so on."]}),`
-`,u.jsx(e.h1,{children:"A Binary Tree"}),`
-`,u.jsxs(e.p,{children:["A The 2 nodes on a Binary Tree are usually called ",u.jsx(e.em,{children:"Left node"})," and ",u.jsx(e.em,{children:"Right node"})]}),`
-`,u.jsx(e.h1,{children:"A Binary Search Tree (BST)"}),`
-`,u.jsx(e.p,{children:"A BST has an additional constraint:"}),`
+`,u.jsx(e.p,{children:"A Tree's type is defined by the maximum number of children that any node is allowed to have."}),`
+`,u.jsxs(e.p,{children:["A ",u.jsx(e.em,{children:"1-ary Tree"}),"  allows any node to have at most 1 child. A ",u.jsx(e.em,{children:"2-ary"})," or ",u.jsx(e.em,{children:"Binary Tree"})," allows at most 2 children, A ",u.jsx(e.em,{children:"3-ary Tree"})," 3 children and so on."]}),`
+`,u.jsx(e.h1,{children:"Binary Tree"}),`
+`,u.jsxs(e.p,{children:["The 2 nodes in a Binary Tree are usually called the ",u.jsx(e.em,{children:"Left"})," and ",u.jsx(e.em,{children:"Right"})," nodes."]}),`
+`,u.jsx(e.h1,{children:"Binary Search Tree (BST)"}),`
+`,u.jsx(e.p,{children:"A BST has an additional constraint where:"}),`
 `,u.jsxs(e.ul,{children:[`
-`,u.jsx(e.li,{children:"where the root node can have any value, but"}),`
-`,u.jsx(e.li,{children:"the left node has to be strictly less than its parent node."}),`
-`,u.jsx(e.li,{children:"the right node has to be strictly larger that its parent node"}),`
+`,u.jsx(e.li,{children:"the root node can have any value, but"}),`
+`,u.jsxs(e.li,{children:["the left node has to be ",u.jsx(e.em,{children:"strictly less"})," than its parent node."]}),`
+`,u.jsxs(e.li,{children:["the right node has to be ",u.jsx(e.em,{children:"strictly larger"})," that its parent node"]}),`
 `]}),`
 `,u.jsx(e.h1,{children:"Implementation"}),`
 `,u.jsx(e.p,{children:"A typical JavaScript implementation has 2 classes:"}),`
