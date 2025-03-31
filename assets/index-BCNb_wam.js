@@ -322,7 +322,7 @@ React is mainly used for organizational purposes.`]})]})]})}function MDXContent$
     }
 }
 `})}),`
-`,jsxRuntimeExports.jsxs(_components.h1,{children:["Step 5 ",jsxRuntimeExports.jsx(_components.code,{children:"/api/index.js"})]}),`
+`,jsxRuntimeExports.jsxs(_components.h1,{children:["Step 5 ",jsxRuntimeExports.jsx(_components.code,{children:"./api/index.js"})]}),`
 `,jsxRuntimeExports.jsxs(_components.p,{children:["Create a folder ",jsxRuntimeExports.jsx(_components.code,{children:"api"})," this will house your server Express logic"]}),`
 `,jsxRuntimeExports.jsx(_components.pre,{children:jsxRuntimeExports.jsx(_components.code,{className:"language-js",children:`import express from "express";
 import path from "path";
@@ -340,7 +340,7 @@ app.listen(port, () => {
     console.log(\`App running on port \${port}\`);
 });
 `})}),`
-`,jsxRuntimeExports.jsxs(_components.h1,{children:["Step 6 Your root web page ",jsxRuntimeExports.jsx(_components.code,{children:"index.html"})]}),`
+`,jsxRuntimeExports.jsxs(_components.h1,{children:["Step 6 Your root web page ",jsxRuntimeExports.jsx(_components.code,{children:"./public/index.html"})]}),`
 `,jsxRuntimeExports.jsx(_components.p,{children:jsxRuntimeExports.jsx(_components.code,{children:"./public/index.html"})}),`
 `,jsxRuntimeExports.jsx(_components.pre,{children:jsxRuntimeExports.jsx(_components.code,{className:"language-html",children:`<!DOCTYPE html>
 <html lang="en">
