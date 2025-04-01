@@ -512,7 +512,7 @@ const isDefined = (val) => {
         return isDefined(this.right);
     }
     set(val) {
-        this.data(val);
+        this.data = val;
     }
 }
 `})}),`
