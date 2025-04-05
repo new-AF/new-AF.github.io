@@ -453,7 +453,7 @@ button:hover {
 `,d.jsx(e.h1,{children:"Binary Tree"}),`
 `,d.jsxs(e.p,{children:["The 2 nodes in a Binary Tree are usually called the ",d.jsx(e.em,{children:"Left"})," and ",d.jsx(e.em,{children:"Right"})," nodes."]}),`
 `,d.jsx(e.h1,{children:"Binary Search Tree (BST)"}),`
-`,d.jsx(VL,{path:"/public/bst.png"}),`
+`,d.jsx(VL,{path:"/bst.png"}),`
 `,d.jsx(e.p,{children:"A BST has an additional constraint where:"}),`
 `,d.jsxs(e.ul,{children:[`
 `,d.jsx(e.li,{children:"the root node can have any value, but"}),`
