@@ -151,7 +151,9 @@ React is mainly used for organizational purposes.`]})]})]}),`
 `,d.jsx(e.h1,{children:"Github repo"}),`
 `,d.jsx(sr,{"same-text":!0,href:"https://github.com/new-AF/react-svg-component"}),`
 `,d.jsx(e.h1,{children:"The React component"}),`
-`,d.jsx(e.pre,{children:d.jsx(e.code,{className:"language-jsx",children:`/*
+`,d.jsx(e.pre,{children:d.jsx(e.code,{className:"language-jsx",children:`/* fileName: SVG.jsx */
+
+/*
 *   <SVG/> React Component
 *   Version: 1.3
 *   Author: Abdullah Fatota
