@@ -560,7 +560,7 @@ export class Node {
 `,d.jsx(e.p,{children:"A Node can have 0, 1, or 2 children Nodes."}),`
 `,d.jsx(e.h1,{children:d.jsx(e.code,{children:"class Binary_Search_Tree"})}),`
 `,d.jsx(e.p,{children:"I know this naming convention goes against the typical JS PascalCase but:"}),`
-`,d.jsx(xr,{path:"/dont-care.gif",className:y("aspect-4/3","justify-self-center","!w-80")}),`
+`,d.jsx(xr,{path:"/dont-care.gif",className:y("aspect-16/9","justify-self-center","!w-80")}),`
 `,d.jsx(e.pre,{children:d.jsx(e.code,{className:"language-mjs",children:`/* fileName: Binary_Search_Tree.mjs */
 
 import { isDefined, isUndefinedOrNull } from "./utils.mjs";
