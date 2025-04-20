@@ -455,9 +455,28 @@ button:hover {
 `,_.jsx(e.p,{children:"Do not worry it seems scary the first time, but you got this!"}),`
 `,_.jsx(e.h1,{children:"Step 12 Success!"}),`
 `,_.jsx(e.p,{children:_.jsx(e.img,{src:"/vercel%203.png",alt:`a dark theme page successfully running on vercel's servers with text "Hello, Vercel!"`})}),`
-`,_.jsx(e.p,{children:"After the build step Vercel should have your Express App up and running!"})]})}function bY(t={}){return _.jsx(hY,{...t,children:_.jsx(TY,{...t})})}const vY=Object.freeze(Object.defineProperty({__proto__:null,default:bY},Symbol.toStringTag,{value:"Module"})),ni=({className:t,path:e,classes:n={container:A("w-full",t)}})=>_.jsx("img",{className:n.container,src:e}),RY=function({className:e,children:n,image:r="/bst.png",title:i="Binary Search Trees, in JavaScript (work in progress)",dateCreated:a="13-03-2025",dateLastUpdated:o="18-04-2025"}){return _.jsx(jr,{title:i,image:r,className:e,dateCreated:a,dateLastUpdated:o,children:n})};function yY(t){const e={code:"code",em:"em",h1:"h1",li:"li",ol:"ol",p:"p",pre:"pre",ul:"ul",...t.components};return _.jsxs(_.Fragment,{children:[_.jsx(e.h1,{children:"Asymptotic performance"}),`
+`,_.jsx(e.p,{children:"After the build step Vercel should have your Express App up and running!"})]})}function bY(t={}){return _.jsx(hY,{...t,children:_.jsx(TY,{...t})})}const vY=Object.freeze(Object.defineProperty({__proto__:null,default:bY},Symbol.toStringTag,{value:"Module"})),ni=({className:t,path:e,classes:n={container:A("w-full",t)}})=>_.jsx("img",{className:n.container,src:e}),RY=function({className:e,children:n,image:r="/bst.png",title:i="Binary Search Trees, in JavaScript (work in progress)",dateCreated:a="13-03-2025",dateLastUpdated:o="20-04-2025"}){return _.jsx(jr,{title:i,image:r,className:e,dateCreated:a,dateLastUpdated:o,children:n})};function yY(t){const e={code:"code",em:"em",h1:"h1",li:"li",ol:"ol",p:"p",pre:"pre",ul:"ul",...t.components};return _.jsxs(_.Fragment,{children:[_.jsx(e.h1,{children:"Asymptotic performance"}),`
 `,_.jsx("div",{class:"overflow-x-auto",children:_.jsxs("table",{class:"daisy-table",children:[_.jsx("thead",{children:_.jsxs("tr",{children:[_.jsx("th",{}),_.jsx("th",{children:"Operation"}),_.jsx("th",{children:"Performance"})]})}),_.jsxs("tbody",{children:[_.jsxs("tr",{children:[_.jsx("th",{children:"1"}),_.jsx("td",{children:"Searh"}),_.jsx("td",{children:"O(n)"})]}),_.jsxs("tr",{children:[_.jsx("th",{children:"2"}),_.jsx("td",{children:"Insert"}),_.jsx("td",{children:"O(n)"})]}),_.jsxs("tr",{children:[_.jsx("th",{children:"3"}),_.jsx("td",{children:"Delete"}),_.jsx("td",{children:"O(n)"})]})]})]})}),`
-`,_.jsx(e.h1,{children:"Tree Data Structre"}),`
+`,_.jsx(e.h1,{children:"Overview"}),`
+`,_.jsx(e.p,{children:"Hold on, if the Asymptotic performance is O(n) then why we're even studying this structure, well few things:"}),`
+`,_.jsxs(e.ul,{children:[`
+`,_.jsxs(e.li,{children:[`
+`,_.jsxs(e.p,{children:["you get an efficient sorting algorithm O(n log n) ",_.jsx(e.em,{children:"without"})," the drudgery feeling of writing a sorting algorithm"]}),`
+`]}),`
+`,_.jsxs(e.li,{children:[`
+`,_.jsx(e.p,{children:"BSTs forms the basis for more advanced and useful structures like AVL, Red-Black trees which allow you to search in O(log n)"}),`
+`]}),`
+`]}),`
+`,_.jsx(e.h1,{children:"Setup"}),`
+`,_.jsxs(e.ul,{children:[`
+`,_.jsxs(e.li,{children:[`
+`,_.jsxs(e.p,{children:["All the code listed here is ",_.jsx(e.em,{children:"JavaScript"})," and was tested on NodeJS, the runtime to run JS locally."]}),`
+`]}),`
+`,_.jsxs(e.li,{children:[`
+`,_.jsxs(e.p,{children:["All JS files have the ",_.jsx(e.code,{children:".mjs"})," extension for ",_.jsx(e.em,{children:"JavaScript Modules"}),", to enable using nice things like ",_.jsx(e.code,{children:"import"}),"/",_.jsx(e.code,{children:"export"}),"."]}),`
+`]}),`
+`]}),`
+`,_.jsx(e.h1,{children:"General Tree Data Structre Definition"}),`
 `,_.jsxs(e.p,{children:["A Tree is a non-linear recursive data structure, where each ",_.jsx(e.em,{children:"Node"}),":"]}),`
 `,_.jsxs(e.ul,{children:[`
 `,_.jsx(e.li,{children:"contains its own data, and"}),`
@@ -465,15 +484,6 @@ button:hover {
 `]}),`
 `,_.jsx(e.p,{children:"Non-linear means different paths are taken to access a target node. This is in contrast to linear structures like Arrays, Stacks and Queues where elements are accessed one after the other in one direction."}),`
 `,_.jsx(ni,{path:"/class Node general.png"}),`
-`,_.jsx(e.h1,{children:"Setup"}),`
-`,_.jsxs(e.ul,{children:[`
-`,_.jsxs(e.li,{children:[`
-`,_.jsx(e.p,{children:"This code was tested on NodeJS, the JavaScript runtime to run JS files locally."}),`
-`]}),`
-`,_.jsxs(e.li,{children:[`
-`,_.jsxs(e.p,{children:["All files here have ",_.jsx(e.code,{children:".mjs"})," extension for JavaScript Modules, to enable using nice things like ",_.jsx(e.code,{children:"import"}),"/",_.jsx(e.code,{children:"export"}),"."]}),`
-`]}),`
-`]}),`
 `,_.jsx(e.h1,{children:"Tree Types"}),`
 `,_.jsx(e.p,{children:"A Tree's type is defined by the maximum number of children that any node is allowed to have."}),`
 `,_.jsxs(e.p,{children:["A ",_.jsx(e.em,{children:"1-ary Tree"})," allows any node to have at most 1 child. A ",_.jsx(e.em,{children:"2-ary"})," or ",_.jsx(e.em,{children:"Binary Tree"})," allows at most 2 children. A ",_.jsx(e.em,{children:"3-ary Tree"})," 3 children and so on."]}),`
