@@ -458,7 +458,7 @@ button:hover {
 `,_.jsx(e.p,{children:"After the build step Vercel should have your Express App up and running!"})]})}function bY(t={}){return _.jsx(hY,{...t,children:_.jsx(TY,{...t})})}const vY=Object.freeze(Object.defineProperty({__proto__:null,default:bY},Symbol.toStringTag,{value:"Module"})),ni=({className:t,path:e,classes:n={container:A("w-full",t)}})=>_.jsx("img",{className:n.container,src:e}),RY=function({className:e,children:n,image:r="/bst.png",title:i="Binary Search Trees, in JavaScript (work in progress)",dateCreated:a="13-03-2025",dateLastUpdated:o="20-04-2025"}){return _.jsx(jr,{title:i,image:r,className:e,dateCreated:a,dateLastUpdated:o,children:n})};function yY(t){const e={code:"code",em:"em",h1:"h1",li:"li",ol:"ol",p:"p",pre:"pre",ul:"ul",...t.components};return _.jsxs(_.Fragment,{children:[_.jsx(e.h1,{children:"Asymptotic performance"}),`
 `,_.jsx("div",{class:"overflow-x-auto",children:_.jsxs("table",{class:"daisy-table",children:[_.jsx("thead",{children:_.jsxs("tr",{children:[_.jsx("th",{}),_.jsx("th",{children:"Operation"}),_.jsx("th",{children:"Performance"})]})}),_.jsxs("tbody",{children:[_.jsxs("tr",{children:[_.jsx("th",{children:"1"}),_.jsx("td",{children:"Search"}),_.jsx("td",{children:"O(n)"})]}),_.jsxs("tr",{children:[_.jsx("th",{children:"2"}),_.jsx("td",{children:"Insert"}),_.jsx("td",{children:"O(n)"})]}),_.jsxs("tr",{children:[_.jsx("th",{children:"3"}),_.jsx("td",{children:"Delete"}),_.jsx("td",{children:"O(n)"})]})]})]})}),`
 `,_.jsx(e.h1,{children:"Overview"}),`
-`,_.jsx(e.p,{children:"Hold on, if the Asymptotic performance is O(n) then why we're even studying this structure, well few things:"}),`
+`,_.jsx(e.p,{children:"Hold on... if the Asymptotic performance is O(n) then why are we even studying this structure, well few things:"}),`
 `,_.jsxs(e.ul,{children:[`
 `,_.jsxs(e.li,{children:[`
 `,_.jsxs(e.p,{children:["you get an efficient sorting algorithm O(n log n) ",_.jsx(e.em,{children:"without"})," the drudgery feeling of writing a sorting algorithm"]}),`
@@ -681,8 +681,8 @@ console.log(tree.toArray());
 `,_.jsx(e.li,{children:"set the root node, and"}),`
 `,_.jsx(e.li,{children:"repeatedly inserting elements into the BST"}),`
 `]}),`
-`,_.jsx(e.h1,{children:_.jsx(e.code,{children:"insert"})}),`
-`,_.jsx(e.p,{children:"Asymptotic performance: worst case O(n2)"}),`
+`,_.jsxs(e.h1,{children:["🔑 ",_.jsx(e.code,{children:"insert"})]}),`
+`,_.jsxs(e.p,{children:["Asymptotic performance for inserting ",_.jsx(e.em,{children:"n"})," items into the tree is O(n2)"]}),`
 `,_.jsx(ni,{path:"/bst insert.PNG"}),`
 `,_.jsx(e.p,{children:"The algorithm is the following:"}),`
 `,_.jsxs(e.ol,{children:[`
