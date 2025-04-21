@@ -484,51 +484,6 @@ button:hover {
 `]}),`
 `,_.jsx(e.p,{children:"Non-linear means different paths are taken to access a target node. This is in contrast to linear structures like Arrays, Stacks and Queues where elements are accessed one after the other in one direction."}),`
 `,_.jsx(ni,{path:"/class Node general.png"}),`
-`,_.jsx(e.h1,{children:"Tree Types"}),`
-`,_.jsx(e.p,{children:"A Tree's type is defined by the maximum number of children that any node is allowed to have."}),`
-`,_.jsxs(e.p,{children:["A ",_.jsx(e.em,{children:"1-ary Tree"})," allows any node to have at most 1 child. A ",_.jsx(e.em,{children:"2-ary"})," or ",_.jsx(e.em,{children:"Binary Tree"})," allows at most 2 children. A ",_.jsx(e.em,{children:"3-ary Tree"})," 3 children and so on."]}),`
-`,_.jsx(ni,{path:"/bst tree types.PNG"}),`
-`,_.jsx(e.h1,{children:"Binary Tree"}),`
-`,_.jsxs(e.p,{children:["The 2 nodes in a Binary Tree are usually called the ",_.jsx(e.em,{children:"Left"})," and ",_.jsx(e.em,{children:"Right"})," nodes."]}),`
-`,_.jsx(ni,{path:"/bst binary tree.PNG"}),`
-`,_.jsx(e.h1,{children:"Binary Search Tree (BST)"}),`
-`,_.jsx(ni,{path:"/bst.png"}),`
-`,_.jsx(e.p,{children:"A BST has an additional constraint where:"}),`
-`,_.jsxs(e.ul,{children:[`
-`,_.jsx(e.li,{children:"the root node can have any value, but"}),`
-`,_.jsxs(e.li,{children:["the left node has to be ",_.jsx(e.em,{children:"strictly less"})," than its parent node."]}),`
-`,_.jsxs(e.li,{children:["the right node has to be ",_.jsx(e.em,{children:"strictly larger"})," that its parent node"]}),`
-`]}),`
-`,_.jsx(e.h1,{children:"A JavaScript Implementation"}),`
-`,_.jsx(e.p,{children:"This implementation has 2 classes:"}),`
-`,_.jsxs(e.ul,{children:[`
-`,_.jsxs(e.li,{children:[`
-`,_.jsxs(e.p,{children:[_.jsx(e.code,{children:"class Node"})," is the backbone of the data structure, it contains both:"]}),`
-`,_.jsxs(e.ul,{children:[`
-`,_.jsx(e.li,{children:"the value and"}),`
-`,_.jsxs(e.li,{children:["crucially ",_.jsx(e.em,{children:"left"})," and ",_.jsx(e.em,{children:"right"})," node references, giving the data structure its tree and non-linear access property, and recurisve defintion."]}),`
-`]}),`
-`]}),`
-`,_.jsxs(e.li,{children:[`
-`,_.jsx(e.p,{children:_.jsx(e.code,{children:"class Binary_Search_Tree"})}),`
-`,_.jsxs(e.ul,{children:[`
-`,_.jsx(e.li,{children:"implements all the operations (insert, delete, find and traversal) and will enforece the constraints that make this structure a Binary Search Tree."}),`
-`,_.jsxs(e.li,{children:["in addition it will contain the ",_.jsx(e.em,{children:"root"})," node"]}),`
-`]}),`
-`]}),`
-`]}),`
-`,_.jsx(e.h1,{children:"Helper functions"}),`
-`,_.jsx(e.p,{children:"To not code like cavemen."}),`
-`,_.jsx(e.pre,{children:_.jsx(e.code,{className:"language-mjs",children:`/* fileName: utils.mjs */
-
-export const isUndefinedOrNull = (val) => {
-    return val === undefined || val === null;
-};
-
-export const isDefined = (val) => {
-    return val != null && val != undefined;
-};
-`})}),`
 `,_.jsx(e.h1,{children:_.jsx(e.code,{children:"class Node"})}),`
 `,_.jsx(e.pre,{children:_.jsx(e.code,{className:"language-mjs",children:`/* fileName: Node.mjs */
 
@@ -578,6 +533,51 @@ export class Node {
 // console.log(n);
 `})}),`
 `,_.jsx(e.p,{children:"A Node can have 0, 1, or 2 children Nodes."}),`
+`,_.jsx(e.h1,{children:"Tree Types"}),`
+`,_.jsx(e.p,{children:"A Tree's type is defined by the maximum number of children that any node is allowed to have."}),`
+`,_.jsxs(e.p,{children:["A ",_.jsx(e.em,{children:"1-ary Tree"})," allows any node to have at most 1 child. A ",_.jsx(e.em,{children:"2-ary"})," or ",_.jsx(e.em,{children:"Binary Tree"})," allows at most 2 children. A ",_.jsx(e.em,{children:"3-ary Tree"})," 3 children and so on."]}),`
+`,_.jsx(ni,{path:"/bst tree types.PNG"}),`
+`,_.jsx(e.h1,{children:"Binary Tree"}),`
+`,_.jsxs(e.p,{children:["The 2 nodes in a Binary Tree are usually called the ",_.jsx(e.em,{children:"Left"})," and ",_.jsx(e.em,{children:"Right"})," nodes."]}),`
+`,_.jsx(ni,{path:"/bst binary tree.PNG"}),`
+`,_.jsx(e.h1,{children:"Binary Search Tree (BST)"}),`
+`,_.jsx(ni,{path:"/bst.png"}),`
+`,_.jsx(e.p,{children:"A BST has an additional constraint where:"}),`
+`,_.jsxs(e.ul,{children:[`
+`,_.jsx(e.li,{children:"the root node can have any value, but"}),`
+`,_.jsxs(e.li,{children:["the left node has to be ",_.jsx(e.em,{children:"strictly less"})," than its parent node."]}),`
+`,_.jsxs(e.li,{children:["the right node has to be ",_.jsx(e.em,{children:"strictly larger"})," that its parent node"]}),`
+`]}),`
+`,_.jsx(e.h1,{children:"A JavaScript Implementation"}),`
+`,_.jsx(e.p,{children:"This implementation has 2 classes:"}),`
+`,_.jsxs(e.ul,{children:[`
+`,_.jsxs(e.li,{children:[`
+`,_.jsxs(e.p,{children:[_.jsx(e.code,{children:"class Node"})," is the backbone of the data structure, it contains both:"]}),`
+`,_.jsxs(e.ul,{children:[`
+`,_.jsx(e.li,{children:"the value and"}),`
+`,_.jsxs(e.li,{children:["crucially ",_.jsx(e.em,{children:"left"})," and ",_.jsx(e.em,{children:"right"})," node references, giving the data structure its tree and non-linear access property, and recurisve defintion."]}),`
+`]}),`
+`]}),`
+`,_.jsxs(e.li,{children:[`
+`,_.jsx(e.p,{children:_.jsx(e.code,{children:"class Binary_Search_Tree"})}),`
+`,_.jsxs(e.ul,{children:[`
+`,_.jsx(e.li,{children:"implements all the operations (insert, delete, find and traversal) and will enforece the constraints that make this structure a Binary Search Tree."}),`
+`,_.jsxs(e.li,{children:["in addition it will contain the ",_.jsx(e.em,{children:"root"})," node"]}),`
+`]}),`
+`]}),`
+`]}),`
+`,_.jsx(e.h1,{children:"Helper functions"}),`
+`,_.jsx(e.p,{children:"To not code like cavemen."}),`
+`,_.jsx(e.pre,{children:_.jsx(e.code,{className:"language-mjs",children:`/* fileName: utils.mjs */
+
+export const isUndefinedOrNull = (val) => {
+    return val === undefined || val === null;
+};
+
+export const isDefined = (val) => {
+    return val != null && val != undefined;
+};
+`})}),`
 `,_.jsx(e.h1,{children:_.jsx(e.code,{children:"class Binary_Search_Tree"})}),`
 `,_.jsx(e.p,{children:"I know this naming convention goes against the typical JS PascalCase but:"}),`
 `,_.jsx(ni,{path:"/dont-care.gif",className:A("aspect-16/9","justify-self-center","!w-80")}),`
