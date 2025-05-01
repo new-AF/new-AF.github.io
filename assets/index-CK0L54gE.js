@@ -458,10 +458,10 @@ button:hover {
 `,_.jsx(e.p,{children:"After the build step Vercel should have your Express App up and running!"})]})}function TY(t={}){return _.jsx(SY,{...t,children:_.jsx(hY,{...t})})}const bY=Object.freeze(Object.defineProperty({__proto__:null,default:TY},Symbol.toStringTag,{value:"Module"})),ri=({className:t,src:e,path:n,classes:r={container:A("max-w-full","w-[unset]",t)}})=>_.jsx("img",{className:r.container,src:n||e}),vY=function({className:e,children:n,image:r="/bst.png",title:i="Binary Search Trees, in JavaScript (work in progress)",dateCreated:a="13-03-2025",dateLastUpdated:o="01-05-2025"}){return _.jsx(Xr,{title:i,image:r,className:e,dateCreated:a,dateLastUpdated:o,children:n})};function RY(t){const e={code:"code",em:"em",h1:"h1",li:"li",ol:"ol",p:"p",pre:"pre",strong:"strong",ul:"ul",...t.components};return _.jsxs(_.Fragment,{children:[_.jsx(e.h1,{children:"Asymptotic performance"}),`
 `,_.jsx("div",{class:"overflow-x-auto",children:_.jsxs("table",{class:"daisy-table",children:[_.jsx("thead",{children:_.jsxs("tr",{children:[_.jsx("th",{}),_.jsx("th",{children:"Operation"}),_.jsx("th",{children:"Performance"})]})}),_.jsxs("tbody",{children:[_.jsxs("tr",{children:[_.jsx("th",{children:"1"}),_.jsx("td",{children:"Search"}),_.jsx("td",{children:"O(n)"})]}),_.jsxs("tr",{children:[_.jsx("th",{children:"2"}),_.jsx("td",{children:"Insert"}),_.jsx("td",{children:"O(n)"})]}),_.jsxs("tr",{children:[_.jsx("th",{children:"3"}),_.jsx("td",{children:"Delete"}),_.jsx("td",{children:"O(n)"})]})]})]})}),`
 `,_.jsx(e.h1,{children:"Overview"}),`
-`,_.jsx(e.p,{children:"Hold on... if the Asymptotic performance is O(n) for a single operation then why are we even studying this structure? Well few things:"}),`
+`,_.jsx(e.p,{children:"Hold on... if the asymptotic performance is O(n) for a single operation then why are we even studying this structure? Well few things:"}),`
 `,_.jsxs(e.ul,{children:[`
 `,_.jsxs(e.li,{children:[`
-`,_.jsx(e.p,{children:"most importantly variations of Binary Search Trees (BSTs) like AVL, Red-Black trees allow for efficient searching in O(log n) and sorting in O(n log n)."}),`
+`,_.jsx(e.p,{children:"most important variations of Binary Search Trees (BSTs) like AVL, Red-Black trees allow for efficient searching in O(log n) and sorting in O(n log n)."}),`
 `]}),`
 `,_.jsxs(e.li,{children:[`
 `,_.jsxs(e.p,{children:["you get a sorting algorithm albeit inefficient one in O(n2) ",_.jsx(e.em,{children:"without"})," the drudgery feeling of writing a sorting algorithm."]}),`
