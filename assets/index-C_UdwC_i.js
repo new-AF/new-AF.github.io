@@ -461,10 +461,10 @@ button:hover {
 `,_.jsx(e.p,{children:"Hold on... if the Asymptotic performance is O(n) for a single operation then why are we even studying this structure? Well few things:"}),`
 `,_.jsxs(e.ul,{children:[`
 `,_.jsxs(e.li,{children:[`
-`,_.jsxs(e.p,{children:["you get a sorting algorithm albeit inefficient one in O(n2) ",_.jsx(e.em,{children:"without"})," the drudgery feeling of writing a sorting algorithm."]}),`
+`,_.jsx(e.p,{children:"most importantly variations of Binary Search Trees (BSTs) like AVL, Red-Black trees allow for efficient searching in O(log n) and sorting in O(n log n)."}),`
 `]}),`
 `,_.jsxs(e.li,{children:[`
-`,_.jsx(e.p,{children:"Variations of Binary Search Trees (BSTs) like AVL, Red-Black tree allow for efficient searching in O(log n) and sorting in O(n log n)"}),`
+`,_.jsxs(e.p,{children:["you get a sorting algorithm albeit inefficient one in O(n2) ",_.jsx(e.em,{children:"without"})," the drudgery feeling of writing a sorting algorithm."]}),`
 `]}),`
 `]}),`
 `,_.jsx(e.h1,{children:"Setup"}),`
