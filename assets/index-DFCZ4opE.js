@@ -465,7 +465,7 @@ button:hover {
 `,_.jsxs(e.li,{children:["you get a sorting algorithm albeit inefficient one in O(n²) ",_.jsx(e.em,{children:"without"})," the ever being aware of writing a sorting algorithm."]}),`
 `]}),`
 `,_.jsx(e.h1,{children:"Asymptotic performance"}),`
-`,_.jsxs(e.p,{children:["For ",_.jsx(e.em,{children:"every"})," single operation listed, the runtime complexity is ",_.jsx(e.em,{children:"O(n)"})," and therefore it is O(n²) for ",_.jsx(e.em,{children:"n"})," elements. This is the reason BSTs are not useful by themselves."]}),`
+`,_.jsxs(e.p,{children:["For ",_.jsx(e.em,{children:"every"})," single operation listed, the runtime complexity is ",_.jsx(e.em,{children:"O(n)"})," and therefore it is ",_.jsx(e.em,{children:"O(n²) for n elements"}),". This is the reason BSTs are not useful by themselves."]}),`
 `,_.jsx("div",{class:"overflow-x-auto",children:_.jsxs("table",{class:"daisy-table",children:[_.jsx("thead",{children:_.jsxs("tr",{children:[_.jsx("th",{}),_.jsx("th",{children:"Operation"}),_.jsx("th",{children:"Performance"})]})}),_.jsxs("tbody",{children:[_.jsxs("tr",{children:[_.jsx("th",{children:"1"}),_.jsx("td",{children:"Search"}),_.jsx("td",{children:"O(n)"})]}),_.jsxs("tr",{children:[_.jsx("th",{children:"2"}),_.jsx("td",{children:"Insert"}),_.jsx("td",{children:"O(n)"})]}),_.jsxs("tr",{children:[_.jsx("th",{children:"3"}),_.jsx("td",{children:"Delete"}),_.jsx("td",{children:"O(n)"})]})]})]})}),`
 `,_.jsx(e.h1,{children:"General Tree Definition"}),`
 `,_.jsxs(e.p,{children:["A Tree is a non-linear recursive data structure, where each ",_.jsx(e.em,{children:"Node"}),":"]}),`
