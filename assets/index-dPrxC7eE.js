@@ -695,7 +695,7 @@ class BinarySearchTree {
 `,_.jsx(e.li,{children:"if yes, set the new node there,"}),`
 `,_.jsx(e.li,{children:"if not recursively start from that right node, and go left or right based on comparing the value inside"}),`
 `]}),`
-`,_.jsx(e.h2,{children:"Example"}),`
+`,_.jsx(e.h2,{children:"Visual example"}),`
 `,_.jsx(e.pre,{children:_.jsx(e.code,{className:"language-jsx",children:`const tree = new BinarySearchTree(4, 3, 1, 6, 5, 7);
 `})}),`
 `,_.jsx(En,{scale:.5,path:"/bst insert 1.png"}),`
@@ -705,7 +705,7 @@ class BinarySearchTree {
 `,_.jsx(En,{scale:.5,path:"/bst insert 5.png"}),`
 `,_.jsx(En,{scale:.5,path:"/bst insert 6.png"}),`
 `,_.jsxs(e.h1,{children:["🔑 The ",_.jsx(e.code,{children:"traversePreOrder"})," algorithm"]}),`
-`,_.jsx(e.pre,{children:_.jsx(e.code,{className:"language-jsx",children:`
+`,_.jsx(e.pre,{children:_.jsx(e.code,{className:"language-mjs",children:`
 /* fileName: BinarySearchTree.mjs */
 
 traversePreOrder() {
