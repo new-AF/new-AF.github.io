@@ -452,13 +452,14 @@ button:hover {
 `,_.jsx(e.li,{children:"Searching, if an element is in the data stored."}),`
 `,_.jsx(e.li,{children:"Sorting, the data."}),`
 `]}),`
-`,_.jsx(e.p,{children:"Despite these impressive operations, they are not the fastest and therefore not widely used in real world applications, but the concepts and algorithms behind their operations power more advanced data structures that are useful, namely:"}),`
+`,_.jsxs(e.p,{children:["All of this in ",_.jsx(e.em,{children:"O(n)"})," for the single operation, and ",_.jsx(e.em,{children:"O(n²)"})," for ",_.jsx(e.em,{children:"n"})," elements, which is slow compared to other data structures that support the same operations."]}),`
+`,_.jsx(e.p,{children:"Due to the speed issue, plain-BSTs are rarely used in real world applications, However the concepts and algorithms behind their operations power more advanced data structures that are fast and useful, namely:"}),`
 `,_.jsxs(e.ul,{children:[`
 `,_.jsx(e.li,{children:"Variations of Binary Search Trees (BSTs) like AVL, Red-Black trees allow for efficient searching in O(log n) and sorting in O(n log n)."}),`
 `]}),`
-`,_.jsx(e.p,{children:"Another side benefit is:"}),`
+`,_.jsx(e.h2,{children:"Another side benefit is"}),`
 `,_.jsxs(e.ul,{children:[`
-`,_.jsxs(e.li,{children:["you get a sorting algorithm albeit inefficient one in O(n²) ",_.jsx(e.em,{children:"without"})," the ever being aware of writing a sorting algorithm."]}),`
+`,_.jsxs(e.li,{children:["you get a sorting algorithm albeit inefficient one in O(n²) ",_.jsx(e.em,{children:"without"})," ever writing a sorting algorithm."]}),`
 `]}),`
 `,_.jsx(e.h1,{children:"Asymptotic performance"}),`
 `,_.jsxs(e.p,{children:["For ",_.jsx(e.em,{children:"every"})," single operation listed, the runtime complexity is ",_.jsx(e.em,{children:"O(n)"})," and therefore it is ",_.jsx(e.em,{children:"O(n²) for n elements"}),". This is the reason BSTs are not useful by themselves."]}),`
