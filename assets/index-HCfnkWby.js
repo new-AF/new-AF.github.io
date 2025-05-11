@@ -779,7 +779,8 @@ traversePreOrder() {
 `]}),`
 `,_.jsx(ce,{scale:1,path:"/bst preorder algorithm.png"}),`
 `,_.jsx(e.h2,{children:"Visual example"}),`
-`,_.jsx(e.pre,{children:_.jsx(e.code,{className:"language-js",children:`bst.toArray();
+`,_.jsx(e.pre,{children:_.jsx(e.code,{className:"language-js",children:`// const bst = new BinarySearchTree(4, 3, 1, 6, 5, 7);
+bst.toArray();
 `})}),`
 `,_.jsx(ce,{scale:1,path:"/bst preorder 1.png"}),`
 `,_.jsx(ce,{scale:1,path:"/bst preorder 2.png"}),`
