@@ -666,7 +666,7 @@ class BinarySearchTree {
     }
 }
 `})}),`
-`,_.jsx(e.h1,{children:"The Constructor algorithm"}),`
+`,_.jsx(e.h1,{children:"The Constructor Algorithm"}),`
 `,_.jsx(e.pre,{children:_.jsx(e.code,{className:"language-js",children:`    constructor(...args) {
         args.forEach((val) => this.insertValue(val));
 }
@@ -676,7 +676,7 @@ class BinarySearchTree {
 `,_.jsx(e.li,{children:"Set the root node witht the first element,"}),`
 `,_.jsxs(e.li,{children:["repeatedly call ",_.jsx(e.code,{children:"insert"})," for each subsequent element."]}),`
 `]}),`
-`,_.jsx(e.h1,{children:"The Insert algorithm 🔑"}),`
+`,_.jsx(e.h1,{children:"The Insert Algorithm 🔑"}),`
 `,_.jsx(e.pre,{children:_.jsx(e.code,{className:"language-js",children:`insertValue(val) {
     const newNode = new Node(val);
 
@@ -739,7 +739,7 @@ class BinarySearchTree {
 `,_.jsx(ce,{className:"sm:max-w-[50%]",path:"/bst insert 4.png"}),`
 `,_.jsx(ce,{className:"sm:max-w-[50%]",path:"/bst insert 5.png"}),`
 `,_.jsx(ce,{className:"sm:max-w-[50%]",path:"/bst insert 6.png"}),`
-`,_.jsx(e.h1,{children:"The Preorder traversal algorithm 🔑"}),`
+`,_.jsx(e.h1,{children:"The Preorder Traversal Algorithm 🔑"}),`
 `,_.jsx(e.pre,{children:_.jsx(e.code,{className:"language-mjs",children:`
 /* fileName: BinarySearchTree.mjs */
 
