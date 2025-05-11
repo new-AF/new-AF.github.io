@@ -676,7 +676,7 @@ class BinarySearchTree {
 `,_.jsx(e.li,{children:"Set the root node witht the first element,"}),`
 `,_.jsxs(e.li,{children:["repeatedly call ",_.jsx(e.code,{children:"insert"})," for each subsequent element."]}),`
 `]}),`
-`,_.jsxs(e.h1,{children:["The ",_.jsx(e.code,{children:"insert"})," algorithm 🔑"]}),`
+`,_.jsx(e.h1,{children:"The Insert algorithm 🔑"}),`
 `,_.jsx(e.pre,{children:_.jsx(e.code,{className:"language-js",children:`insertValue(val) {
     const newNode = new Node(val);
 
