@@ -666,16 +666,55 @@ class BinarySearchTree {
     }
 }
 `})}),`
-`,_.jsx(e.h1,{children:"The constructor algorithm"}),`
-`,_.jsx(e.p,{children:_.jsx(e.code,{children:"new BinarySearchTree(4, 3, 1, 6, 5, 7)"})}),`
-`,_.jsx(e.p,{children:"It accepts and converts an array into a BST with the following algorithm:"}),`
+`,_.jsx(e.h1,{children:"The Constructor algorithm"}),`
+`,_.jsx(e.pre,{children:_.jsx(e.code,{className:"language-js",children:`    constructor(...args) {
+        args.forEach((val) => this.insertValue(val));
+}
+`})}),`
+`,_.jsx(e.p,{children:"It accepts and converts (an array of) data into a BST with the following algorithm:"}),`
 `,_.jsxs(e.ul,{children:[`
-`,_.jsx(e.li,{children:"set the root node, and"}),`
-`,_.jsxs(e.li,{children:["for each element in the array, calls the instance's ",_.jsx(e.code,{children:"insert"})," method"]}),`
+`,_.jsx(e.li,{children:"Set the root node witht the first element,"}),`
+`,_.jsxs(e.li,{children:["repeatedly call ",_.jsx(e.code,{children:"insert"})," for each subsequent element."]}),`
 `]}),`
-`,_.jsxs(e.h1,{children:["🔑 The ",_.jsx(e.code,{children:"insert"})," algorithm"]}),`
-`,_.jsxs(e.p,{children:["Insert effectively constructs the Binary Search Tree. Its asymptotic performance for inserting ",_.jsx(e.em,{children:"n"})," elements is ",_.jsx(e.em,{children:"O(n²)"})]}),`
-`,_.jsxs(e.p,{children:["The O(n²) algorithm performs the following for ",_.jsx(e.em,{children:"every"})," element from the array:"]}),`
+`,_.jsxs(e.h1,{children:["The ",_.jsx(e.code,{children:"insert"})," algorithm 🔑"]}),`
+`,_.jsx(e.pre,{children:_.jsx(e.code,{className:"language-js",children:`insertValue(val) {
+    const newNode = new Node(val);
+
+    if (this.isRootUnset()) {
+        this.setRootNode(newNode);
+        return;
+    }
+
+    /* recursive 'helper' insert */
+    const recursiveFunction = (currentNode, val) => {
+        if (isUndefinedOrNull(currentNode)) return;
+
+        /* if value <  current node, and there is an has an empty left spot then set new node, otherwise unpack */
+        if (val < currentNode.value()) {
+            if (currentNode.hasEmptyLeftSpot()) {
+                currentNode.setLeftNode(newNode);
+                return;
+            }
+            recursiveFunction(currentNode.leftNode(), val);
+        }
+
+        /* if value <  current node, and there is an has an empty left spot then set new node, otherwise unpack */
+        if (val > currentNode.value()) {
+            if (currentNode.hasEmptyRightSpot()) {
+                currentNode.setRightNode(newNode);
+                return;
+            }
+            recursiveFunction(currentNode.rightNode(), val);
+        }
+
+        /* end of recursive function */
+    };
+
+    /* start recursively from _root node */
+    recursiveFunction(this.root(), val);
+}
+`})}),`
+`,_.jsxs(e.p,{children:[_.jsx(e.code,{children:"insert"})," is effectively the bacbkone of constructing the Binary Search Tree in memory. The algorithm is the following:"]}),`
 `,_.jsxs(e.ol,{children:[`
 `,_.jsx(e.li,{children:"Start from the root node"}),`
 `,_.jsx(e.li,{children:"check if the root node has been set, if not then set it,"}),`
@@ -692,7 +731,7 @@ class BinarySearchTree {
 `,_.jsx(e.li,{children:"if not recursively start from that right node, and go left or right based on comparing the value inside"}),`
 `]}),`
 `,_.jsx(e.h2,{children:"Visual example"}),`
-`,_.jsx(e.pre,{children:_.jsx(e.code,{className:"language-jsx",children:`const tree = new BinarySearchTree(4, 3, 1, 6, 5, 7);
+`,_.jsx(e.pre,{children:_.jsx(e.code,{className:"language-js",children:`const bst = new BinarySearchTree(4, 3, 1, 6, 5, 7);
 `})}),`
 `,_.jsx(ce,{className:"sm:max-w-[50%]",path:"/bst insert 1.png"}),`
 `,_.jsx(ce,{className:"sm:max-w-[50%]",path:"/bst insert 2.png"}),`
@@ -700,7 +739,7 @@ class BinarySearchTree {
 `,_.jsx(ce,{className:"sm:max-w-[50%]",path:"/bst insert 4.png"}),`
 `,_.jsx(ce,{className:"sm:max-w-[50%]",path:"/bst insert 5.png"}),`
 `,_.jsx(ce,{className:"sm:max-w-[50%]",path:"/bst insert 6.png"}),`
-`,_.jsxs(e.h1,{children:["🔑 The ",_.jsx(e.code,{children:"traversePreOrder"})," algorithm"]}),`
+`,_.jsx(e.h1,{children:"The Preorder traversal algorithm 🔑"}),`
 `,_.jsx(e.pre,{children:_.jsx(e.code,{className:"language-mjs",children:`
 /* fileName: BinarySearchTree.mjs */
 
