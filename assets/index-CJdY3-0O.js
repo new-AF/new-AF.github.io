@@ -131,6 +131,8 @@ function checkDuplicate() {
 `,l.jsx(e.h2,{children:"Day 4 - Christmas Movie Emoji Quiz 🎬"}),`
 `,l.jsx(e.h2,{children:"Day 5 - Find the anagrams"})]})}function aL(t={}){return l.jsx(rL,{...t,children:l.jsx(iL,{...t})})}const oL=Object.freeze(Object.defineProperty({__proto__:null,default:aL},Symbol.toStringTag,{value:"Module"})),sL=function(e){return l.jsx(rn,{...e})};function lL(t){const e={a:"a",code:"code",h1:"h1",li:"li",p:"p",strong:"strong",ul:"ul",...t.components};return l.jsxs(l.Fragment,{children:[l.jsx(e.h1,{children:"Overview"}),`
 `,l.jsx(e.p,{children:"Moodflix is a hobby/experimental project that recommends movies based on user mood in order to gently uplift their emotional state. It is not intended for therapeutic purposes or to provide medical advice."}),`
+`,l.jsx(e.h1,{children:"Live Project Link"}),`
+`,l.jsx(e.p,{children:l.jsx(e.a,{href:"https://new-af.github.io/moodflix/",children:"https://new-af.github.io/moodflix/"})}),`
 `,l.jsx(e.h1,{children:"API & Algorithm"}),`
 `,l.jsxs(e.p,{children:["Data is powered by the ",l.jsx(e.a,{href:"https://www.themoviedb.org/",children:"TMDB API"}),". The project's core recommendation logic is a straightforward ",l.jsx(e.strong,{children:"mood-to-genre mapping"})," defined in ",l.jsx(e.code,{children:"api/mapping.js"}),". This algorithm takes a user's selected mood and, at the moment, translates it into a single corresponding movie genre."]}),`
 `,l.jsx(e.p,{children:"For example:"}),`
