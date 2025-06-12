@@ -139,9 +139,9 @@ function checkDuplicate() {
 `,s.jsx(e.p,{children:s.jsx(e.a,{href:"https://new-af.github.io/moodflix/",children:"https://new-af.github.io/moodflix/"})}),`
 `,s.jsx(e.h1,{children:"User Workflow"}),`
 `,s.jsx(e.p,{children:"The user is shown a list of predefined moods (buttons) on the landing page."}),`
-`,s.jsx(se,{path:"/moodflix/landing.png",caption:"Landing Page"}),`
+`,s.jsx(se,{path:"moodflix/landing.png",caption:"Landing Page"}),`
 `,s.jsx(e.p,{children:"The user then selects the mood that best aligns with their emotional state and shortly after a list of recommended movies is displayed, each including poster image, production year, and plot summary, as well as a Copy button to copy the movie title into their system clipboard."}),`
-`,s.jsx(se,{src:"/moodflix/happy.png",caption:"Results for Selecting Happy Mood"}),`
+`,s.jsx(se,{src:"moodflix/happy.png",caption:"Results for Selecting Happy Mood"}),`
 `,s.jsx(e.h1,{children:"Recommendation Algorithm"}),`
 `,s.jsx(e.p,{children:`I opted for a straightforward algorithm that maps the user's mood to a specific movie genre. For example, selecting the "happy" mood shows Comedy movies. Here's the mapping:`}),`
 `,s.jsxs(e.ul,{children:[`
@@ -164,7 +164,7 @@ function checkDuplicate() {
 `,s.jsxs(e.p,{children:["Unlike styling, I paid a premium to get the global app state management working properly. This is because I wanted a solution that scales regardless of the complexity of the application. While ",s.jsx(e.code,{children:"jsx: useState()"})," is doable for such a small project, it introduces technical debt that compounds as changes are needed to the application. This is because the state or multiple needed states would have to be ",s.jsx(e.code,{children:"prop drilled"})," across different components in the application, which is an error-prone process. ",s.jsx(e.code,{children:"jsx: useState"})," is really meant for local component state management only."]}),`
 `,s.jsxs(e.p,{children:["React, unlike some other frameworks (Solid.js), doesn't include built-in global state handling. To address this, I chose ",s.jsx(e.code,{children:"Redux Toolkit"}),". It centralizes the app's state, has a straightforward mental model for how to update the state, and allows components to access and update the state efficiently. The main drawback is the amount of boilerplate code still required to set it up."]}),`
 `,s.jsxs(e.p,{children:["The workflow is illustrated below and mainly relies on ",s.jsx(e.code,{children:"useEffect()"})," to call the API and update the central state whenever ",s.jsx(e.code,{children:"mood"})," changes, which is then reflected immediately by all components which consume the state."]}),`
-`,s.jsx(se,{src:"/moodflix/state diagram.png",caption:"App State Management"}),`
+`,s.jsx(se,{src:"moodflix/state diagram.png",caption:"App State Management"}),`
 `,s.jsx(e.pre,{children:s.jsx(e.code,{className:"language-jsx",children:`/* fileName: Mood.jsx */
 /* caption: Mood.jsx is loaded and linked to whatever the query parameter is in "/mood/:mood" */
 import { useParams } from "react-router-dom";
