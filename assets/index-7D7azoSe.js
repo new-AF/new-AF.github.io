@@ -141,7 +141,7 @@ function checkDuplicate() {
 `,s.jsx(e.p,{children:"The user is shown a list of predefined moods (buttons) on the landing page."}),`
 `,s.jsx(se,{path:"/moodflix/landing.png",caption:"Landing Page"}),`
 `,s.jsx(e.p,{children:"The user then selects the mood that best aligns with their emotional state and shortly after a list of recommended movies is displayed, each including poster image, production year, and plot summary, as well as a Copy button to copy the movie title into their system clipboard."}),`
-`,s.jsx(se,{src:"/moodflix/happy.png",caption:"Results for Happy Mood"}),`
+`,s.jsx(se,{src:"/moodflix/happy.png",caption:"Results for Selecting Happy Mood"}),`
 `,s.jsx(e.h1,{children:"Recommendation Algorithm"}),`
 `,s.jsx(e.p,{children:`I opted for a straightforward algorithm that maps the user's mood to a specific movie genre. For example, selecting the "happy" mood shows Comedy movies. Here's the mapping:`}),`
 `,s.jsx(e.pre,{children:s.jsx(e.code,{className:"language-js",children:`/* fileName: src/api/mapping.js */
