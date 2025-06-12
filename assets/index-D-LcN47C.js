@@ -129,7 +129,7 @@ function checkDuplicate() {
 `,s.jsx(e.h2,{children:"Day 2 - Ugly Advent Calendar"}),`
 `,s.jsx(e.h2,{children:"Day 3 - Santa's Emoji Hack"}),`
 `,s.jsx(e.h2,{children:"Day 4 - Christmas Movie Emoji Quiz 🎬"}),`
-`,s.jsx(e.h2,{children:"Day 5 - Find the anagrams"})]})}function lL(t={}){return s.jsx(oL,{...t,children:s.jsx(sL,{...t})})}const cL=Object.freeze(Object.defineProperty({__proto__:null,default:lL},Symbol.toStringTag,{value:"Module"})),se=({className:t,src:e,path:n,caption:r,classes:i={container:N("flex","flex-col","items-center","gap-(--spacing-sm)"),image:N("max-w-[90%]","shadow-sm",t),caption:N("italic","text-xs","text-(--custom-color-dimmer)")}})=>s.jsxs("figure",{className:i.container,children:[s.jsx("img",{className:i.image,src:n||e}),s.jsx("figcaption",{className:i.caption,children:r})]}),dL=function(e){return s.jsx(Vt,{...e})};function uL(t){const e={a:"a",blockquote:"blockquote",code:"code",h1:"h1",li:"li",p:"p",pre:"pre",strong:"strong",ul:"ul",...t.components};return s.jsxs(s.Fragment,{children:[s.jsx(e.h1,{children:"Overview"}),`
+`,s.jsx(e.h2,{children:"Day 5 - Find the anagrams"})]})}function lL(t={}){return s.jsx(oL,{...t,children:s.jsx(sL,{...t})})}const cL=Object.freeze(Object.defineProperty({__proto__:null,default:lL},Symbol.toStringTag,{value:"Module"})),se=({className:t,src:e,path:n,caption:r,classes:i={container:N("flex","flex-col","items-center","gap-(--spacing-sm)"),image:N("max-w-[90%]","shadow-sm",t),caption:N("italic","text-xs","text-(--custom-color-dimmer)")}})=>s.jsxs("figure",{className:i.container,children:[s.jsx("img",{className:i.image,src:n||e}),s.jsx("figcaption",{className:i.caption,children:r})]}),dL=function(e){return s.jsx(Vt,{...e})};function uL(t){const e={a:"a",blockquote:"blockquote",code:"code",h1:"h1",h2:"h2",li:"li",p:"p",pre:"pre",strong:"strong",ul:"ul",...t.components};return s.jsxs(s.Fragment,{children:[s.jsx(e.h1,{children:"Overview"}),`
 `,s.jsx(e.p,{children:"Moodflix is a common React project idea, similar to a Todo app, that can be implemented using different design decisions and styles. This article outlines my implementation of the project, covering everything from the user workflow and recommendation algorithm to styling, state management, and data fetching."}),`
 `,s.jsx(e.p,{children:"The goal of the application is to validate the user's feelings by recommending movies that match their emotional state in that moment and, in doing so, positively affect their mood."}),`
 `,s.jsxs(e.blockquote,{children:[`
@@ -137,6 +137,8 @@ function checkDuplicate() {
 `]}),`
 `,s.jsx(e.h1,{children:"Live Project Link"}),`
 `,s.jsx(e.p,{children:s.jsx(e.a,{href:"https://new-af.github.io/moodflix/",children:"https://new-af.github.io/moodflix/"})}),`
+`,s.jsx(e.h2,{children:"GitHub Project Link"}),`
+`,s.jsx(e.p,{children:s.jsx(e.a,{href:"https://github.com/new-AF/moodflix",children:"https://github.com/new-AF/moodflix/"})}),`
 `,s.jsx(e.h1,{children:"User Workflow"}),`
 `,s.jsx(e.p,{children:"The user is shown a list of predefined moods (buttons) on the landing page."}),`
 `,s.jsx(se,{path:"/moodflix landing.png",caption:"Landing Page"}),`
