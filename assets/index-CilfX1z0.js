@@ -205,7 +205,6 @@ export const Mood = () => {
     const dispatch = useDispatch();
 
     const fetchAPI = async () => {
-        // Set the current mood in the state
         dispatch(setMood(mood));
         dispatch(setAPICallInProgrss());
 
