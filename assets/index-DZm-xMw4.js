@@ -145,7 +145,7 @@ function checkDuplicate() {
 `,s.jsx(e.h1,{children:"Recommendation Algorithm"}),`
 `,s.jsx(e.p,{children:`I opted for a straightforward algorithm that maps the user's mood to a specific movie genre. For example, selecting the "happy" mood shows Comedy movies. Here's the mapping:`}),`
 `,s.jsxs(e.ul,{children:[`
-`,s.jsx(e.li,{children:"Happy mood 😊 → Comedy moviesMore actions"}),`
+`,s.jsx(e.li,{children:"Happy mood 😊 → Comedy movies"}),`
 `,s.jsx(e.li,{children:"Sad mood 😢 → Drama movies"}),`
 `,s.jsx(e.li,{children:"Angry mood 😡 → Action movies"}),`
 `,s.jsx(e.li,{children:"Scared mood 😨 → Animation movies"}),`
