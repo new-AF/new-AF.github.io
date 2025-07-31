@@ -245,7 +245,8 @@ console.log(bubbleSort(testEmpty));
 `,o.jsxs(e.ul,{children:[`
 `,o.jsxs(e.li,{children:["For the 0-based version I have to first do some mapping in my head: so ",o.jsx(e.code,{children:"length - 1"})," means the last element, and then ",o.jsx(e.code,{children:"outerIndex >= 1"})," means the outer loop stops after processing the second element."]}),`
 `]}),`
-`,o.jsxs(e.p,{children:["However the real problem arises comes if I were to re-write the outer condition as ",o.jsx(e.code,{children:"outerIndex > 0"}),". This is ",o.jsx(e.em,{children:"supposed"})," to convey the same meaning, that the outer loop goes from the last element up until and including the ",o.jsx(e.em,{children:"second"})," element. This unnecessary confusion causes the code to be fragile and susceptible to future bugs and vulnerabilities even for seemingly simple changes. This is a bad developer experience."]}),`
+`,o.jsxs(e.p,{children:["However the real problem arises comes if I were to re-write the outer condition as ",o.jsx(e.code,{children:"outerIndex > 0"}),". This is ",o.jsx(e.em,{children:"supposed"})," to convey the same meaning, that the outer loop goes from the last element up until and including the ",o.jsx(e.em,{children:"second"})," element."]}),`
+`,o.jsx(e.p,{children:"This unnecessary confusion causes the code to be fragile and susceptible to future bugs and vulnerabilities even for seemingly simple changes. This is a bad developer experience."}),`
 `,o.jsx(e.h1,{children:"Caveat"}),`
 `,o.jsx(e.p,{children:"My article only applies to high-level programming languages. The one place where ZBI makes sense is in low-level programming languages like C that directly access memory because of how memory and pointer arithmetic works, but otherwise we should not copy C in this regard."}),`
 `,o.jsx(e.h1,{children:"Conclusion"}),`
