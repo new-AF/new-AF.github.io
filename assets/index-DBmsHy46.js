@@ -119,7 +119,7 @@ Error generating stack: `+a.message+`
 `]})]})}function Yv(t={}){return o.jsx(uM,{...t,children:o.jsx(_M,{...t})})}const pM=function(e){return o.jsx(it,{...e})};function mM(t){const e={code:"code",em:"em",h1:"h1",h2:"h2",li:"li",p:"p",pre:"pre",ul:"ul",...t.components};return o.jsxs(o.Fragment,{children:[o.jsx(Yv,{}),`
 `,o.jsx(e.h1,{children:"Zero-Based Indexing (ZBI)"}),`
 `,o.jsx(e.p,{children:"You might think how dare I call myself a software engineer if I think ZBI is bad idea?"}),`
-`,o.jsx(e.p,{children:"Well I'd argue for high-level programming languages like JavaScript ZBI is only a (bad) convention that we copied over from C that we absolutely did not have to do, that leads to a significantly worst developer experience, off-by-one bugs and worst code readability."}),`
+`,o.jsx(e.p,{children:"Well I'd argue for high-level programming languages like JavaScript ZBI is only a convention, and a bad one at that, which we copied from C that we absolutely did not have to do. It leads to a significantly worst developer experience, off-by-one bugs and worst code readability."}),`
 `,o.jsx(e.p,{children:"You want to tell me that:"}),`
 `,o.jsxs(e.ul,{children:[`
 `,o.jsx(e.li,{children:"0 denotes the first element."}),`
@@ -146,7 +146,8 @@ picture-in-picture;
 web-share`,allowfullscreen:!0}),`
 `,o.jsx(e.p,{children:"Boom."}),`
 `,o.jsx(e.h1,{children:"Developer Experience"}),`
-`,o.jsx(e.p,{children:"I wrote down 2 versions of Bubble Sort using the 2 indexing schemes, and objectively I know which one I enjoyed writing more and was more confident in, which one is more readable and most importantly when I revisit my code 6 months later, I know which version would instantly click for me, instead of me having to compute in head first how the indices map to the actual elements."}),`
+`,o.jsx(e.p,{children:"I wrote 2 versions of Bubble Sort using both indexing schemes, and objectively I know which one I enjoyed writing more and was more confident in, which one is easier to read and understand."}),`
+`,o.jsx(e.p,{children:"Most important however when I revisit the code later, I know which version would instantly click for me, instead of me having to compute in head first how the ZBI indices map to the actual elements."}),`
 `,o.jsx(e.pre,{children:o.jsx(e.code,{className:"language-mjs",children:`/* fileName: bubble sort 1 indexing.mjs */
 const test = [6, 5, 4, 3, 2, 1];
 const testEmpty = [];
@@ -228,8 +229,8 @@ export const bubbleSort = (arrayOriginal) => {
 console.log(bubbleSort(test));
 console.log(bubbleSort(testEmpty));
 `})}),`
-`,o.jsx(e.h2,{children:"The real difference"}),`
-`,o.jsx(e.p,{children:"The difference between the two is in the outer loop:"}),`
+`,o.jsx(e.h2,{children:"The Real Difference"}),`
+`,o.jsx(e.p,{children:"The real difference between the two is in the outer loop:"}),`
 `,o.jsx(e.pre,{children:o.jsx(e.code,{className:"language-mjs",children:`/* fileName: bubble sort 1 indexing.mjs */
     for (let outerIndex = length; outerIndex >= 2; --outerIndex) {
         for (let index = 1; index < outerIndex; ++index) {
