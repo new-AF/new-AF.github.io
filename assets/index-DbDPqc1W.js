@@ -145,7 +145,7 @@ gyroscope;
 picture-in-picture; 
 web-share`,allowfullscreen:!0}),`
 `,o.jsx(e.p,{children:"Boom."}),`
-`,o.jsx(e.h1,{children:"Developer Experience"}),`
+`,o.jsx(e.h1,{children:"Developer Experience (DX)"}),`
 `,o.jsx(e.p,{children:"I wrote 2 versions of Bubble Sort using both indexing schemes, and objectively I know which one I enjoyed writing more and was more confident in, which one is easier to read and understand."}),`
 `,o.jsx(e.p,{children:"Most important however when I revisit the code later, I know which version would instantly click for me, instead of me having to compute in head first how the ZBI indices map to the actual elements."}),`
 `,o.jsx(e.pre,{children:o.jsx(e.code,{className:"language-mjs",children:`/* fileName: bubble sort 1 indexing.mjs */
@@ -230,7 +230,7 @@ console.log(bubbleSort(test));
 console.log(bubbleSort(testEmpty));
 `})}),`
 `,o.jsx(e.h2,{children:"The Real Difference"}),`
-`,o.jsx(e.p,{children:"The real difference between the two is in the outer loop:"}),`
+`,o.jsx(e.p,{children:"The real difference between the two versions Bubble Sort is in the outer loop:"}),`
 `,o.jsx(e.pre,{children:o.jsx(e.code,{className:"language-mjs",children:`/* fileName: bubble sort 1 indexing.mjs */
     for (let outerIndex = length; outerIndex >= 2; --outerIndex) {
         for (let index = 1; index < outerIndex; ++index) {
