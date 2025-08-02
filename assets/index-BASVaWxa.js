@@ -230,7 +230,7 @@ console.log(bubbleSort(test));
 console.log(bubbleSort(testEmpty));
 `})}),`
 `,o.jsx(e.h2,{children:"The Real Difference"}),`
-`,o.jsx(e.p,{children:"The real difference between the two versions Bubble Sort is in the outer loop:"}),`
+`,o.jsx(e.p,{children:"The real difference between the two versions of Bubble Sort is in the outer loop:"}),`
 `,o.jsx(e.pre,{children:o.jsx(e.code,{className:"language-mjs",children:`/* fileName: bubble sort 1 indexing.mjs */
     for (let outerIndex = length; outerIndex >= 2; --outerIndex) {
         for (let index = 1; index < outerIndex; ++index) {
