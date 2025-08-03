@@ -236,10 +236,13 @@ console.log(bubbleSort(testEmpty)); // []
 `,o.jsxs(e.p,{children:["Even if I were to re-write the outer condition as ",o.jsx(e.code,{children:"outerIndex > 1"})," it would still be relatively easy to understand: the outer loop would not process the first element."]}),`
 `,o.jsxs(e.p,{children:["The 1-based version is superior because it aligns with and ",o.jsx(e.em,{children:"centers"})," the human experience."]}),`
 `,o.jsxs(e.p,{children:["Most important I would be confident modifying the algorithm bounds without worrying about off-by-one errors because ",o.jsx(e.em,{children:o.jsx(e.code,{children:"2"})})," unequivocally means the ",o.jsx(e.em,{children:"second"})," element, not the third."]}),`
-`,o.jsx(e.p,{children:"The 0-based version however introduces friction which always degrades the end-user experience (of developers in this case)."}),`
-`,o.jsx(e.p,{children:'This is because You and I would be constantly second-guessing our intuition as to what these numbers represent, to context-switch to a different mental model whenever we had to deal with arrays, but then switch back to our "normal" brain mode for all the other programming constructs.'}),`
-`,o.jsx(e.p,{children:"As you can guess this context-switching is mentally exhausting and error-prone."}),`
-`,o.jsxs(e.p,{children:["In the 0-based version of the algorithm the outer loop runs backward from the last element ",o.jsx(e.code,{children:"length-1"})," to (and including) the second element ",o.jsx(e.code,{children:"outerIndex >= 1"}),". Here ",o.jsx(e.code,{children:"1"})," here denotes the ",o.jsx(e.em,{children:"second"})," element."]}),`
+`,o.jsx(e.p,{children:"The 0-based version, however, introduces friction which always degrades the end-user experience (of developers in this case)."}),`
+`,o.jsx(e.pre,{children:o.jsx(e.code,{className:"language-mjs",children:`/* fileName: bubble sort 0 indexing.mjs */
+    for (let outerIndex = length - 1; outerIndex >= 1; --outerIndex) {
+        for (let index = 0; index < outerIndex; ++index) {
+`})}),`
+`,o.jsx(e.p,{children:'This is because You and I would be constantly second-guessing our intuition as to what these numbers represent, trying to context-switch to a different mental model when dealing with arrays, but then switch back to our "normal" brain mode for all the other programming constructs. All of this context-switching is mentally exhausting and error-prone.'}),`
+`,o.jsxs(e.p,{children:["In this version the outer loop runs backward from the last element ",o.jsx(e.code,{children:"length-1"})," to (and including) the second element ",o.jsx(e.code,{children:"outerIndex >= 1"}),". Here ",o.jsx(e.code,{children:"1"})," here denotes the ",o.jsx(e.em,{children:"second"})," element."]}),`
 `,o.jsxs(e.p,{children:["It would still be problematic if I were to re-write the outer condition as ",o.jsx(e.code,{children:"outerIndex > 0"}),". This is ",o.jsx(e.em,{children:"supposed"})," to convey the same meaning, that the outer loop would not process the first element. Here ",o.jsx(e.code,{children:"0"})," here denotes the ",o.jsx(e.em,{children:"first"})," element."]}),`
 `,o.jsx(e.h1,{children:"Caveat"}),`
 `,o.jsx(e.p,{children:"My article only applies to high-level programming languages. The one place where ZBI makes sense is in low-level languages like C that directly access memory because of how pointer arithmetic and offsets work, but otherwise we should not copy C in this regard."}),`
