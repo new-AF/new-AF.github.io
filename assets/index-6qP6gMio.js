@@ -113,7 +113,8 @@ Error generating stack: `+a.message+`
 `,o.jsx(rt,{href:"https://www.uplift.ie/bds/",text:"Boycott brands fueling the Gaza Holocaust by doing business with the Occupation.",className:"text-center"})]})}function ln(t={}){return o.jsx(uM,{...t,children:o.jsx(_M,{...t})})}const pM=function(e){return o.jsx(it,{...e})};function mM(t){const e={code:"code",em:"em",h1:"h1",h2:"h2",li:"li",p:"p",pre:"pre",ul:"ul",...t.components};return o.jsxs(o.Fragment,{children:[o.jsx(ln,{}),`
 `,o.jsx(e.h1,{children:"Zero-Based Indexing (ZBI)"}),`
 `,o.jsx(e.p,{children:"You might be thinking how dare I call myself a developer if I think ZBI is a bad idea?"}),`
-`,o.jsx(e.p,{children:"Well I'd argue for high-level programming languages like JavaScript, ZBI is only a convention, and a bad one at that, which we copied from C that we absolutely did not have to do. It leads to a worse developer experience, worse code readability and an additional source of off-by-one bugs."}),`
+`,o.jsx(e.p,{children:"Well I'd argue for high-level programming languages like JavaScript, ZBI is only a convention, and a bad one at that, which we copied from C that we absolutely did not have to do."}),`
+`,o.jsx(e.p,{children:"It leads to a worse developer experience, worse code readability and an additional source of off-by-one bugs."}),`
 `,o.jsx(e.p,{children:"You want to tell me that:"}),`
 `,o.jsxs(e.ul,{children:[`
 `,o.jsxs(e.li,{children:[o.jsx(e.code,{children:"0"})," denotes the first element."]}),`
