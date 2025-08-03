@@ -123,7 +123,7 @@ Error generating stack: `+a.message+`
 `]}),`
 `,o.jsx(re,{path:"/spinning cat.gif",className:v("max-h-[320px]")}),`
 `,o.jsx(e.p,{children:"Why is it off by 1?"}),`
-`,o.jsx(e.p,{children:"Is this meant for some alien race?"}),`
+`,o.jsx(e.p,{children:"Is this native to some alien race?"}),`
 `,o.jsx(e.p,{children:"Why are we doing this to ourselves?"}),`
 `,o.jsx(e.p,{children:"Objectively your dev experience as a human would be much better if you used a convention that you have been using your whole life without any issues:"}),`
 `,o.jsxs(e.ul,{children:[`
