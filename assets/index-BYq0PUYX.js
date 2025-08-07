@@ -357,7 +357,8 @@ for await (const { success, line, error } of readLines("./not-found")) {
 }
 `})})]})}function CM(t={}){return o.jsx(vM,{...t,children:o.jsx(RM,{...t})})}const yM=Object.freeze(Object.defineProperty({__proto__:null,default:CM},Symbol.toStringTag,{value:"Module"})),NM=function({title:e="Dark Mode in CSS",children:n,className:r}){return o.jsx(rt,{title:e,className:r,children:n})};function OM(t){return o.jsx(o.Fragment,{})}function IM(t={}){return o.jsx(NM,{...t,children:o.jsx(OM,{...t})})}const AM=Object.freeze(Object.defineProperty({__proto__:null,default:IM},Symbol.toStringTag,{value:"Module"})),xM=function(e){return o.jsx(rt,{...e})};function DM(t){const e={code:"code",h1:"h1",li:"li",ol:"ol",p:"p",pre:"pre",ul:"ul",...t.components};return o.jsxs(o.Fragment,{children:[o.jsx(ln,{}),`
 `,o.jsx(e.h1,{children:"Overview"}),`
-`,o.jsx(e.p,{children:"I asked an AI to write me a 30 Days API development roadmap with Node.js using modern and best practices. It includes working with TypeScript because type safety, so let's do this."}),`
+`,o.jsx(e.p,{children:"I asked an AI to help me plan a 30-day API development roadmap with Node.js using modern and best practices which includes working with TypeScript (because type safety)."}),`
+`,o.jsx(e.p,{children:"Disclaimer: While the AI gave me a lot of code, I tested every snippet, corrected mistakes and documented the process in my own words based on what I learned each day, so let's do this."}),`
 `,o.jsx(_w,{path:"/cat-typing.gif",alt:"Gif of cat typing on laptop"}),`
 `,o.jsx(e.h1,{children:"1/6 Install Express, TypeScript and other packages"}),`
 `,o.jsx(e.pre,{children:o.jsx(e.code,{className:"language-command",children:`pnpm init
