@@ -1420,7 +1420,7 @@ dotenv.config({
 export const PORT: number = parseInt(process.env.PORT || "3000", 10);
 `})}),`
 `,o.jsx(e.h1,{children:"Test"}),`
-`,o.jsx(e.p,{children:"We'll create a test Router and Controller, just to make everything is setup properly."}),`
+`,o.jsx(e.p,{children:"We'll create a test Router and Controller, just to make sure everything is setup properly."}),`
 `,o.jsx(e.h2,{children:"Controller"}),`
 `,o.jsx(e.pre,{children:o.jsx(e.code,{className:"language-ts",children:`/* fileName: src/controllers/test.controller.ts */
 import { Request, Response } from "express";
