@@ -224,7 +224,7 @@ console.log(bubbleSort(testEmpty)); // []
 `,a.jsxs(e.p,{children:["Most importantly however, I would be confident modifying the loop bounds as the algorithm requires without worrying about off-by-one errors because ",a.jsx(e.em,{children:a.jsx(e.code,{children:"2"})})," unequivocally means the ",a.jsx(e.em,{children:"second"})," element, not the third."]}),`
 `,a.jsx(Hi,{children:a.jsxs(e.p,{children:["The 1-based version is superior because it aligns with and ",a.jsx(e.em,{children:"centers"}),` the
 human experience.`]})}),`
-`,a.jsx(e.p,{children:"The 0-based version, however, introduces friction which always degrades the end-user experience (of developers in this case)."}),`
+`,a.jsx(e.p,{children:"The 0-based version, however, introduces friction and second-guessing into the picture which always degrades the dev experience."}),`
 `,a.jsx(e.pre,{children:a.jsx(e.code,{className:"language-mjs",children:`    // 0-based
     for (let outerIndex = length - 1; outerIndex >= 1; --outerIndex) {
         for (let index = 0; index < outerIndex; ++index) {
