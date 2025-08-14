@@ -1463,7 +1463,7 @@ app.listen(PORT, () => {
 `})}),`
 `,a.jsx(e.h2,{children:"Test Endpoint (GET /api/v1/test)"}),`
 `,a.jsx(te,{path:"/day 2 node api dev test.png",alt:"screenshot of HTTPie after running GET on /api/v1/test and returning json message and status 200"}),`
-`,a.jsx(e.p,{children:"Wohoo! our router, controller and endpoint are working as intended!"}),`
+`,a.jsx(e.p,{children:"Woohoo! our router, controller and endpoint are working as intended!"}),`
 `,a.jsx(e.h1,{children:"Users Endpoint"}),`
 `,a.jsx(e.p,{children:"Now onto the real task obtaining data about stored users."}),`
 `,a.jsx(e.h2,{children:"Controller"}),`
@@ -1556,9 +1556,9 @@ app.listen(PORT, () => {
 `})}),`
 `,a.jsx(e.p,{children:"Day 2 is complete, onto the next!"})]})}function EP(t={}){return a.jsx(mP,{...t,children:a.jsx(gP,{...t})})}const fP=Object.freeze(Object.defineProperty({__proto__:null,default:EP},Symbol.toStringTag,{value:"Module"})),SP=function(e){return a.jsx(ze,{...e})};function hP(t){const e={code:"code",em:"em",h1:"h1",h2:"h2",li:"li",p:"p",pre:"pre",strong:"strong",ul:"ul",...t.components};return a.jsxs(a.Fragment,{children:[a.jsx(Vp,{path:"/validation.jpg",alt:"spongebob meme 'validation' word over rainbow"}),`
 `,a.jsx(e.h1,{children:"Objectives"}),`
-`,a.jsx(e.p,{children:"Today our backend service will gain the ability to accept user input (payload) and if valid, will be stored in our database."}),`
+`,a.jsx(e.p,{children:"Today our backend service will gain the ability to accept user input (payload) and if valid, will store it in the database."}),`
 `,a.jsxs(e.p,{children:["We'll send the server a JSON payload representing a new user with ",a.jsx(e.code,{children:"name"})," and ",a.jsx(e.code,{children:"email"})," fields, and the Controller will first ",a.jsx(e.em,{children:"validate"})," it to ensure the data is in the format we expect."]}),`
-`,a.jsx(e.p,{children:"For example, the following payload will pass validation and be stored:"}),`
+`,a.jsx(e.p,{children:"For example, this payload will pass validation and be stored:"}),`
 `,a.jsx(e.pre,{children:a.jsx(e.code,{className:"language-json",children:`{ "name": "Can", "email": "can@example.com" }
 `})}),`
 `,a.jsx(e.p,{children:"The server will confirm and return:"}),`
@@ -1566,7 +1566,7 @@ app.listen(PORT, () => {
 `,a.jsxs(e.li,{children:["Success code ",a.jsx(e.code,{children:"201"}),' "Created"']}),`
 `,a.jsx(e.li,{children:"A copy of the newly-created user"}),`
 `]}),`
-`,a.jsx(e.p,{children:"However, the following mal-formatted input will not be stored:"}),`
+`,a.jsx(e.p,{children:"However, this mal-formatted input will not be stored:"}),`
 `,a.jsx(e.pre,{children:a.jsx(e.code,{className:"language-json",children:`{ "name": "", "email": "can@example.com" }
 `})}),`
 `,a.jsx(e.p,{children:"The server will return an error code, and a helpful message:"}),`
@@ -1578,8 +1578,8 @@ app.listen(PORT, () => {
 }
 `})}),`
 `,a.jsx(e.h1,{children:"POST"}),`
-`,a.jsxs(e.p,{children:[a.jsx(e.code,{children:"POST"})," is a type of an HTTP request that denotes/informs the backend service to create a new resource using the data/payload in the request body."]}),`
-`,a.jsxs(e.p,{children:[a.jsx(e.code,{children:"POST"})," is non-idempotent meaning if I send the same request (having the ",a.jsx(e.em,{children:"same"})," payload) multiple items, it can have multiple side effects. In our code this means the ",a.jsx(e.em,{children:"same"})," user would be pushed ",a.jsx(e.em,{children:"multiple"})," times into our ",a.jsx(e.code,{children:"users"})," database array."]}),`
+`,a.jsxs(e.p,{children:[a.jsx(e.code,{children:"POST"})," is a type of an HTTP request that informs the backend service to create a new resource using the data/payload in the request body."]}),`
+`,a.jsxs(e.p,{children:[a.jsx(e.code,{children:"POST"})," is non-idempotent meaning if I send the same request (with the ",a.jsx(e.em,{children:"same"})," payload) multiple items, it may have multiple side effects. In our code this means the ",a.jsx(e.em,{children:"same"})," user would be pushed ",a.jsx(e.em,{children:"multiple"})," times into our ",a.jsx(e.code,{children:"users"})," database array."]}),`
 `,a.jsx(e.h1,{children:"Folder Structure"}),`
 `,a.jsx(e.pre,{children:a.jsx(e.code,{className:"language-txt",children:`30-days-of-node-api-dev/
 │
@@ -1893,7 +1893,7 @@ app.listen(PORT, () => {
 `,a.jsx(e.h1,{children:"Test Endpoint"}),`
 `,a.jsx(e.h2,{children:"Valid Input"}),`
 `,a.jsx(te,{path:"/day 3 node api dev valid.png",alt:"screenshot of HTTPie after running POST on /api/v1/users and returning success status 201"}),`
-`,a.jsx(e.p,{children:"We can also confirm this by listing the entire database."}),`
+`,a.jsx(e.p,{children:"Woohoo! our controller works! We can also confirm this by listing the entire database."}),`
 `,a.jsx(te,{path:"/day 3 node api dev valid all users.png",alt:"screenshot of HTTPie after running POST on /api/v1/users and returning success status 201"}),`
 `,a.jsx(e.h2,{children:"Invalid Input"}),`
 `,a.jsx(te,{path:"/day 3 node api dev invalid email.png",alt:"screenshot of HTTPie after running POST on /api/v1/users and returning error code 400"}),`
