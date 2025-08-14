@@ -1589,7 +1589,7 @@ app.listen(PORT, () => {
 `,a.jsx(e.p,{children:"However, this mal-formatted input will not be stored:"}),`
 `,a.jsx(e.pre,{children:a.jsx(e.code,{className:"language-json",children:`{ "name": "", "email": "can@example.com" }
 `})}),`
-`,a.jsx(e.p,{children:"The server will return an error code, and a helpful message:"}),`
+`,a.jsx(e.p,{children:"The server will return an error code, and a helpful message (crafted by the Controller):"}),`
 `,a.jsxs(e.ul,{children:[`
 `,a.jsxs(e.li,{children:["Error code ",a.jsx(e.code,{children:"400"}),' "Bad Request"']}),`
 `]}),`
@@ -1694,7 +1694,7 @@ export const PORT: number = parseInt(process.env.PORT || "3000", 10);
 `})}),`
 `,a.jsx(e.h1,{children:"POST /users Endpoint"}),`
 `,a.jsx(e.h2,{children:"Validator"}),`
-`,a.jsx(pw,{children:a.jsxs(e.p,{children:["Never trust client input, always assume it is ",a.jsx(e.strong,{children:"unsafe"}),` and would
+`,a.jsx(pw,{children:a.jsxs(e.p,{children:["Never trust client input, always assume it is ",a.jsx(e.strong,{children:"malicious"}),` and would
 `,a.jsx(e.strong,{children:"compromise"})," your server if injected unchecked."]})}),`
 `,a.jsxs(e.p,{children:["The two functions that validate user input: ",a.jsx(e.code,{children:"isValidName"})," and ",a.jsx(e.code,{children:"isValidEmail"})," use regular expressions (RegEx) to enforce the acceptable format of the (unicode) strings we want:"]}),`
 `,a.jsxs(e.ul,{children:[`
