@@ -221,9 +221,9 @@ console.log(bubbleSort(testEmpty)); // []
 `,a.jsxs(e.li,{children:["to (and including) the second element ",a.jsx(e.code,{children:"outerIndex >= 2"}),"."]}),`
 `]}),`
 `,a.jsxs(e.p,{children:["Even if I were to re-write the outer condition as ",a.jsx(e.code,{children:"outerIndex > 1"})," it would still be easy to understand: the outer loop would not process the first element."]}),`
+`,a.jsxs(e.p,{children:["Most importantly however, I would be confident modifying the loop bounds as the algorithm requires without worrying about off-by-one errors because ",a.jsx(e.em,{children:a.jsx(e.code,{children:"2"})})," unequivocally means the ",a.jsx(e.em,{children:"second"})," element, not the third."]}),`
 `,a.jsx(Hi,{children:a.jsxs(e.p,{children:["The 1-based version is superior because it aligns with and ",a.jsx(e.em,{children:"centers"}),` the
 human experience.`]})}),`
-`,a.jsxs(e.p,{children:["Most important I would be confident modifying the algorithm bounds without worrying about off-by-one errors because ",a.jsx(e.em,{children:a.jsx(e.code,{children:"2"})})," unequivocally means the ",a.jsx(e.em,{children:"second"})," element, not the third."]}),`
 `,a.jsx(e.p,{children:"The 0-based version, however, introduces friction which always degrades the end-user experience (of developers in this case)."}),`
 `,a.jsx(e.pre,{children:a.jsx(e.code,{className:"language-mjs",children:`    // 0-based
     for (let outerIndex = length - 1; outerIndex >= 1; --outerIndex) {
