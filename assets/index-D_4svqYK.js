@@ -1943,7 +1943,7 @@ app.listen(PORT, () => {
             └── user.routes.ts
 `})}),`
 `,a.jsx(e.h1,{children:"Upping the DX"}),`
-`,a.jsxs(e.p,{children:["The manual validator we wrote in Day 3 was fine for one-off examples but the process quickly becomes tedious and error-prone. Therefore we will use a data validation library (",a.jsx(e.em,{children:"Zod"}),") that streamlines the process for us."]}),`
+`,a.jsxs(e.p,{children:["The manual validator we wrote in Day 3 was fine for one-off examples but the process quickly becomes tedious and error-prone. Therefore our ti improve our Developer Experience and consequently ensure code robustness we will use a data validation library (",a.jsx(e.em,{children:"Zod"}),") that streamlines the process for us."]}),`
 `,a.jsx(e.h2,{children:"Installing Zod"}),`
 `,a.jsxs(e.p,{children:[a.jsx(e.code,{children:"cd"})," back into ",a.jsx(e.code,{children:"30-days-of-node-api-dev"})]}),`
 `,a.jsxs(Vr,{children:["Current Working Directory is ",a.jsx(e.code,{children:"30-days-of-node-api-dev"})]}),`
