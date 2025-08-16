@@ -2023,7 +2023,6 @@ export const userModelSchema = z.object({
 export type UserModel = z.infer<typeof userModelSchema>;
 
 // Schema for POST /users body without \`id\`
-
 export const createUserSchema = userModelSchema.omit({ id: true });
 export type CreateUserBody = z.infer<typeof createUserSchema>;
 
