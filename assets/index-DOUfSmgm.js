@@ -1921,7 +1921,8 @@ app.listen(PORT, () => {
 `,i.jsx(e.pre,{children:i.jsx(e.code,{className:"language-bash",children:`git add . && git commit -m "add day 3: post and validation"
 `})}),`
 `,i.jsxs(e.p,{children:["Day 3 is is almost complete, onto the last section (",i.jsx(e.em,{children:"Zod"}),")!"]})]})}function TP(t={}){return i.jsx(SP,{...t,children:i.jsx(hP,{...t})})}const bP=Object.freeze(Object.defineProperty({__proto__:null,default:TP},Symbol.toStringTag,{value:"Module"})),vP=function(e){return i.jsx(ke,{...e})};function yP(t){const e={code:"code",em:"em",h1:"h1",h2:"h2",li:"li",p:"p",pre:"pre",ul:"ul",...t.components};return i.jsxs(i.Fragment,{children:[i.jsx(Vr,{path:"/validation.jpg",alt:"spongebob meme 'validation' word over rainbow"}),`
-`,i.jsx(e.h1,{children:"Objectives"}),`
+`,i.jsx(e.h1,{children:"Upping the DX"}),`
+`,i.jsxs(e.p,{children:["The manual validator we wrote in Day 3 was fine for one-off examples but the process quickly becomes tedious and error-prone. Therefore our ti improve our Developer Experience and consequently ensure code robustness we will use a data validation library (",i.jsx(e.em,{children:"Zod"}),") that streamlines the process for us."]}),`
 `,i.jsx(e.h1,{children:"Folder Structure"}),`
 `,i.jsx(e.pre,{children:i.jsx(e.code,{className:"language-txt",children:`30-days-of-node-api-dev/
 │
@@ -1942,8 +1943,6 @@ app.listen(PORT, () => {
         └── routes/
             └── user.routes.ts
 `})}),`
-`,i.jsx(e.h1,{children:"Upping the DX"}),`
-`,i.jsxs(e.p,{children:["The manual validator we wrote in Day 3 was fine for one-off examples but the process quickly becomes tedious and error-prone. Therefore our ti improve our Developer Experience and consequently ensure code robustness we will use a data validation library (",i.jsx(e.em,{children:"Zod"}),") that streamlines the process for us."]}),`
 `,i.jsx(e.h2,{children:"Installing Zod"}),`
 `,i.jsxs(e.p,{children:[i.jsx(e.code,{children:"cd"})," back into ",i.jsx(e.code,{children:"30-days-of-node-api-dev"})]}),`
 `,i.jsxs(qr,{children:["Current Working Directory is ",i.jsx(e.code,{children:"30-days-of-node-api-dev"})]}),`
