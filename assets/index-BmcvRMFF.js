@@ -2622,8 +2622,8 @@ JSON Payload:
 `,i.jsx(e.p,{children:"Day 4 is now complete, onto the next!"})]})}function IP(t={}){return i.jsx(NP,{...t,children:i.jsx(OP,{...t})})}const xP=Object.freeze(Object.defineProperty({__proto__:null,default:IP},Symbol.toStringTag,{value:"Module"})),AP=function(e){return i.jsx(Me,{...e})};function DP(t){const e={code:"code",em:"em",h1:"h1",li:"li",p:"p",pre:"pre",ul:"ul",...t.components};return i.jsxs(i.Fragment,{children:[i.jsx(He,{path:"/delete.gif",alt:"a close up of a person pressing the delete key on a keyboard."}),`
 `,i.jsx(e.h1,{children:"Objectives"}),`
 `,i.jsxs(e.ul,{children:[`
-`,i.jsxs(e.li,{children:["We'll implement ",i.jsx(e.code,{children:"DELETE"})," request"]}),`
-`,i.jsx(e.li,{children:"Refactor our error handling from each controller to a central middleware logic."}),`
+`,i.jsxs(e.li,{children:["We'll implement our ",i.jsx(e.code,{children:"DELETE"})," request handling Controller (",i.jsx(e.code,{children:"ts: deleteUser"})," in ",i.jsx(e.code,{children:"src/controllers/deleteUser.ts"}),")."]}),`
+`,i.jsxs(e.li,{children:["Refactor our error handling e.g. Validation or Runtime Errors from the controller to a central ",i.jsx(e.em,{children:"middleware"})," logic."]}),`
 `]}),`
 `,i.jsx(e.h1,{children:"Current Folder Structure (From Day 4)"}),`
 `,i.jsxs(e.ul,{children:[`
