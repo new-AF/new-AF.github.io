@@ -3148,11 +3148,11 @@ app.listen(PORT, () => {
 `,i.jsx(e.h2,{children:"Denied Access, Missing Key"}),`
 `,i.jsxs(e.p,{children:["Use HTTPie to ",i.jsx(e.code,{children:"GET /api/v1/user"})]}),`
 `,i.jsx(Ae,{path:"/day 6 node api dev missing key.png",alt:"screenshot of HTTPie"}),`
+`,i.jsx(e.p,{children:"We were denied access to the API because we did not provide the API Key."}),`
 `,i.jsx(e.p,{children:"But our logging service is working"}),`
 `,i.jsx(e.pre,{children:i.jsx(e.code,{className:"language-bash-split",children:`---
 [22/08/2025, 17:25:06.001 UTC] GET /api/v1/users
 `})}),`
-`,i.jsx(e.p,{children:"We were denied access to the API because we did not provide the API Key."}),`
 `,i.jsx(e.h2,{children:"Denied Access, Invalid Key"}),`
 `,i.jsx(Ae,{path:"/day 6 node api dev invalid key.png",alt:"screenshot of HTTPie"}),`
 `,i.jsx(e.p,{children:"Likewise we're denied access because the API Key is wrong, set let's fix that."}),`
