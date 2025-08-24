@@ -2890,7 +2890,7 @@ app.listen(PORT, () => {
 `]}),`
 `,i.jsx(e.h1,{children:"Current Folder Structure (From Day 5)"}),`
 `,i.jsxs(e.ul,{children:[`
-`,i.jsxs(e.li,{children:["Copy Day 5 folder ",i.jsx(e.code,{children:"day-5-delete"})," but rename it as ",i.jsx(e.code,{children:"day-6-more-middleware"})," and enter/",i.jsx(e.code,{children:"cd"})," it."]}),`
+`,i.jsxs(e.li,{children:["Copy Day 5 folder ",i.jsx(e.code,{children:"day-5-delete"})," and rename it as ",i.jsx(e.code,{children:"day-6-more-middleware"})," and enter/",i.jsx(e.code,{children:"cd"})," it."]}),`
 `]}),`
 `,i.jsx(on,{children:i.jsxs(e.p,{children:["Current Working Directory is ",i.jsx(e.code,{children:"30-days-of-node-api-dev/day-6-more-middleware"})]})}),`
 `,i.jsx(e.pre,{children:i.jsx(e.code,{className:"language-txt",children:`day-6-more-middleware/
