@@ -2951,10 +2951,7 @@ app.listen(PORT, () => {
 }
 `})}),`
 `,i.jsx(e.h1,{children:"Create Logging Middleware"}),`
-`,i.jsx(e.p,{children:"The Date format will be the common sense:"}),`
-`,i.jsxs(e.ul,{children:[`
-`,i.jsx(e.li,{children:i.jsx(e.code,{children:"DD/MM/YYYY HH:mm:ss.SSS"})}),`
-`]}),`
+`,i.jsxs(e.p,{children:["The Date format will be the widely-used ",i.jsx(e.code,{children:"DD/MM/YYYY HH:mm:ss.SSS"})]}),`
 `,i.jsx(e.p,{children:"Logging example:"}),`
 `,i.jsx(e.pre,{children:i.jsx(e.code,{className:"language-txt",children:`[22/08/2025, 17:11:15.316 UTC] GET /api/v1/users
 `})}),`
