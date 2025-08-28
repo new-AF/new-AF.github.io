@@ -3871,13 +3871,43 @@ export const errorHandler = (error: unknown, response: Response, ) => {
 `,r.jsx(Re,{path:"/shocked-cat.gif",alt:"cute shocked and surprised cat"}),`
 `,r.jsxs(e.p,{children:["So let's fix our ",r.jsx(e.code,{children:"errorHandler"})," ",r.jsx(e.em,{children:"function signature"})," to be 4-parameter:"]}),`
 `,r.jsx(e.pre,{children:r.jsx(e.code,{className:"language-ts",children:`/* fileName: src/middleware/errorHandler.ts */
+import { NextFunction, Response } from "express";
+import { ZodError, flattenError } from "zod";
+
 export const errorHandler = (
     error: unknown,
     _request: Request,
     response: Response,
     _next: NextFunction
 ) => {
-// ...
+    console.log(\`errorHandler \${error}\`);
+    // Validation error
+    if (error instanceof ZodError) {
+        // Bad request
+        response.status(400);
+        response.json({ errors: flattenError(error) });
+        return;
+    }
+
+    // Standard JS Exception
+    if (error instanceof Error) {
+        // Internal Server Error
+        response.status(500);
+        response.json({ error: error.message });
+        return;
+    }
+
+    /*
+        Safety net because JavaScript lets us throw literally anything, we must guard against it.
+        e.g. \`throw "DB Crashed", throw 1234\`
+        Without this fallback, Express would crash or hang if something bizarre was thrown.
+    */
+    response.status(500);
+    response.json({
+        error: "Unknown server error",
+        detail: typeof error === "string" ? error : undefined,
+    });
+};
 `})}),`
 `,r.jsx(e.p,{children:"And voila all our test cases pass!"}),`
 `,r.jsx(e.pre,{children:r.jsx(e.code,{className:"language-bash-split",children:`pnpm: day-7
