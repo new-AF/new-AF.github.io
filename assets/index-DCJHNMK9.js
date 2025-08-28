@@ -3873,7 +3873,7 @@ export const errorHandler = (error: unknown, response: Response, ) => {
 `]}),`
 `,r.jsxs(e.p,{children:["Turns out the bug is in the ",r.jsx(e.code,{children:"errorHandler"})," ",r.jsx(e.em,{children:"function signature"}),": ",r.jsx(e.code,{children:"ts: const errorHandler = (error: unknown, response: Response, ) => ..."})]}),`
 `,r.jsxs(e.p,{children:["This is because Express ",r.jsx(e.em,{children:"only"})," treats ",r.jsx(e.em,{children:"4-parameter functions"})," as middleware, but we have 2 which means ours is never called."]}),`
-`,r.jsx(e.p,{children:r.jsx(e.em,{children:r.jsx(e.strong,{children:"This means: this whole time we thought our error middleware was registered and would catch errors but it was never called, not even once."})})}),`
+`,r.jsx(e.p,{children:r.jsx(e.em,{children:r.jsx(e.strong,{children:"This means: this whole time we thought our error-handling middleware was registered and would catch errors but it was never called, not even once."})})}),`
 `,r.jsx(Re,{path:"/shocked-cat.gif",alt:"cute shocked and surprised cat"}),`
 `,r.jsxs(e.p,{children:["So let's fix our ",r.jsx(e.code,{children:"errorHandler"})," ",r.jsx(e.em,{children:"function signature"})," to be 4-parameter:"]}),`
 `,r.jsx(e.pre,{children:r.jsx(e.code,{className:"language-ts",children:`/* fileName: src/middleware/errorHandler.ts */
