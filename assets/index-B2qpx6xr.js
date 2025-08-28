@@ -3273,7 +3273,7 @@ app.listen(PORT, () => {
 `,r.jsx(e.h2,{children:'Update "src/server.ts"'}),`
 `,r.jsxs(e.p,{children:["Ensure ",r.jsx(e.code,{children:"ts: export const app = express();"})]}),`
 `,r.jsxs(e.p,{children:[r.jsx(e.code,{children:"app"})," will be used by all subsequent test cases e.g. ",r.jsx(e.code,{children:"tests/users/listUsers.test.ts"})]}),`
-`,r.jsx(e.pre,{children:r.jsx(e.code,{className:"language-ts",children:`/* fileName: "src/server.ts */
+`,r.jsx(e.pre,{children:r.jsx(e.code,{className:"language-ts",children:`/* fileName: src/server.ts */
 import express from "express";
 import { PORT } from "@/config/environment";
 import { userRouter } from "@/routes/user.route";
