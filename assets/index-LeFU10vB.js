@@ -3759,7 +3759,7 @@ cases["invalid user id  (not numeric), returns 400"] = async () => {
 ...
 `})}),`
 `,r.jsx(e.p,{children:"Which calls"}),`
-`,r.jsx(e.pre,{children:r.jsx(e.code,{className:"language-txt",children:`DELETE /api/v1/users/abc
+`,r.jsx(e.pre,{children:r.jsx(e.code,{className:"language-http",children:`DELETE /api/v1/users/abc
 `})}),`
 `,r.jsx(e.p,{children:"The full cases suite is below:"}),`
 `,r.jsx(e.pre,{children:r.jsx(e.code,{className:"language-ts",children:`/* fileName: tests/users/deleteUser.test.ts */
