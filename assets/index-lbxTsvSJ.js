@@ -3931,7 +3931,7 @@ export const errorHandler = (
 `})}),`
 `,r.jsx(e.h1,{children:"Conclusion"}),`
 `,r.jsxs(e.p,{children:["We have implemented a scalable super nice DX testing approach for our API backend using ",r.jsx(e.code,{children:"vitest"})," and ",r.jsx(e.code,{children:"supertest"}),", and discovered a major yet subtle bug with ",r.jsx(e.code,{children:"errorHandler"})," not being run at all."]}),`
-`,r.jsxs(e.p,{children:["We have validated all our API endpoints ",r.jsx(e.code,{children:"GET"})," ",r.jsx(e.code,{children:"PUT"})," ",r.jsx(e.code,{children:"PATCH"})," ",r.jsx(e.code,{children:"DELETE"})," with 27 test cases that all passed, and have now confidence if we introduce any future breaking changes in the future, the tests will ",r.jsx(e.em,{children:"alert"})," us enabling us to pinpoint the bugs and fix them."]}),`
+`,r.jsxs(e.p,{children:["We have validated all our API endpoints ",r.jsx(e.code,{children:"GET"})," ",r.jsx(e.code,{children:"PUT"})," ",r.jsx(e.code,{children:"PATCH"})," ",r.jsx(e.code,{children:"DELETE"})," with 27 test cases that all passed. We now have confidence if we introduce any future breaking changes in the future, these tests will ",r.jsx(e.em,{children:"alert"})," us enabling us to pinpoint the bugs and fix them."]}),`
 `,r.jsx(e.h1,{children:"Commit Changes"}),`
 `,r.jsx(e.pre,{children:r.jsx(e.code,{className:"language-bash",children:`git add . && git commit -m "add day 7: api testing"
 `})}),`
