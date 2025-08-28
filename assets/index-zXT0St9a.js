@@ -3738,7 +3738,7 @@ describe("PATCH /api/v1/users/:id", () =>
       Tests  7 passed (7)
    Duration  1.07s
 `})}),`
-`,r.jsx(e.h2,{children:"DELETE"}),`
+`,r.jsx(e.h2,{children:"DELETE (and The Shock of Our Lives)"}),`
 `,r.jsx(e.p,{children:"Here we find out why testing is crucial because we stumbled upon our first failed test:"}),`
 `,r.jsx(e.pre,{children:r.jsx(e.code,{className:"language-ts",children:`/* fileName: tests/users/deleteUser.test.ts */
 // invalid user id (not numeric)
