@@ -3184,7 +3184,7 @@ app.listen(PORT, () => {
 `,r.jsx(e.h1,{children:"Folder Structure"}),`
 `,r.jsx(e.h2,{children:"Copy Previous Day 6"}),`
 `,r.jsxs(e.ul,{children:[`
-`,r.jsxs(e.li,{children:["Copy folder ",r.jsx(e.code,{children:"day-6-more-middleware"})," and paste it into the root folder ",r.jsx(e.code,{children:"30-days-of-node-api-dev"})]}),`
+`,r.jsxs(e.li,{children:["Make a copy of folder ",r.jsx(e.code,{children:"day-6-more-middleware"})," and paste it into the root folder ",r.jsx(e.code,{children:"30-days-of-node-api-dev"})]}),`
 `,r.jsxs(e.li,{children:["Rename the copied folder as ",r.jsx(e.code,{children:"day-7-api-testing"})]}),`
 `]}),`
 `,r.jsxs(_t,{children:["Current Working Directory is ",r.jsx(e.code,{children:"30-days-of-node-api-dev"})]}),`
