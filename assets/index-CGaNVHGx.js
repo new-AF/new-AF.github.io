@@ -3083,15 +3083,27 @@ PORT=3000
 API_KEY=Paste-Generated-Key-Here
 `})}),`
 `,r.jsx(e.h2,{children:'Update "src/config/environment.ts"'}),`
-`,r.jsxs(e.p,{children:["To export our API Key from ",r.jsx(e.code,{children:".env"})]}),`
-`,r.jsx(e.pre,{children:r.jsx(e.code,{className:"language-ts",children:`/* fileName: */
+`,r.jsxs(e.p,{children:["To export our API Key from the local ",r.jsx(e.code,{children:"day-x-xx/.env"})," automatically."]}),`
+`,r.jsx(e.pre,{children:r.jsx(e.code,{className:"language-ts",children:`/* fileName: src/config/environment.ts */
 import dotenv from "dotenv";
 import path from "path";
+import { fileURLToPath } from "url";
+
+// Recreate __dirname in ESM
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Get current project folder name (e.g. "day-x-...")
+const currentFolder = path.basename(path.resolve(__dirname, "../../"));
+
+const absolutePath = path.resolve(process.cwd(), currentFolder + "/.env");
 
 // Load the .env from the current day's folder
 dotenv.config({
-    path: path.resolve(process.cwd(), "day-6-api-keys/.env"),
+    path: absolutePath,
 });
+
+// console.log({ absolutePath, currentFolder });
 
 // Fallback to port 3000 if not defined
 export const PORT: number = parseInt(process.env.PORT || "3000", 10);
@@ -3286,21 +3298,6 @@ app.listen(PORT, () => {
 `,r.jsx(e.h2,{children:"Enter Current Day 7"}),`
 `,r.jsxs(e.p,{children:["Enter or ",r.jsx(e.code,{children:"cd"})," into ",r.jsx(e.code,{children:"day-7-api-testing"})]}),`
 `,r.jsx(_t,{children:r.jsxs(e.p,{children:["Current Working Directory is ",r.jsx(e.code,{children:"30-days-of-node-api-dev/day-7-api-testing"})]})}),`
-`,r.jsx(e.h2,{children:'Update "src/config/environment.ts"'}),`
-`,r.jsxs(e.p,{children:["To export our API Keys from ",r.jsx(e.code,{children:".env"})]}),`
-`,r.jsx(e.pre,{children:r.jsx(e.code,{className:"language-ts",children:`/* fileName: src/config/environment.ts */
-import dotenv from "dotenv";
-import path from "path";
-
-// Load the .env from the current day's folder
-dotenv.config({
-    path: path.resolve(process.cwd(), "day-7-api-testing/.env"),
-});
-
-// Fallback to port 3000 if not defined
-export const PORT: number = parseInt(process.env.PORT || "3000", 10);
-export const API_KEY: string = process.env.API_KEY ?? "dev-key";
-`})}),`
 `,r.jsx(e.h2,{children:'Update "src/server.ts"'}),`
 `,r.jsxs(e.p,{children:["Ensure ",r.jsx(e.code,{children:"ts: export const app = express();"})]}),`
 `,r.jsxs(e.p,{children:[r.jsx(e.code,{children:"app"})," will be used by all subsequent test cases e.g. ",r.jsx(e.code,{children:"tests/users/listUsers.test.ts"})]}),`
