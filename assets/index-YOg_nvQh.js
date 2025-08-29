@@ -2697,7 +2697,7 @@ JSON Payload:
 `,r.jsxs(e.li,{children:["But first create ",r.jsx(e.code,{children:"src/middleware"})," Folder"]}),`
 `]}),`
 `,r.jsx(e.pre,{children:r.jsx(e.code,{className:"language-ts",children:`/* fileName: src/middleware/errorHandler.ts */
-import { NextFunction, Response } from "express";
+import { Request, Response, NextFunction } from "express";
 import { ZodError, flattenError } from "zod";
 
 export const errorHandler = (
@@ -2706,7 +2706,6 @@ export const errorHandler = (
     response: Response,
     _next: NextFunction
 ) => {
-    console.log(\`errorHandler \${error}\`);
     // Validation error
     if (error instanceof ZodError) {
         // Bad request
@@ -2896,10 +2895,10 @@ app.listen(PORT, () => {
 `]}),`
 `,r.jsx(e.h1,{children:"Current Folder Structure (From Day 5)"}),`
 `,r.jsxs(e.ul,{children:[`
-`,r.jsxs(e.li,{children:["Copy Day 5 folder ",r.jsx(e.code,{children:"day-5-delete"})," and rename it as ",r.jsx(e.code,{children:"day-6-more-middleware"})," and enter/",r.jsx(e.code,{children:"cd"})," it."]}),`
+`,r.jsxs(e.li,{children:["Copy Day 5 folder ",r.jsx(e.code,{children:"day-5-delete"})," and rename it as ",r.jsx(e.code,{children:"day-6-api-keys"})," and enter/",r.jsx(e.code,{children:"cd"})," it."]}),`
 `]}),`
-`,r.jsx(_t,{children:r.jsxs(e.p,{children:["Current Working Directory is ",r.jsx(e.code,{children:"30-days-of-node-api-dev/day-6-more-middleware"})]})}),`
-`,r.jsx(e.pre,{children:r.jsx(e.code,{className:"language-txt",children:`day-6-more-middleware/
+`,r.jsx(_t,{children:r.jsxs(e.p,{children:["Current Working Directory is ",r.jsx(e.code,{children:"30-days-of-node-api-dev/day-6-api-keys"})]})}),`
+`,r.jsx(e.pre,{children:r.jsx(e.code,{className:"language-txt",children:`day-6-api-keys/
 ├─ src/
 │  ├─ config/
 │  │  └─ environment.ts
@@ -2938,8 +2937,8 @@ app.listen(PORT, () => {
         "day-3": "tsx watch --tsconfig day-3-post-validation/tsconfig.json day-3-post-validation/src/server.ts",
         "day-4": "tsx watch --tsconfig day-4-put-patch/tsconfig.json day-4-put-patch/src/server.ts",
         "day-5": "tsx watch --tsconfig day-5-delete/tsconfig.json day-5-delete/src/server.ts",
-        "day-6": "tsx watch --tsconfig day-6-more-middleware/tsconfig.json day-6-more-middleware/src/server.ts",
-        "day-6-generate-key": "tsx --tsconfig day-6-more-middleware/tsconfig.json day-6-more-middleware/src/scripts/generateApiKey.ts"
+        "day-6": "tsx watch --tsconfig day-6-api-keys/tsconfig.json day-6-api-keys/src/server.ts",
+        "day-6-generate-key": "tsx --tsconfig day-6-api-keys/tsconfig.json day-6-api-keys/src/scripts/generateApiKey.ts"
     },
     "keywords": [],
     "author": "",
@@ -3078,10 +3077,25 @@ e.g. 0c43b7f1a14...
 `]}),`
 `]}),`
 `,r.jsx(e.h2,{children:"Create .env"}),`
-`,r.jsxs(e.p,{children:["To guard our API Key from being leaked, we store it ",r.jsx(e.code,{children:"src/.env"})," which is ignored by Git (",r.jsx(e.code,{children:".gitignore"}),")."]}),`
+`,r.jsxs(e.p,{children:["To guard our API Key from being leaked, we store it in ",r.jsx(e.code,{children:".env"})," which is ignored by Git (",r.jsx(e.code,{children:".gitignore"}),")."]}),`
 `,r.jsx(e.pre,{children:r.jsx(e.code,{className:"language-env",children:`/* fileName: .env */
 PORT=3000
 API_KEY=Paste-Generated-Key-Here
+`})}),`
+`,r.jsx(e.h2,{children:'Update "src/config/environment.ts"'}),`
+`,r.jsxs(e.p,{children:["To export our API Key from ",r.jsx(e.code,{children:".env"})]}),`
+`,r.jsx(e.pre,{children:r.jsx(e.code,{className:"language-ts",children:`/* fileName: */
+import dotenv from "dotenv";
+import path from "path";
+
+// Load the .env from the current day's folder
+dotenv.config({
+    path: path.resolve(process.cwd(), "day-6-api-keys/.env"),
+});
+
+// Fallback to port 3000 if not defined
+export const PORT: number = parseInt(process.env.PORT || "3000", 10);
+export const API_KEY: string = process.env.API_KEY ?? "dev-key";
 `})}),`
 `,r.jsx(e.h1,{children:"Wire The Middlewares"}),`
 `,r.jsx(e.p,{children:"Update Server Entry Point."}),`
@@ -3112,11 +3126,13 @@ app.use("/api/v1/users", userRouter);
 app.use(errorHandler);
 
 app.listen(PORT, () => {
-    console.log(\`🚀 Day 6 server running on http://localhost:\${PORT}\`);
+    console.log(
+        \`🚀 Day 6: API Keys server running on http://localhost:\${PORT}\`
+    );
 });
 `})}),`
 `,r.jsx(e.h1,{children:"After Folder Structure (Day 6)"}),`
-`,r.jsx(e.pre,{children:r.jsx(e.code,{className:"language-txt",children:`day-6-more-middleware/
+`,r.jsx(e.pre,{children:r.jsx(e.code,{className:"language-txt",children:`day-6-api-keys/
 ├─ src/
 │  ├─ config/
 │  │  └─ environment.ts
@@ -3149,8 +3165,8 @@ app.listen(PORT, () => {
 `,r.jsx(e.h1,{children:"Run and Test"}),`
 `,r.jsx(e.pre,{children:r.jsx(e.code,{className:"language-bash-split",children:`pnpm day-6
 ---
-[dotenv@17.2.1] injecting env (2) from day-6-more-middleware\\.env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
-🚀 Day 6 server running on http://localhost:3000
+[dotenv@17.2.1] injecting env (2) from day-6-api-keys\\.env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+🚀 Day 6: API Keys server running on http://localhost:3000
 `})}),`
 `,r.jsx(e.h2,{children:"Denied Access, Missing Key"}),`
 `,r.jsxs(e.p,{children:["Use HTTPie to ",r.jsx(e.code,{children:"GET /api/v1/user"})]}),`
@@ -3171,7 +3187,7 @@ app.listen(PORT, () => {
 `})}),`
 `,r.jsx(e.p,{children:"Excellent our backend service now only provides access to authorized apps!"}),`
 `,r.jsx(e.h1,{children:"Commit Changes"}),`
-`,r.jsx(e.pre,{children:r.jsx(e.code,{className:"language-bash",children:`git add . && git commit -m "add day 6: more middleware"
+`,r.jsx(e.pre,{children:r.jsx(e.code,{className:"language-bash",children:`git add . && git commit -m "add day 6: api keys"
 `})}),`
 `,r.jsx(e.p,{children:"Day 6 is complete, onto the next!"})]})}function kP(t={}){return r.jsx(MP,{...t,children:r.jsx(PP,{...t})})}const UP=Object.freeze(Object.defineProperty({__proto__:null,default:kP},Symbol.toStringTag,{value:"Module"})),FP=function(e){return r.jsx(Ie,{...e})};function BP(t){const e={code:"code",em:"em",h1:"h1",h2:"h2",li:"li",p:"p",pre:"pre",strong:"strong",ul:"ul",...t.components};return r.jsxs(r.Fragment,{children:[r.jsx(Re,{path:"/test.gif",alt:"a clip from Huda Boss where Huda Kattan is saying Have somebody do like a test today."}),`
 `,r.jsx(e.h1,{children:"Objectives"}),`
@@ -3270,6 +3286,21 @@ app.listen(PORT, () => {
 `,r.jsx(e.h2,{children:"Enter Current Day 7"}),`
 `,r.jsxs(e.p,{children:["Enter or ",r.jsx(e.code,{children:"cd"})," into ",r.jsx(e.code,{children:"day-7-api-testing"})]}),`
 `,r.jsx(_t,{children:r.jsxs(e.p,{children:["Current Working Directory is ",r.jsx(e.code,{children:"30-days-of-node-api-dev/day-7-api-testing"})]})}),`
+`,r.jsx(e.h2,{children:'Update "src/config/environment.ts"'}),`
+`,r.jsxs(e.p,{children:["To export our API Keys from ",r.jsx(e.code,{children:".env"})]}),`
+`,r.jsx(e.pre,{children:r.jsx(e.code,{className:"language-ts",children:`/* fileName: src/config/environment.ts */
+import dotenv from "dotenv";
+import path from "path";
+
+// Load the .env from the current day's folder
+dotenv.config({
+    path: path.resolve(process.cwd(), "day-7-api-testing/.env"),
+});
+
+// Fallback to port 3000 if not defined
+export const PORT: number = parseInt(process.env.PORT || "3000", 10);
+export const API_KEY: string = process.env.API_KEY ?? "dev-key";
+`})}),`
 `,r.jsx(e.h2,{children:'Update "src/server.ts"'}),`
 `,r.jsxs(e.p,{children:["Ensure ",r.jsx(e.code,{children:"ts: export const app = express();"})]}),`
 `,r.jsxs(e.p,{children:[r.jsx(e.code,{children:"app"})," will be used by all subsequent test cases e.g. ",r.jsx(e.code,{children:"tests/users/listUsers.test.ts"})]}),`
@@ -3850,7 +3881,6 @@ AssertionError: expected 500 to be 400 // Object.is equality
 `,r.jsx(e.p,{children:"Our error middleware should be activated but is not happening:"}),`
 `,r.jsx(e.pre,{children:r.jsx(e.code,{className:"language-ts",children:`/* fileName: src/middleware/errorHandler.ts */
 export const errorHandler = (error: unknown, response: Response, ) => {
-    console.log(\`errorHandler \${error}\`);
     // Validation error
     if (error instanceof ZodError) {
         // Bad request
@@ -3877,7 +3907,7 @@ export const errorHandler = (error: unknown, response: Response, ) => {
 `,r.jsx(Re,{path:"/shocked-cat.gif",alt:"cute shocked and surprised cat"}),`
 `,r.jsxs(e.p,{children:["So let's fix our ",r.jsx(e.code,{children:"errorHandler"})," ",r.jsx(e.em,{children:"function signature"})," to be 4-parameter:"]}),`
 `,r.jsx(e.pre,{children:r.jsx(e.code,{className:"language-ts",children:`/* fileName: src/middleware/errorHandler.ts */
-import { NextFunction, Response } from "express";
+import { Request, Response, NextFunction } from "express";
 import { ZodError, flattenError } from "zod";
 
 export const errorHandler = (
@@ -3886,7 +3916,6 @@ export const errorHandler = (
     response: Response,
     _next: NextFunction
 ) => {
-    console.log(\`errorHandler \${error}\`);
     // Validation error
     if (error instanceof ZodError) {
         // Bad request
@@ -3916,7 +3945,7 @@ export const errorHandler = (
 };
 `})}),`
 `,r.jsx(e.p,{children:"And voila all our test cases pass!"}),`
-`,r.jsx(e.pre,{children:r.jsx(e.code,{className:"language-bash-split",children:`pnpm: day-7
+`,r.jsx(e.pre,{children:r.jsx(e.code,{className:"language-bash-split",children:`pnpm test:day-7
 ---
  ✓ day-7-api-testing/tests/users/deleteUser.test.ts (5 tests) 141ms
    ✓ DELETE /api/v1/users/:id > existing user, deletes successfully 70ms
