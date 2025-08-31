@@ -4230,7 +4230,7 @@ export const createUser = (request: Request, response: Response) => {
 `,r.jsx(e.h1,{children:"Objectives"}),`
 `,r.jsxs(e.ul,{children:[`
 `,r.jsxs(e.li,{children:["Install ",r.jsx(e.code,{children:"better-sqlite3"})," to manage our file-based SQL database."]}),`
-`,r.jsxs(e.li,{children:["Learn the 10 most widely used SQL commands: ",r.jsx(e.code,{children:"CREATE TABLE"})," ",r.jsx(e.code,{children:"SELECT"}),"."]}),`
+`,r.jsx(e.li,{children:"Practice SQL commands."}),`
 `]}),`
 `,r.jsx(e.h1,{children:"Folder Structure"}),`
 `,r.jsx(e.h2,{children:"Copy Previous Day 7"}),`
