@@ -1779,7 +1779,7 @@ export const testRouter = Router();
 testRouter.get("/", getTestMessage);
 \`\`\`
 
-## Server Entry Point (server.ts)
+## Server Entry Point (\`server.ts\`)
 
 \`\`\`ts
 /* fileName: src/server.ts */
@@ -1798,7 +1798,7 @@ app.listen(PORT, () => {
 });
 \`\`\`
 
-## Test Endpoint (GET /api/v1/test)
+## Test Endpoint (\`GET\` \`/api/v1/test\`)
 
 <Image
     path="/day 2 node api dev test.png"
