@@ -3187,7 +3187,7 @@ day-4-put-patch/
 └─ tsconfig.json
 \`\`\`
 
-# Update package.json
+# Update \`package.json\`
 
 <Info>Current Working Directory is \`30-days-of-node-api-dev\`</Info>
 
@@ -3275,7 +3275,7 @@ export const errorHandler = (
 };
 \`\`\`
 
-# Add DELETE Controller
+# Add \`DELETE\` Controller
 
 \`\`\`ts
 /* fileName: src/controllers/deleteUser.ts */
