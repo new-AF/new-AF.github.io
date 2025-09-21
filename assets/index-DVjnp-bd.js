@@ -3496,7 +3496,7 @@ day-6-api-keys/
 └─ tsconfig.json
 \`\`\`
 
-# Update package.json
+# Update \`package.json\`
 
 To add Day 6 run command, and generate API Key command
 
@@ -3645,7 +3645,7 @@ export const checkApiKey = (
 };
 \`\`\`
 
-## Generate a Key
+## Generate Key
 
 An API Key should be a cryptographic string (long uniformly-random alphanumeric characters) where each next character cannot be predicted or guessed and therefore is infeasible to _brute-forcing_ so keys like \`my-dev-key\` can be compromised instantly.
 
@@ -3673,7 +3673,7 @@ e.g. 0c43b7f1a14...
 
 - Copy it to .env
 
-## Create .env
+## Create \`.env\`
 
 To guard our API Key from being leaked, we store it in \`.env\` which is ignored by Git (\`.gitignore\`).
 
@@ -3683,7 +3683,7 @@ PORT=3000
 API_KEY=Paste-Generated-Key-Here
 \`\`\`
 
-## Update "src/config/environment.ts"
+## Update \`src/config/environment.ts\`
 
 To export our API Key from the local \`day-x-xx/.env\` automatically.
 
