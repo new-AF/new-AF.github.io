@@ -3893,7 +3893,7 @@ The resulting \`day-7-api-testing\` folder structure should be similar to below:
 └─ tsconfig.json
 \`\`\`
 
-## Update package.json
+## Update \`package.json\`
 
 Add commands:
 
@@ -3950,7 +3950,7 @@ Enter or \`cd\` into \`day-7-api-testing\`
     Current Working Directory is \`30-days-of-node-api-dev/day-7-api-testing\`
 </Info>
 
-## Update "src/server.ts"
+## Update \`src/server.ts\`
 
 Ensure \`ts: export const app = express();\`
 
@@ -3990,7 +3990,7 @@ app.listen(PORT, () => {
 });
 \`\`\`
 
-## Create "vitest.config.ts"
+## Create \`vitest.config.ts\`
 
 In anticipation of installing \`vitest\` later
 
@@ -4016,12 +4016,12 @@ export default defineConfig({
 });
 \`\`\`
 
-## Create folders "tests" and "tests/users"
+## Create \`tests/\` and \`tests/users/\`
 
 - Create \`tests\` folder
     - And \`users\` inside it as subfolder. This is for our endpoint controllers.
 
-## Create "tests/setupEnv.ts"
+## Create \`tests/setupEnv.ts/\`
 
 To load our \`.env\` file (which includes API Keys) before running tests.
 
