@@ -4040,7 +4040,7 @@ We're testing endpoints (HTTP Request type + dedicated partial URL) not controll
 
 File names will the have format: \`fileName.test.ts\`
 
-## GET /api/v1/users
+## \`GET\` \`/api/v1/users\`
 
 We're testing if the \`ts: app.use(checkApiKey)\` middleware is working as gate a keeper, only allowing requests with a valid API Key.
 
@@ -4144,7 +4144,7 @@ describe("POST /api/v1/users", () =>
     ));
 \`\`\`
 
-## POST (Create User)
+## \`POST\` (Create User)
 
 \`\`\`ts
 /* fileName: tests/users/createUser.test.ts */
@@ -4237,7 +4237,7 @@ pnpm test:day-7
    Duration  1.28s
 \`\`\`
 
-## PUT (Replace All Fields)
+## \`PUT\` (Replace All Fields)
 
 All fields \`name\` \`email\` must be provided and this is enforced/inspected at runtime by our _Zod_ schema validations in \`src/validators/users/user.requests.ts\`
 
@@ -4351,7 +4351,7 @@ pnpm test:day-7
    Duration  956ms
 \`\`\`
 
-## PATCH (Partial Update)
+## \`PATCH\` (Partial Update)
 
 At least one field \`name\` or \`email\` is required, and providing both is fine too, schema validation is enforced in \`src/validators/users/user.requests.ts\`
 
@@ -4467,7 +4467,7 @@ pnpm test:day-7
    Duration  1.07s
 \`\`\`
 
-## DELETE (and The Shock of Our Lives)
+## \`DELETE\` (and The Shock of Our Lives)
 
 Here we find out why testing is crucial because we stumbled upon our first failed test:
 
