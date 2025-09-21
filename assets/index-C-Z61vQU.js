@@ -5052,7 +5052,7 @@ The resulting \`day-8-sqlite\` folder structure should be similar to below:
 └─ tsconfig.json
 \`\`\`
 
-## Update package.json
+## Update \`package.json\`
 
 Add commands:
 
@@ -5113,7 +5113,7 @@ Enter \`day-8-sql\`
 
 <Info>Current Working Directory is \`30-days-of-node-api-dev/day-8-sql\`</Info>
 
-## Create "src/database/"
+## Create \`src/database/\`
 
 \`\`\`dir
 day-8-sql/
@@ -5184,7 +5184,7 @@ src/
 
 And update \`src/server.ts\`, \`tests/setupEnv.ts\`
 
-## "connection.ts" and others
+## \`connection.ts\` and others
 
 **\`connection.ts\`** creates our SQL database \`./my-database.db\` if it doesn't exist, or connect to it.
 
@@ -5316,7 +5316,7 @@ export const setupDatabase = () => {
 };
 \`\`\`
 
-## "server.ts"
+## \`server.ts\`
 
 Update **\`server.ts\`** to initialize the database before processing requests, and export the \`server\` instance (to close the server after each test file).
 
@@ -5355,7 +5355,7 @@ export const server = app.listen(PORT, () => {
 });
 \`\`\`
 
-## "setupEnv.ts"
+## \`setupEnv.ts\`
 
 The Node test runner runs \`before\` at the beginning of each test file, and \`after\` at the end. We need these two to ensure the database starts anew, and crucially to shutdown the server so Node can run the next test file.
 
@@ -5392,7 +5392,7 @@ This is where we remove code manipulating our _array of user objects_ storage, r
 - \`updateUser\` and \`replaceUser\` handling \`PATCH\` and \`PUT\` will use \`sql: UPDATE\` to modify existing user rows in the database.
 - \`deleteUser\` handling \`DELETE\` will use \`sql: DELETE\` to delete user records from the database.
 
-## listUsers (GET)
+## \`listUsers\` (GET)
 
 \`ts: listUsers\` handling \`GET /api/v1/users\` has the simplest SQL statement to retrieve everything from the \`users\` table.
 
@@ -5452,7 +5452,7 @@ path: '/custom/path/.env' }
 ->closed database
 \`\`\`
 
-## getUser (GET)
+## \`getUser\` (GET)
 
 \`ts: getUser\` handling \`GET /api/v1/users/:id\` refines the \`sql: SELECT *\` statement by adding the \`WHERE\` clause. \`WHERE\` filters the rows to only return those matching a specific condition, in this matching the \`id\` from the HTTP request.
 
@@ -5538,7 +5538,7 @@ pnpm test:day-8
 ✔ GET /api/v1/users/:id (97.9819ms)
 \`\`\`
 
-## createUser (POST)
+## \`createUser\` (POST)
 
 Because \`sql: INSERT\` throws an error if the email already exists in the table we have to update our controller to reflect this change:
 
@@ -5757,7 +5757,7 @@ pnpm test:day-8
 ✔ POST /api/v1/users (142.5604ms)
 \`\`\`
 
-## updateUser (PATCH)
+## \`updateUser\` (PATCH)
 
 Because \`PATCH\` will provide us with at least either \`name\` or \`email\` we have to dynamically construct the \`UPDATE\` SQL query:
 
@@ -5906,7 +5906,7 @@ Test Files  1 passed (1)
 Duration  605ms
 \`\`\`
 
-## replaceUser (PUT)
+## \`replaceUser\` (PUT)
 
 The logic here is similar to \`PATCH\` and it's easier because we don't have to construct the fields for \`sql: UPDATE\` because we know we'll be getting both \`name\` and \`email\` as this part of Payload schema validation.
 
@@ -6035,7 +6035,7 @@ pnpm test:day-8
 ✔ PUT /api/v1/users/:id (120.6191ms)
 \`\`\`
 
-## deleteUser (DELETE)
+## \`deleteUser\` (DELETE)
 
 \`deleteUser\` will use the \`sql: DELETE\` to remove the user entry from the table. It uses the \`WHERE\` clause to match the row to remove.
 
