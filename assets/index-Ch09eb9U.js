@@ -1956,7 +1956,7 @@ The server will return an error code, and a helpful message (crafted by the Cont
 }
 \`\`\`
 
-# POST
+# \`POST\`
 
 \`POST\` is a type of an HTTP request that informs the backend service to create a new resource using the data/payload in the request body.
 
@@ -2063,7 +2063,7 @@ dotenv.config({
 export const PORT: number = parseInt(process.env.PORT || "3000", 10);
 \`\`\`
 
-# POST /users Endpoint
+# \`POST\` \`/users Endpoint\`
 
 ## Validator
 
