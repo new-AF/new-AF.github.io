@@ -2640,7 +2640,7 @@ Day 3 is now complete, onto the next!
 
 Though \`PATCH\` can perform a complete update making it equivalent to \`PUT\`, the semantic meaning and intent behind those requests still stand.
 
-# Update package.json
+# Update \`package.json\`
 
 To Day 4 run command
 
@@ -2884,7 +2884,7 @@ src/controllers
     };
     \`\`\`
 
-# PUT & PATCH Schema
+# \`PUT\` & \`PATCH\` Schema
 
 \`\`\`ts
 /* fileName: src/validators/user.requests.ts */
@@ -2907,7 +2907,7 @@ export const patchUserSchema = userModelSchema
     );
 \`\`\`
 
-# PUT Controller
+# \`PUT\` Controller
 
 \`\`\`ts
 /* fileName: src/controllers/replaceUser.ts */
@@ -3000,9 +3000,9 @@ export const replaceUser = (request: Request, response: Response) => {
 - Use HTTPie to send \`GET http://localhost:3000/api/v1/users/\`
 
     <Gif
-            path="/day 4 node api dev put get first.png"
-            alt="screenshot of HTTPie"
-        />
+              path="/day 4 node api dev put get first.png"
+              alt="screenshot of HTTPie"
+          />
 
 - Replace user 1 with below payload
 
@@ -3017,18 +3017,18 @@ export const replaceUser = (request: Request, response: Response) => {
 
     \`\`\`
 
-        <Gif path="/day 4 node api dev put.png" alt="screenshot of HTTPie" />
+          <Gif path="/day 4 node api dev put.png" alt="screenshot of HTTPie" />
 
 - Confirm changes by sending \`GET http://localhost:3000/api/v1/users/\`
 
     <Gif
-            path="/day 4 node api dev put get second.png"
-            alt="screenshot of HTTPie"
-        />
+              path="/day 4 node api dev put get second.png"
+              alt="screenshot of HTTPie"
+          />
 
 Excellent! our controller and schema validation work as intended.
 
-# PATCH Controller
+# \`PATCH\` Controller
 
 It's effectively same code apart from the difference in schema validation used (\`patchUserSchema\` vs \`putUserSchema\`).
 
@@ -3094,9 +3094,9 @@ I restarted the server by \`CRTL + C\` then running \`pnpm day-4\` on terminal, 
 - Use HTTPie to send \`GET http://localhost:3000/api/v1/users/\`
 
     <Gif
-            path="/day 4 node api dev patch first.png"
-            alt="screenshot of HTTPie"
-        />
+              path="/day 4 node api dev patch first.png"
+              alt="screenshot of HTTPie"
+          />
 
 - Update user 1 information
 
@@ -3110,14 +3110,14 @@ I restarted the server by \`CRTL + C\` then running \`pnpm day-4\` on terminal, 
 
     \`\`\`
 
-        <Gif path="/day 4 node api dev patch.png" alt="screenshot of HTTPie" />
+          <Gif path="/day 4 node api dev patch.png" alt="screenshot of HTTPie" />
 
 - Confirm changes by sending \`GET http://localhost:3000/api/v1/users/\`
 
     <Gif
-            path="/day 4 node api dev patch second.png"
-            alt="screenshot of HTTPie"
-        />
+              path="/day 4 node api dev patch second.png"
+              alt="screenshot of HTTPie"
+          />
 
 Excellent! our controller and schema validation work as intended.
 
