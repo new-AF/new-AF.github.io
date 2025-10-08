@@ -37,12 +37,7 @@ That's One-Based Indexing (OBI)
 <iframe
     width="100%"
     height="auto"
-    className={mergeClassNames(
-        "aspect-[1.64]",
-        "max-w-[640px]",
-        "mx-auto",
-        "rounded-md"
-    )}
+    className="aspect-[1.64] max-w-[640px] mx-auto rounded-md"
     src="https://www.youtube.com/embed/w8onXV1v_WA"
     title="YouTube video player"
     frameborder="0"
@@ -179,9 +174,9 @@ My article only applies to high-level programming languages. The one place where
 # Conclusion
 
 <Image
-    path="/1 based indexing.jpg"
-    className={mergeClassNames("max-h-[320px]")}
-    alt="SpongeBob meme saying 1 Based Indexing. Just Use It."
+path="/1 based indexing.jpg"
+className={mergeClassNames("max-h-[320px]")}
+alt="SpongeBob meme saying 1 Based Indexing. Just Use It."
 />
 
 # Appendix
