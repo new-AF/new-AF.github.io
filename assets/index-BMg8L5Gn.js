@@ -17,7 +17,7 @@ You want to tell me that:
 - \`length - 2\` denotes the before-last element and
 - \`length - 1\` denotes the last element
 
-<Image path="/spinning cat.gif" className={mergeClassNames("max-h-[320px]")} />
+<Image path="/spinning cat.gif" className="max-h-[320px]" />
 
 Why is it off by 1?
 
@@ -55,7 +55,7 @@ Boom.
 
 # Developer Experience (DX)
 
-To demonstrate that I wrote 2 versions of Bubble Sort using both indexing schemes, and _objectively_ it is clear which version is easier to understand.
+I wrote 2 versions of Bubble Sort using both indexing schemes, and _objectively_ it is clear which is _**less prone to off-by-one errors**_ and is easier to understand.
 
 ## 1-Based Bubble Sort
 
@@ -147,10 +147,7 @@ Even if I were to re-write the outer condition as \`outerIndex > 1\` it would st
 
 Most importantly however, I would be confident modifying the loop bounds as the algorithm requires without worrying about off-by-one errors because _\`2\`_ unequivocally means the _second_ element, not the third.
 
-<Info>
-    The 1-based version is superior because it aligns with and _centers_ the
-    human experience.
-</Info>
+> The 1-based version is superior because it aligns with and _centers_ the human experience.
 
 The 0-based version, however, introduces friction and second-guessing into the picture which always degrades the dev experience.
 
@@ -175,7 +172,7 @@ My article only applies to high-level programming languages. The one place where
 
 <Image
 path="/1 based indexing.jpg"
-className={mergeClassNames("max-h-[320px]")}
+className="max-h-[320px]"
 alt="SpongeBob meme saying 1 Based Indexing. Just Use It."
 />
 
