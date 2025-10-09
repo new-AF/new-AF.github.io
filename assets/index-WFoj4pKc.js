@@ -55,7 +55,7 @@ Boom.
 
 # Developer Experience (DX)
 
-I wrote 2 versions of Bubble Sort using both indexing schemes, and _objectively_ it is clear which is _**less prone to off-by-one errors**_ and is _also easier to understand_.
+I wrote 2 versions of Bubble Sort using both indexing schemes, and _objectively_ it is clear which is **less prone to off-by-one errors** but is also easier to understand.
 
 ## 1-Based Bubble Sort
 
