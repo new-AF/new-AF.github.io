@@ -7106,7 +7106,7 @@ https://github.com/highlightjs/highlight.js/issues/2277`),F=I,P=k),O===void 0&&(
 // splice(index, 1);
 array.splice(0, 1);
 
-// ["a", "b"]
+// ["b", "c"]
 console.log(array);
 `,oV=`import { useEffect } from "react";
 
