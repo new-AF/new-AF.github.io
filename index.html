@@ -28,5 +28,34 @@
             class="font-custom min-h-dvh grid grid-rows-[auto_1fr_auto_auto_auto] [--header-height:8rem]"
         ></div>
         <!-- <script src="./src/prism/prism.js"></script> -->
+
+        <!-- freeze 100dvh -->
+        <script type="text/javascript">
+            function freezeDvh() {
+                const root = document.documentElement;
+
+                // Read the CSS variable (--dvh = 100dvh)
+                const dvhValue = getComputedStyle(root)
+                    .getPropertyValue("--dvh")
+                    .trim();
+
+                // Create a temporary element to resolve dvh → px
+                const el = document.createElement("div");
+                el.style.position = "fixed";
+                el.style.visibility = "hidden";
+                el.style.height = dvhValue;
+
+                document.body.appendChild(el);
+
+                const px = el.getBoundingClientRect().height + "px";
+
+                document.body.removeChild(el);
+
+                // Freeze it
+                root.style.setProperty("--dvh", px);
+            }
+
+            document.addEventListener("DOMContentLoaded", freezeDvh);
+        </script>
     </body>
 </html>
