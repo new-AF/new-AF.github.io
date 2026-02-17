@@ -189,38 +189,61 @@ Error generating stack: `+o.message+`
 <li>
 <p class="[display:var(--p-inside-li-display,block)]">We use a <strong class="text-fuchsia-400">hash map</strong> to <strong class="text-fuchsia-400">store</strong> those matching pairs.</p>
 </li>
-</ol><pre><div class="w-full my-(--spacing-md) grid lg:max-w-[1000px] [align-items:start] rounded-md bg-(--color-base-200) relative"><header class="text-xs font-medium grid [grid-auto-flow:column] items-center ps-4 pe-2 py-2 rounded-tl-md rounded-tr-md [grid-column:1] [grid-row:1] gap-x-(--spacing-sm) border-b-(--color-base-100) border-dotted sticky top-0 bg-inherit"><span class="min-w-3">ts</span><button class="box-content text-sm cursor-pointer py-(--spacing-xs) px-(--spacing-sm) flex items-center gap-x-[1ch] rounded-lg hover:!bg-(--color-base-100) focus:outline-none transition !text-xs justify-self-end z-99"><svg class="!w-[0.9em] !h-[0.9em]"></svg>Copy</button></header><pre style="height:unset;min-height:300px" class="[grid-column:1] flex flex-col [justify-content:center] gap-y-(--spacing-sm) px-4 text-sm text-z overflow-x-auto pb-2 transition-[height]"><code class="text-sm font-normal font-mono leading-relaxed overflow-y-hidden"><span class="hljs-comment">// build the jump table</span>
-<span class="hljs-keyword">const</span> <span class="hljs-attr">globalJumpTable</span>: <span class="hljs-title class_">JumpTable</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Map</span>&lt;<span class="hljs-built_in">number</span>, <span class="hljs-title class_">Token</span>&gt;();
+</ol><pre><div class="w-full my-(--spacing-md) grid lg:max-w-[1000px] [align-items:start] rounded-md bg-(--color-base-200) relative"><header class="text-xs font-medium grid [grid-auto-flow:column] items-center ps-4 pe-2 py-2 rounded-tl-md rounded-tr-md [grid-column:1] [grid-row:1] gap-x-(--spacing-sm) border-b-(--color-base-100) border-dotted sticky top-0 bg-inherit"><span class="min-w-3">ts</span><button class="box-content text-sm cursor-pointer py-(--spacing-xs) px-(--spacing-sm) flex items-center gap-x-[1ch] rounded-lg hover:!bg-(--color-base-100) focus:outline-none transition !text-xs justify-self-end z-99"><svg class="!w-[0.9em] !h-[0.9em]"></svg>Copy</button></header><pre style="height:unset;min-height:300px" class="[grid-column:1] flex flex-col [justify-content:center] gap-y-(--spacing-sm) px-4 text-sm text-z overflow-x-auto pb-2 transition-[height]"><code class="text-sm font-normal font-mono leading-relaxed overflow-y-hidden"><span class="hljs-keyword">const</span> buildJumpTable = (<span class="hljs-attr">tokens</span>: <span class="hljs-title class_">Token</span>[]): <span class="hljs-function"><span class="hljs-params">JumpTable</span> =&gt;</span> {
+    <span class="hljs-comment">// match [] {} used to build jump tables</span>
+    <span class="hljs-keyword">const</span> <span class="hljs-attr">stack</span>: <span class="hljs-title class_">Token</span>[] = [];
 
-<span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> token <span class="hljs-keyword">of</span> allTokens) {
-       <span class="hljs-keyword">const</span> { <span class="hljs-attr">type</span>: tokenType, index } = token;
-       <span class="hljs-keyword">if</span> (
-           tokenType === <span class="hljs-title class_">TokenType</span>.<span class="hljs-property">Loop_Start</span> ||
-           tokenType === <span class="hljs-title class_">TokenType</span>.<span class="hljs-property">If_Start</span>
-       ) {
-           stack.<span class="hljs-title function_">push</span>(token);
-       }
-       <span class="hljs-comment">// do it both ways, jump[start] = end, and jump[end]=start</span>
-       <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (tokenType === <span class="hljs-title class_">TokenType</span>.<span class="hljs-property">Loop_End</span>) {
-           <span class="hljs-keyword">const</span> loopStart = stack.<span class="hljs-title function_">pop</span>();
+    <span class="hljs-keyword">const</span> <span class="hljs-attr">jumpTable</span>: <span class="hljs-title class_">JumpTable</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Map</span>();
 
-           <span class="hljs-keyword">if</span> (loopStart === <span class="hljs-literal">undefined</span>) {
-               <span class="hljs-title function_">raiseMalformedInput</span>();
-           }
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> token <span class="hljs-keyword">of</span> tokens) {
+        <span class="hljs-keyword">const</span> { <span class="hljs-keyword">type</span>, index } = token;
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">type</span> === <span class="hljs-title class_">TokenType</span>.<span class="hljs-property">WhileStart</span> || <span class="hljs-keyword">type</span> === <span class="hljs-title class_">TokenType</span>.<span class="hljs-property">IfStart</span>) {
+            stack.<span class="hljs-title function_">push</span>(token);
+        }
+        <span class="hljs-comment">// do it both ways, jump[start] = end, and jump[end]=start</span>
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">type</span> === <span class="hljs-title class_">TokenType</span>.<span class="hljs-property">WhileEnd</span>) {
+            <span class="hljs-keyword">const</span> loopStart = stack.<span class="hljs-title function_">pop</span>();
 
-           <span class="hljs-comment">// malformed input</span>
-           <span class="hljs-keyword">if</span> (loopStart.<span class="hljs-property">type</span> !== <span class="hljs-title class_">TokenType</span>.<span class="hljs-property">Loop_Start</span>) {
-               <span class="hljs-title function_">raiseMalformedInput</span>();
-           }
+            <span class="hljs-keyword">if</span> (loopStart === <span class="hljs-literal">undefined</span>) {
+                <span class="hljs-title function_">raiseMalformedInput</span>();
+            }
 
-           <span class="hljs-comment">// in case we need to skip over the loop; jump[start] = end</span>
-           globalJumpTable.<span class="hljs-title function_">set</span>(loopStart.<span class="hljs-property">index</span>, token);
+            <span class="hljs-comment">// malformed input</span>
+            <span class="hljs-keyword">if</span> (loopStart.<span class="hljs-property">type</span> !== <span class="hljs-title class_">TokenType</span>.<span class="hljs-property">WhileStart</span>) {
+                <span class="hljs-title function_">raiseMalformedInput</span>();
+            }
 
-           <span class="hljs-comment">// in case we need to loop back; jump[end] = start</span>
-           globalJumpTable.<span class="hljs-title function_">set</span>(index, loopStart);
-       }
-<span class="hljs-comment">// ...</span>
-</code></pre></div></pre></section>
+            <span class="hljs-comment">// in case we need to skip over the loop; jump[start] = end</span>
+            jumpTable.<span class="hljs-title function_">set</span>(loopStart.<span class="hljs-property">index</span>, token);
+
+            <span class="hljs-comment">// in case we need to loop back; jump[end] = start</span>
+            jumpTable.<span class="hljs-title function_">set</span>(index, loopStart);
+        }
+        <span class="hljs-comment">// only one way jump[ifStart] = ifEnd; because we cannot go back/loop</span>
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">type</span> === <span class="hljs-title class_">TokenType</span>.<span class="hljs-property">IfEnd</span>) {
+            <span class="hljs-keyword">const</span> ifStart = stack.<span class="hljs-title function_">pop</span>();
+
+            <span class="hljs-keyword">if</span> (ifStart === <span class="hljs-literal">undefined</span>) {
+                <span class="hljs-title function_">raiseMalformedInput</span>();
+            }
+
+            <span class="hljs-comment">// malformed input</span>
+            <span class="hljs-keyword">if</span> (ifStart.<span class="hljs-property">type</span> !== <span class="hljs-title class_">TokenType</span>.<span class="hljs-property">IfStart</span>) {
+                <span class="hljs-title function_">raiseMalformedInput</span>();
+            }
+
+            jumpTable.<span class="hljs-title function_">set</span>(ifStart.<span class="hljs-property">index</span>, token);
+        }
+    }
+
+    <span class="hljs-comment">// malformed input, incomplete closing token e.g. &quot;[+&quot;</span>
+    <span class="hljs-keyword">if</span> (stack.<span class="hljs-property">length</span> &gt; <span class="hljs-number">0</span>) {
+        <span class="hljs-title function_">raiseMalformedInput</span>();
+    }
+
+    <span class="hljs-keyword">return</span> jumpTable;
+};
+</code></pre></div></pre><p class="[display:var(--p-inside-li-display,block)]">During the building attempt if we find a mismatched or missing coding block e.g. <code class="text-base [word-break:var(--inline-code-word-break,break-word)] font-medium font-mono bg-[var(--inline-code-bg,var(--color-base-300))] rounded-md text-[var(--inline-code-text,var(--color-base-content))] px-(--spacing-xs) py-[0.1em]">{]</code> or <code class="text-base [word-break:var(--inline-code-word-break,break-word)] font-medium font-mono bg-[var(--inline-code-bg,var(--color-base-300))] rounded-md text-[var(--inline-code-text,var(--color-base-content))] px-(--spacing-xs) py-[0.1em]">{</code> we raise an exception by calling <code class="text-base [word-break:var(--inline-code-word-break,break-word)] font-medium font-mono bg-[var(--inline-code-bg,var(--color-base-300))] rounded-md text-[var(--inline-code-text,var(--color-base-content))] px-(--spacing-xs) py-[0.1em]">raiseMalformedInput</code></p></section>
 <section class="mb-(--spacing-md) flex flex-col gap-y-(--spacing-sm)"><h2 class="scroll-mt-(--spacing-md) [--inline-code-bg:none] [--inline-code-border:] [--inline-code-px:var(--spacing-xs)] [--inline-code-aside-ps:none] [--inline-code-mx:0.1em] text-white/85 break-words font-bold text-2xl mb-(--spacing-sm)">Building the Transition Functions 🔑</h2><pre><div class="w-full my-(--spacing-md) grid lg:max-w-[1000px] [align-items:start] rounded-md bg-(--color-base-200) relative"><header class="text-xs font-medium grid [grid-auto-flow:column] items-center ps-4 pe-2 py-2 rounded-tl-md rounded-tr-md [grid-column:1] [grid-row:1] gap-x-(--spacing-sm) border-b-(--color-base-100) border-dotted sticky top-0 bg-inherit"><span class="min-w-3">ts</span><button class="box-content text-sm cursor-pointer py-(--spacing-xs) px-(--spacing-sm) flex items-center gap-x-[1ch] rounded-lg hover:!bg-(--color-base-100) focus:outline-none transition !text-xs justify-self-end z-99"><svg class="!w-[0.9em] !h-[0.9em]"></svg>Copy</button></header><pre style="height:unset;min-height:300px" class="[grid-column:1] flex flex-col [justify-content:center] gap-y-(--spacing-sm) px-4 text-sm text-z overflow-x-auto pb-2 transition-[height]"><code class="text-sm font-normal font-mono leading-relaxed overflow-y-hidden"><span class="hljs-comment">// ...</span>
 
 <span class="hljs-keyword">const</span> <span class="hljs-attr">tokenTypeToTransitionFunction</span>: <span class="hljs-title class_">Record</span>&lt;<span class="hljs-title class_">TokenType</span>, <span class="hljs-title class_">StateFunction</span>&gt; = {
