@@ -1,4 +1,4 @@
-import{j as m,m as g}from"./chunk-Ck8b8Ykx.js";/**
+import{j as m,m as g}from"./chunk-j2QiW7mU.js";/**
  * mergeClassNames - A straightforward utility for merging CSS class names in React + Tailwind, and other JavaScript projects.
  *
  * @license AGPL-3.0
