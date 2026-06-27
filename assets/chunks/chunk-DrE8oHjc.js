@@ -1,0 +1,1 @@
+import{j as e,m as r}from"./chunk-C8rv51TL.js";const m=({className:t,text:a,children:s})=>e.jsx("article",{className:r("text-xl","font-medium","grid","gap-y-[var(--spacing-sm)]","content-start","text-balance","lg:px-0",t),children:a||s});export{m as I};
