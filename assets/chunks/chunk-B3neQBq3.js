@@ -1,0 +1,1 @@
+import{j as e,m as r}from"./chunk-gFYgHftU.js";const n=({className:s,text:t,children:a})=>e.jsx("article",{className:r("max-w-4xl","text-xl","font-medium","grid","gap-y-(--spacing-sm]","content-start","lg:px-0",s),children:t||a});export{n as I};
