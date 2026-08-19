@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="44 41 300 318">
 
     <defs>
-        <linearGradient id="healthyGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <linearGradient id="healthyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
             <stop offset="0%" stop-color="var(--internal-healthy-gradient-start, #7986cb)" />
             <stop offset="100%" stop-color="var(--internal-healthy-gradient-end, #c084fc)" />
         </linearGradient>
