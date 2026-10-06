@@ -1,0 +1,1 @@
+import{j as a,m as t}from"./chunk-CCpoKMBe.js";const l=({className:s,text:e,children:m})=>a.jsx("article",{className:t("max-w-4xl","text-xl","font-medium","flex","flex-col","gap-y-sm","px-sm",s),children:e||m});export{l as I};
